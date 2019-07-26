@@ -76,12 +76,7 @@
         return check
     }
     // 處理data
-    function calculate(e){
-        e.preventDefault()
-        if(!checkInput()) { 
-            alert('請輸入正確數值')
-            return 
-        }
+    function calculate(){
         var resultBmi = document.querySelector('.showResult__bmi')
         var resultState = document.querySelector('.showResult__state')
         var target = document.querySelector('.showResult')
@@ -162,6 +157,11 @@
     }
     
     function sendAnimation(e) {
+        e.preventDefault()
+        if(!checkInput()) { 
+            alert('請輸入正確數值')
+            return 
+        }
         document.querySelector('.header__show').classList.add('active')
         setTimeout(function(){
             document.querySelector('.header__show').classList.remove('active')
