@@ -404,15 +404,19 @@ a {
       color: rgba(255, 255, 255, 0.5); }
       .header__input .input::-webkit-input-placeholder {
         font-size: 2rem;
+        vertical-align: bottom;
         color: rgba(255, 255, 255, 0.5); }
       .header__input .input:-ms-input-placeholder {
         font-size: 2rem;
+        vertical-align: bottom;
         color: rgba(255, 255, 255, 0.5); }
       .header__input .input::-ms-input-placeholder {
         font-size: 2rem;
+        vertical-align: bottom;
         color: rgba(255, 255, 255, 0.5); }
       .header__input .input::placeholder {
         font-size: 2rem;
+        vertical-align: bottom;
         color: rgba(255, 255, 255, 0.5); }
   .header .header__show__submit, .header .showResult__bmi {
     width: 120px;
