@@ -131,10 +131,13 @@ a
         @include circle-obj(120px)
     &__show
         position: relative
+        width: 205px
+        @include media(540)
+            width: 120px
         &::after
             content: 'BMI'
             position: absolute
-            left: 50%
+            left: 60px
             transform: translateX(-50%)
             visibility: hidden
         &.active::after
@@ -285,7 +288,7 @@ $result-data: ('bmi': 'BMI', 'weight': 'weight', 'height': 'height')
         position: absolute
         top: 0
         left: 0
-    
+//set color    
 $sticker-color: ('normal': $result-normal, 'under': $result-under, 'over': $result-over, 'obese': $result-obese, 'obese-severely': $result-obese-severely)
 @each $key, $value in $sticker-color
     .showResult.#{$key}

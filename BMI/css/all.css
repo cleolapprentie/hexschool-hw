@@ -426,11 +426,15 @@ a {
     text-align: center;
     overflow: hidden; }
   .header__show {
-    position: relative; }
+    position: relative;
+    width: 205px; }
+    @media only screen and (max-width: 540px) {
+      .header__show {
+        width: 120px; } }
     .header__show::after {
       content: 'BMI';
       position: absolute;
-      left: 50%;
+      left: 60px;
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
