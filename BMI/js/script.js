@@ -135,7 +135,6 @@
 //            target.classList.add('obese-severely')
 //            resultState.textContent = '重度肥胖'
 //        }
-        console.log(target.className)
         obj.state = resultState.textContent
         obj.stateClass = target.classList[1]
         bmiCalc.push(obj)
@@ -180,7 +179,7 @@
         bmiCalc = []
         showResult()
     }, false)
-    document.querySelector('.js--logo').addEventListener('click', function(){
+    document.querySelector('.js--logo').addEventListener('click', function(e){
         e.preventDefault()
         window.location.reload()
     }, false)
