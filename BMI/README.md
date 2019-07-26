@@ -5,8 +5,9 @@ https://kayahino.github.io/hexschool-hw/BMI/
 
 ## 使用技術
 - Sass
-- Grid System
 - JavaScript
+- RWD
+- Grid System
 
 ## 自我突破
 剛上完Sass的課，就拿來JS最終作業拿來應用
