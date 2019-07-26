@@ -31,7 +31,7 @@
 
     function createList() {
         document.querySelector('.content__result').innerHTML = ''
-        var arr = bmiCalc.map(function(item, index){
+        bmiCalc.forEach(item => {
             var li = document.createElement('li')
             li.classList.add('sticker', 'result', item.stateClass)
             document.querySelector('.content__result').appendChild(li)
@@ -170,5 +170,9 @@
         localStorage.removeItem('data')
         bmiCalc = []
         showResult()
+    }, false)
+    document.querySelector('.js--logo').addEventListener('click', function(){
+        e.preventDefault()
+        window.location.reload()
     }, false)
 })()
