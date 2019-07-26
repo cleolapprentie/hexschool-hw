@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Noto+Sans+TC:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Noto+Sans+TC:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <title></title>
@@ -14,11 +14,11 @@
         <header class="header d-flex justify-content-center align-items-center">
             <a href="#" class="header__logo"><h1>BMI Calculator</h1></a>
             <div class="header__input">
-                <div class="pb20"><span class="header__input__label">身高 cm</span><input type="text" class="input js--height" placeholder="請輸入身高"></div>
-                <div><span class="header__input__label">體重 kg</span><input type="text" class="input js--weight" placeholder="請輸入體重"></div>
+                <div class="pb20"><span class="header__input__label">身高 cm</span><input type="text" class="input js--height" placeholder="Your Height"></div>
+                <div><span class="header__input__label">體重 kg</span><input type="text" class="input js--weight" placeholder="Your Weight"></div>
             </div>
             <div class="header__show d-flex align-items-center">
-                <a href="#" class="btn header__show__submit js--submit">看結果</a>
+                <a href="#" class="btn header__show__submit js--submit">Calculate!</a>
                 <div class="showResult hide">
                     <div class="showResult__bmi"></div>
                     <p class="showResult__state pl20"></p>
@@ -27,19 +27,8 @@
             </div>
         </header>
         <div class="content d-flex f-direction-column justify-content-center align-items-center">
-            <h2 class="content__title">BMI 查詢記錄</h2>
+            <h2 class="content__title">BMI Search Result</h2>
             <ul class="content__result d-flex f-direction-column justify-content-center">
-    <!--
-                <li class="sticker result normal">
-                    <div class="row">
-                        <span class="col-1 result__state">理想</span>
-                        <span class="col-2 result__bmi">20.90</span>
-                        <span class="col-2 result__weight">70kg</span>
-                        <span class="col-2 result__height">180cm</span>
-                        <span class="col-1 result__date">06-19-2017</span>
-                    </div>
-                </li>
-    -->
             </ul>
             <a href="#" class="mt15 btn reset hide">Clear All</a>
         </div>

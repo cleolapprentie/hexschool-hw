@@ -327,8 +327,9 @@ html {
   outline: 0; }
 
 body {
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2rem;
+  font-weight: 500;
   line-height: 2.4rem;
   color: #424242; }
 
@@ -388,12 +389,16 @@ a {
       padding: 0 1.5rem;
       color: rgba(255, 255, 255, 0.5); }
       .header__input .input::-webkit-input-placeholder {
+        font-size: 2rem;
         color: rgba(255, 255, 255, 0.5); }
       .header__input .input:-ms-input-placeholder {
+        font-size: 2rem;
         color: rgba(255, 255, 255, 0.5); }
       .header__input .input::-ms-input-placeholder {
+        font-size: 2rem;
         color: rgba(255, 255, 255, 0.5); }
       .header__input .input::placeholder {
+        font-size: 2rem;
         color: rgba(255, 255, 255, 0.5); }
   .header .header__show__submit, .header .showResult__bmi {
     width: 120px;
@@ -404,7 +409,9 @@ a {
     overflow: hidden; }
   .header__show__submit {
     display: block;
-    background-color: #FFD366; }
+    background-color: #FFD366;
+    font-weight: 600;
+    font-size: 1.8rem; }
     .header__show__submit:hover {
       -webkit-box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
       box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64); }
@@ -429,7 +436,6 @@ a {
   .showResult__bmi {
     font-size: 3rem;
     line-height: 108px !important;
-    font-family: "Montserrat", sans-serif;
     position: relative; }
     .showResult__bmi::after {
       content: 'BMI';
@@ -441,6 +447,8 @@ a {
       -ms-transform: translateX(-50%);
       transform: translateX(-50%); }
   .showResult__state {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
     white-space: nowrap;
     font-size: 3.2rem; }
     @media only screen and (max-width: 960px) {
@@ -484,7 +492,7 @@ a {
 .content {
   padding: 5rem 2rem; }
   .content__title {
-    font-weight: 400;
+    font-weight: 700;
     font-size: 2.4rem;
     padding-bottom: 3rem; }
   .content__result {
@@ -511,11 +519,11 @@ a {
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.17); }
 
 .result__bmi {
-  font-family: "Montserrat", sans-serif;
   text-align: center; }
   .result__bmi::before {
     content: "BMI";
     font-size: 1.2rem;
+    font-weight: 400;
     vertical-align: top;
     padding-right: 0.7rem; }
     @media only screen and (max-width: 540px) {
@@ -524,11 +532,11 @@ a {
         padding-right: 0; } }
 
 .result__weight {
-  font-family: "Montserrat", sans-serif;
   text-align: center; }
   .result__weight::before {
     content: "weight";
     font-size: 1.2rem;
+    font-weight: 400;
     vertical-align: top;
     padding-right: 0.7rem; }
     @media only screen and (max-width: 540px) {
@@ -537,11 +545,11 @@ a {
         padding-right: 0; } }
 
 .result__height {
-  font-family: "Montserrat", sans-serif;
   text-align: center; }
   .result__height::before {
     content: "height";
     font-size: 1.2rem;
+    font-weight: 400;
     vertical-align: top;
     padding-right: 0.7rem; }
     @media only screen and (max-width: 540px) {
@@ -556,12 +564,13 @@ a {
     .result {
       margin-top: 3rem; } }
   .result__state {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
     text-align: left; }
     @media only screen and (max-width: 340px) {
       .result__state {
         font-size: 2.5rem; } }
   .result__date {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     text-align: right; }
@@ -574,7 +583,6 @@ a {
         left: 0; } }
 
 .input {
-  font-family: "Montserrat", sans-serif;
   width: 250px;
   height: 40px;
   border: 2px solid #FFD366;
@@ -656,7 +664,6 @@ a {
   box-shadow: 2px 0px 3px rgba(255, 18, 0, 0.29); }
 
 .btn {
-  font-family: "Montserrat", sans-serif;
   cursor: pointer;
   display: block; }
   .btn:active {

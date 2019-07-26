@@ -7,8 +7,8 @@ $result-over: #FF982D
 $result-obese: #FF6C03
 $result-obese-severely: #FF1200
 
-$main-fa: 'Noto Sans TC', sans-serif
-$fa-english: 'Montserrat', sans-serif
+$main-fa: 'Montserrat', sans-serif
+$fa-zhw: 'Noto Sans TC', sans-serif
 $main-font-color: #424242
 
 $logo-path: '../BMICLogo.png'
@@ -67,6 +67,7 @@ html
 body
     font-family: $main-fa
     font-size: 2rem
+    font-weight: 500
     line-height: 2.4rem
     color: $main-font-color
 img
@@ -116,6 +117,7 @@ a
             padding: 0 1.5rem
             color: rgba(255, 255, 255, 0.5)
             &::placeholder
+                font-size: 2rem
                 color: rgba(255, 255, 255, 0.5)
     %circle
         @include circle-obj(120px)
@@ -123,6 +125,8 @@ a
         @extend %circle
         display: block
         background-color: $color-primary
+        font-weight: 600
+        font-size: 1.8rem
         &:hover
             box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64)
 .showResult
@@ -136,7 +140,6 @@ a
         @extend %circle
         font-size: 3rem
         line-height: 120px - 12px!important
-        font-family: $fa-english
         position: relative
         &::after
             content: 'BMI'
@@ -146,6 +149,8 @@ a
             left: 50%
             transform: translateX(-50%)
     &__state
+        font-family: $fa-zhw
+        font-weight: 400
         white-space: nowrap
         font-size: 3.2rem
         @include media(960)
@@ -175,7 +180,7 @@ a
 .content
     padding: 5rem 2rem
     &__title
-        font-weight: 400
+        font-weight: 700
         font-size: 2.4rem
         padding-bottom: 3rem
     &__result
@@ -203,11 +208,11 @@ a
 $result-data: ('bmi': 'BMI', 'weight': 'weight', 'height': 'height')
 @each $key, $value in $result-data
     .result__#{$key}
-        font-family: $fa-english
         text-align: center
         &::before
             content: $value
             font-size: 1.2rem
+            font-weight: 400
             vertical-align: top
             padding-right: 0.7rem
             @include media(540)
@@ -220,11 +225,12 @@ $result-data: ('bmi': 'BMI', 'weight': 'weight', 'height': 'height')
     @include media(540)
         margin-top: 3rem
     &__state
+        font-family: $fa-zhw
+        font-weight: 400
         text-align: left
         @include media(340)
             font-size: 2.5rem
     &__date
-        font-family: $fa-english
         font-size: 1.2rem
         font-weight: 700
         text-align: right
@@ -236,7 +242,6 @@ $result-data: ('bmi': 'BMI', 'weight': 'weight', 'height': 'height')
             left: 0
 //component
 .input
-    font-family: $fa-english
     width: 250px
     height: 40px
     border: 2px solid $color-primary
@@ -270,7 +275,6 @@ $sticker-color: ('normal': $result-normal, 'under': $result-under, 'over': $resu
         box-shadow: 2px 0px 3px rgba($value, 0.29)
     
 .btn
-    font-family: $fa-english
     cursor: pointer
     display: block
     &:active
