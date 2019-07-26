@@ -85,7 +85,6 @@
         var resultBmi = document.querySelector('.showResult__bmi')
         var resultState = document.querySelector('.showResult__state')
         var target = document.querySelector('.showResult')
-        console.log(target.classList[1])
         height = document.querySelector('.js--height').value / 100
         weight = document.querySelector('.js--weight').value
         bmi = weight / (height * height)
@@ -99,8 +98,6 @@
         resultBmi.textContent = bmi
         document.querySelector('.js--submit').classList.add('hide')
         target.classList.remove('hide')
-        var a = target.classList[1]
-        if (a) { target.classList.remove(a) }
         var state = (bmi <= 18.5) ? 'under' : (bmi <= 25) ? 'normal' : (bmi <= 30) ? 'over' : (bmi <= 35) ? 'obese' : (bmi <= 40) ? 'obese' : 'obese-severely'
         target.classList.add(state)
         
@@ -148,28 +145,28 @@
         obj.state = resultState.textContent
         obj.stateClass = target.classList[1]
         bmiCalc.push(obj)
-        localStorage.data = JSON.stringify(bmiCalc)
+        localStorage.data = JSON.stringify(bmiCalc.reverse())
         showResult()
+    }
+    
+    function resetHeader() {
+        var target = document.querySelector('.showResult')
+        document.querySelector('.js--submit').classList.remove('hide')
+        target.classList.add('hide')
+        var a = target.classList[1]
+        if (a !== 'hide') { target.classList.remove(a) }
         document.querySelectorAll('.input').forEach(el => {
-            el.value = ''
+            if(el.value) {
+                el.value = ''
+            }
         })
     }
 
     // events
     document.querySelector('.js--submit').addEventListener('click', calculate, false)
-    document.querySelector('.js--refresh').addEventListener('click', function(e){
-        if(!checkInput()) {
-            document.querySelector('.js--submit').classList.remove('hide')
-            document.querySelector('.showResult').classList.add('hide')
-        } else {
-            calculate(e)
-        }
-    }, false)
+    document.querySelector('.js--refresh').addEventListener('click', resetHeader, false)
     document.querySelector('.reset').addEventListener('click', function(){
-        document.querySelector('.js--submit').classList.remove('hide')
-        document.querySelector('.showResult').classList.add('hide')
-        var a = document.querySelector('.showResult').classList[1]
-        document.querySelector('.showResult').classList.remove(a)
+        resetHeader()
         localStorage.removeItem('data')
         bmiCalc = []
         showResult()
