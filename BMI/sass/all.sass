@@ -1,0 +1,338 @@
+//variable
+$color-primary: #FFD366
+$color-secondary: #424242
+$result-normal: #86D73F
+$result-under: #31BAF9
+$result-over: #FF982D
+$result-obese: #FF6C03
+$result-obese-severely: #FF1200
+
+$main-fa: 'Noto Sans TC', sans-serif
+$fa-english: 'Montserrat', sans-serif
+$main-font-color: #424242
+
+$logo-path: '../BMICLogo.png'
+$gutter: 2rem
+$grid-num: 8
+
+//normalize
+@import 'normalize'
+
+//mixin
+@mixin media($bp)
+    @media only screen and (max-width: #{$bp}px)
+        @content
+
+@mixin set-column($cl)
+    max-width: percentage(1/($grid-num/$cl))
+    flex: 0 0 percentage(1/($grid-num/$cl))
+@mixin circle-obj($set-width)
+    width: $set-width
+    height: $set-width
+    line-height: $set-width
+    border-radius: 50rem
+    text-align: center
+    overflow: hidden
+@mixin h1-with-logo
+    text-indent: 101%
+    white-space: nowrap
+    overflow: hidden
+@mixin flex-centerize($direction)
+    display: flex
+    flex-direction: $direction
+    justify-content: center
+    align-items: center
+@mixin fontAwesome($code, $weight)
+    content: '#{$code}'
+    font-family: "Font Awesome 5 Free"
+    font-style: normal
+    font-weight: $weight
+    text-decoration: inherit
+//900 (Solid), 400 (Regular or Brands), 300 (Light)
+//argument example: '\f2f1'
+
+//base
+html
+    box-sizing: border-box
+    font-size: 62.5%
+    @include media(767)
+        font-size: 50%
+*, *::after, *::before
+    box-sizing: inherit
+    margin: 0
+    padding: 0
+    outline: 0
+body
+    font-family: $main-fa
+    font-size: 2rem
+    line-height: 2.4rem
+    color: $main-font-color
+img
+    display: block
+    max-width: 100%
+    height: auto
+ul
+    list-style: none
+a
+    text-decoration: none
+    color: $main-font-color
+
+//page
+.wrap
+    min-height: calc(100vh - 12.5rem)
+    background-color: #f2f2f2
+.header
+    padding: 8rem 0
+    background-color: $color-secondary
+    color: $color-primary
+    font-size: 2.4rem
+    @include media(540)
+        flex-direction: column
+    &__logo
+        & > h1
+            background-image: url($logo-path)
+            background-repeat: no-repeat
+            background-size: cover
+            width: 11.7rem
+            height: 11.7rem
+            @include h1-with-logo
+            margin-right: 10rem
+            @include media(540)
+                margin-right: 0
+                margin-bottom: 5rem
+    &__input
+        margin-right: 5rem
+        @include media(540)
+            margin-right: 0
+            margin-bottom: 3.5rem
+        &__label
+            font-size: 1.8rem
+            display: block
+            padding-bottom: 0.5rem
+        .input
+            background-color: rgba(255, 255, 255, 0.18)
+            padding: 0 1.5rem
+            color: rgba(255, 255, 255, 0.5)
+            &::placeholder
+                color: rgba(255, 255, 255, 0.5)
+    %circle
+        @include circle-obj(12rem)
+    &__show__submit
+        @extend %circle
+        display: block
+        background-color: $color-primary
+        &:hover
+            box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64)
+.showResult
+    position: relative
+    &__bmi
+        @extend %circle
+        font-size: 3rem
+        line-height: 12rem - 1.2rem!important
+        font-family: $fa-english
+        position: relative
+        &::after
+            content: 'BMI'
+            font-size: 1.2rem
+            position: absolute
+            top: 25%
+            left: 50%
+            transform: translateX(-50%)
+    &__state
+        white-space: nowrap
+        font-size: 3.2rem
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translate(100%, -50%)
+        @include media(540)
+            top: 130%
+            right: 75%
+            padding: 0!important
+    &__refresh
+        @include circle-obj(30px)
+        line-height: 24px
+        border: 3px solid $main-font-color
+        position: absolute
+        bottom: 5%
+        right: 5%
+        transform: rotate(90deg)
+        @include media(540)
+            @include circle-obj(35px)
+            line-height: 29px
+            border: 3px solid $main-font-color
+            bottom: 0%
+            right: 0%
+        &::after
+            font-size: 14px
+            color: $main-font-color
+            @include fontAwesome('\f2f1', 900)
+            position: absolute
+            top: 0
+            left: 50%    
+            transform: translateX(-50%)
+            
+.content
+    padding: 5rem 2rem
+    &__title
+        font-weight: 400
+        font-size: 2.4rem
+        padding-bottom: 3rem
+    &__result
+        min-height: 20vh
+        .sticker
+            min-width: 624px
+            @include media(540)
+                min-width: 100%
+.result
+    margin-bottom: 1.5rem
+
+.footer
+    width: 100%
+    padding: 2rem
+    background-color: $color-primary
+    &__logo
+        width: 55px
+        filter: brightness(30%)
+    & > p
+        letter-spacing: 0.3px
+        font-size: 1.4rem
+        & > i
+            color: rgb(204, 76, 76);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.17);
+    
+$result-data: ('bmi': 'BMI', 'weight': 'weight', 'height': 'height')
+@each $key, $value in $result-data
+    .result__#{$key}
+        font-family: $fa-english
+        text-align: center
+        &::before
+            content: $value
+            font-size: 1.2rem
+            vertical-align: top
+            padding-right: 0.7rem
+            @include media(540)
+                display: block
+                padding-right: 0
+    
+.result
+    position: relative
+    &__state
+        text-align: left
+    &__date
+        font-family: $fa-english
+        font-size: 1.2rem
+        font-weight: 700
+        text-align: right
+        @include media(540)
+            font-size: 1.4rem
+            white-space: nowrap
+            transform: rotate(90deg)
+            transform-origin: center
+            position: absolute
+            top: 4px
+            right: -11%
+
+//component
+.input
+    font-family: $fa-english
+    width: 250px
+    height: 40px
+    border: 2px solid $color-primary
+    border-radius: 10px
+    
+.sticker
+    width: 100%
+    height: 100%
+    background-color: #fff
+    position: relative
+    padding: 2rem 2rem 2rem 2.4rem
+    @include media(540)
+        padding: 1.5rem 1rem
+    &:before
+        content: ''
+        display: block
+        width: 7px
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+    
+$sticker-color: ('normal': $result-normal, 'under': $result-under, 'over': $result-over, 'obese': $result-obese, 'obese-severely': $result-obese-severely)
+@each $key, $value in $sticker-color
+    .showResult.#{$key}
+        color: $value
+        .showResult__bmi
+            border: 6px solid $value
+        .showResult__refresh
+            background-color: $value
+    .sticker.#{$key}::before
+        background-color: $value
+        box-shadow: 2px 0px 3px rgba($value, 0.29)
+    
+.btn
+    font-family: $fa-english
+    cursor: pointer
+    display: block
+    &:active
+        transform: translate(1px, 1px)
+    
+.reset
+    padding: 0.5rem 1.8rem
+    background-color: $color-primary
+    color: lighten($main-font-color, 2%)
+    text-transform: uppercase
+    font-size: 1.4rem
+    font-weight: 700
+    border-radius: 30px
+    border: 8px solid darken($color-primary, 2%)
+    
+//gird
+.row
+    display: flex
+    flex-wrap: wrap
+    margin-left: -($gutter / 2)
+    margin-right: -($gutter / 2)
+    align-items: center
+    justify-content: center
+%col
+    padding-left: $gutter / 2
+    padding-right: $gutter / 2
+    flex: 0 0 100%
+@for $i from 1 through $grid-num
+    .col-#{$i}
+        @extend %col
+        @include set-column($i)
+//helper
+.pb20
+    padding-bottom: 2rem
+.pb30
+    padding-bottom: 3rem
+.pl20
+    padding-left: 2rem
+.text-align-center
+    text-align: center
+.m0auto
+    margin: 0 auto
+.mt15
+    margin-top: 15px
+.ml20
+    margin-left: 20px
+.d-none, .hide
+    display: none!important
+.d-block
+    display: block!important
+.d-inline-block
+    display: inline-block
+.d-flex
+    display: flex
+.justify-content-center
+    justify-content: center
+.justify-content-around
+    justify-content: space-around
+.justify-content-between
+    justify-content: space-between
+.align-items-center
+    align-items: center
+.f-direction-column
+    flex-direction: column
