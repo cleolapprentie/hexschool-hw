@@ -12,8 +12,8 @@ $fa-english: 'Montserrat', sans-serif
 $main-font-color: #424242
 
 $logo-path: '../BMICLogo.png'
-$gutter: 2rem
-$grid-num: 8
+$gutter: 0
+$grid-num: 9
 
 //normalize
 @import 'normalize'
@@ -56,7 +56,9 @@ html
     box-sizing: border-box
     font-size: 62.5%
     @include media(767)
-        font-size: 50%
+        font-size: 60%
+    @include media(540)
+        font-size: 52%
 *, *::after, *::before
     box-sizing: inherit
     margin: 0
@@ -104,7 +106,7 @@ a
         margin-right: 5rem
         @include media(540)
             margin-right: 0
-            margin-bottom: 3.5rem
+            margin-bottom: 5rem
         &__label
             font-size: 1.8rem
             display: block
@@ -116,7 +118,7 @@ a
             &::placeholder
                 color: rgba(255, 255, 255, 0.5)
     %circle
-        @include circle-obj(12rem)
+        @include circle-obj(120px)
     &__show__submit
         @extend %circle
         display: block
@@ -125,10 +127,15 @@ a
             box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64)
 .showResult
     position: relative
+    display: flex
+    align-items: center
+    @include media(960)
+        flex-direction: column
+        justify-content: center
     &__bmi
         @extend %circle
         font-size: 3rem
-        line-height: 12rem - 1.2rem!important
+        line-height: 120px - 12px!important
         font-family: $fa-english
         position: relative
         &::after
@@ -141,28 +148,21 @@ a
     &__state
         white-space: nowrap
         font-size: 3.2rem
-        position: absolute
-        top: 50%
-        right: 0
-        transform: translate(100%, -50%)
-        @include media(540)
-            top: 130%
-            right: 75%
-            padding: 0!important
+        @include media(960)
+            padding-top: 2rem
+            padding-left: 0!important
+
     &__refresh
         @include circle-obj(30px)
         line-height: 24px
         border: 3px solid $main-font-color
-        position: absolute
-        bottom: 5%
-        right: 5%
         transform: rotate(90deg)
-        @include media(540)
-            @include circle-obj(35px)
-            line-height: 29px
-            border: 3px solid $main-font-color
-            bottom: 0%
-            right: 0%
+        position: absolute
+        left: 90px
+        bottom: 12px
+        @include media(960)
+            top: 78px
+            left: 90px
         &::after
             font-size: 14px
             color: $main-font-color
@@ -183,9 +183,8 @@ a
         .sticker
             min-width: 624px
             @include media(540)
-                min-width: 100%
-.result
-    margin-bottom: 1.5rem
+                min-width: calc(100vw - 4rem)
+                
 
 .footer
     width: 100%
@@ -216,9 +215,14 @@ $result-data: ('bmi': 'BMI', 'weight': 'weight', 'height': 'height')
                 padding-right: 0
     
 .result
+    margin-bottom: 1.5rem
     position: relative
+    @include media(540)
+        margin-top: 3rem
     &__state
         text-align: left
+        @include media(340)
+            font-size: 2.5rem
     &__date
         font-family: $fa-english
         font-size: 1.2rem
@@ -227,12 +231,9 @@ $result-data: ('bmi': 'BMI', 'weight': 'weight', 'height': 'height')
         @include media(540)
             font-size: 1.4rem
             white-space: nowrap
-            transform: rotate(90deg)
-            transform-origin: center
             position: absolute
-            top: 4px
-            right: -11%
-
+            top: -30%
+            left: 0
 //component
 .input
     font-family: $fa-english
@@ -247,8 +248,6 @@ $result-data: ('bmi': 'BMI', 'weight': 'weight', 'height': 'height')
     background-color: #fff
     position: relative
     padding: 2rem 2rem 2rem 2.4rem
-    @include media(540)
-        padding: 1.5rem 1rem
     &:before
         content: ''
         display: block
@@ -263,7 +262,7 @@ $sticker-color: ('normal': $result-normal, 'under': $result-under, 'over': $resu
     .showResult.#{$key}
         color: $value
         .showResult__bmi
-            border: 6px solid $value
+            border: 0.6rem solid $value
         .showResult__refresh
             background-color: $value
     .sticker.#{$key}::before
@@ -293,8 +292,8 @@ $sticker-color: ('normal': $result-normal, 'under': $result-under, 'over': $resu
     flex-wrap: wrap
     margin-left: -($gutter / 2)
     margin-right: -($gutter / 2)
+    justify-content: space-between
     align-items: center
-    justify-content: center
 %col
     padding-left: $gutter / 2
     padding-right: $gutter / 2

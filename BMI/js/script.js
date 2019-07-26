@@ -43,7 +43,7 @@
             var spanWeight = document.createElement('span')
             var spanHeight = document.createElement('span')
             var spanDate = document.createElement('span')
-            spanState.classList.add('col-1', 'result__state')
+            spanState.classList.add('col-2', 'result__state')
             spanBmi.classList.add('col-2', 'result__bmi')
             spanWeight.classList.add('col-2', 'result__weight')
             spanHeight.classList.add('col-2', 'result__height')
@@ -85,6 +85,7 @@
         var resultBmi = document.querySelector('.showResult__bmi')
         var resultState = document.querySelector('.showResult__state')
         var target = document.querySelector('.showResult')
+        console.log(target.classList[1])
         height = document.querySelector('.js--height').value / 100
         weight = document.querySelector('.js--weight').value
         bmi = weight / (height * height)
@@ -98,22 +99,52 @@
         resultBmi.textContent = bmi
         document.querySelector('.js--submit').classList.add('hide')
         target.classList.remove('hide')
-        if (bmi < 18.5) { //under
-            target.classList.add('under')
-            resultState.textContent = '過輕'
-        } else if (bmi > 18.5 && bmi < 25 ) {
-            target.classList.add('normal')
-            resultState.textContent = '理想'
-        } else if (bmi > 25 && bmi < 30 ) {
-            target.classList.add('over')
-            resultState.textContent = '過重'
-        } else if (bmi > 30 && bmi < 35) {
-            target.classList.add('obese')
-            resultState.textContent = '輕度肥胖'
-        } else {
-            target.classList.add('obese-severely')
-            resultState.textContent = '中度肥胖'
+        var a = target.classList[1]
+        if (a) { target.classList.remove(a) }
+        var state = (bmi <= 18.5) ? 'under' : (bmi <= 25) ? 'normal' : (bmi <= 30) ? 'over' : (bmi <= 35) ? 'obese' : (bmi <= 40) ? 'obese' : 'obese-severely'
+        target.classList.add(state)
+        
+        switch(state) {
+            case 'under': 
+                resultState.textContent = '過輕'
+                break
+            case 'normal':
+                resultState.textContent = '理想'
+                break
+            case 'over':
+                resultState.textContent = '過重'
+                break
+            case 'obese':
+                if(bmi > 30 && bmi <= 35) {
+                    resultState.textContent = '輕度肥胖'
+                } else {
+                    resultState.textContent = '中度肥胖'
+                }
+                break
+            case 'obese-severely':
+                resultState.textContent = '重度肥胖'
+                break
         }
+        
+//        if (bmi <= 18.5) { //under
+//            target.classList.add('under')
+//            resultState.textContent = '過輕'
+//        } else if (bmi <= 25 ) {
+//            target.classList.add('normal')
+//            resultState.textContent = '理想'
+//        } else if (bmi <= 30 ) {
+//            target.classList.add('over')
+//            resultState.textContent = '過重'
+//        } else if (bmi <= 35) {
+//            target.classList.add('obese')
+//            resultState.textContent = '輕度肥胖'
+//        } else if (bmi <= 45) {
+//            target.classList.add('obese')
+//            resultState.textContent = '中度肥胖'
+//        } else {
+//            target.classList.add('obese-severely')
+//            resultState.textContent = '重度肥胖'
+//        }
         obj.state = resultState.textContent
         obj.stateClass = target.classList[1]
         bmiCalc.push(obj)
@@ -122,7 +153,6 @@
         document.querySelectorAll('.input').forEach(el => {
             el.value = ''
         })
-
     }
 
     // events
@@ -138,6 +168,8 @@
     document.querySelector('.reset').addEventListener('click', function(){
         document.querySelector('.js--submit').classList.remove('hide')
         document.querySelector('.showResult').classList.add('hide')
+        var a = document.querySelector('.showResult').classList[1]
+        document.querySelector('.showResult').classList.remove(a)
         localStorage.removeItem('data')
         bmiCalc = []
         showResult()
