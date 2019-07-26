@@ -96,8 +96,6 @@
             bmi: bmi
         }
         resultBmi.textContent = bmi
-        document.querySelector('.js--submit').classList.add('hide')
-        target.classList.remove('hide')
         var state = (bmi <= 18.5) ? 'under' : (bmi <= 25) ? 'normal' : (bmi <= 30) ? 'over' : (bmi <= 35) ? 'obese' : (bmi <= 40) ? 'obese' : 'obese-severely'
         target.classList.add(state)
         
@@ -142,6 +140,7 @@
 //            target.classList.add('obese-severely')
 //            resultState.textContent = '重度肥胖'
 //        }
+        console.log(target.className)
         obj.state = resultState.textContent
         obj.stateClass = target.classList[1]
         bmiCalc.push(obj)
@@ -161,9 +160,19 @@
             }
         })
     }
+    
+    function sendAnimation(e) {
+        document.querySelector('.header__show').classList.add('active')
+        setTimeout(function(){
+            document.querySelector('.header__show').classList.remove('active')
+            document.querySelector('.js--submit').classList.add('hide')
+            document.querySelector('.showResult').classList.remove('hide')
+            calculate(e)
+        }, 700)
+    }
 
     // events
-    document.querySelector('.js--submit').addEventListener('click', calculate, false)
+    document.querySelector('.js--submit').addEventListener('click', sendAnimation, false)
     document.querySelector('.js--refresh').addEventListener('click', resetHeader, false)
     document.querySelector('.reset').addEventListener('click', function(){
         resetHeader()

@@ -51,6 +51,13 @@ $grid-num: 9
 //900 (Solid), 400 (Regular or Brands), 300 (Light)
 //argument example: '\f2f1'
 
+@keyframes loading
+    from
+        ransform: rotate(0deg)
+    to
+        transform: rotate(360deg)
+
+
 //base
 html
     box-sizing: border-box
@@ -121,6 +128,21 @@ a
                 color: rgba(255, 255, 255, 0.5)
     %circle
         @include circle-obj(120px)
+    &__show
+        position: relative
+        &::after
+            content: 'BMI'
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            visibility: hidden
+        &.active::after
+            visibility: visible
+        &.active > .header__show__submit
+            background-color: transparent
+            border: 0.6rem solid $color-primary
+            border-left: 0.6rem solid lighten($color-secondary, 30%)
+            animation: loading 1s infinite linear
     &__show__submit
         @extend %circle
         display: block

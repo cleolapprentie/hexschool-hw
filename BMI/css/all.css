@@ -308,6 +308,20 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes loading {
+  from {
+    ransform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes loading {
+  from {
+    ransform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -407,6 +421,24 @@ a {
     border-radius: 50rem;
     text-align: center;
     overflow: hidden; }
+  .header__show {
+    position: relative; }
+    .header__show::after {
+      content: 'BMI';
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      visibility: hidden; }
+    .header__show.active::after {
+      visibility: visible; }
+    .header__show.active > .header__show__submit {
+      background-color: transparent;
+      border: 0.6rem solid #FFD366;
+      border-left: 0.6rem solid #8f8f8f;
+      -webkit-animation: loading 1s infinite linear;
+      animation: loading 1s infinite linear; }
   .header__show__submit {
     display: block;
     background-color: #FFD366;
