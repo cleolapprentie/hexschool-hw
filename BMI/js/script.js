@@ -173,7 +173,8 @@
     // events
     document.querySelector('.js--submit').addEventListener('click', sendAnimation, false)
     document.querySelector('.js--refresh').addEventListener('click', resetHeader, false)
-    document.querySelector('.reset').addEventListener('click', function(){
+    document.querySelector('.reset').addEventListener('click', function(e){
+        e.preventDefault()
         resetHeader()
         localStorage.removeItem('data')
         bmiCalc = []
