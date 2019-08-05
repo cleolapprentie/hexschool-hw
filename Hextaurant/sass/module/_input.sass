@@ -5,10 +5,14 @@ fieldset
 input, select, textarea
   border: 0
   border-radius: 0
+  @include placeholder
+    color: transparent
 
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
-    // display: none <- Crashes Chrome on hover
-    opacity: 0
+@include input-spin
+  opacity: 0
+  cursor: pointer
+  // display: none <- Crashes Chrome on hover
+
 
 select
   -webkit-appearance: none
@@ -23,9 +27,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   transition: background-color 5000s ease-in-out 0s
 //input:-internal-autofill-selected, input:-internal-autofill-selected
 //  background-color: transparent!important  <-- not really work
-  
 
-  
+
   
 .select
   position: relative
@@ -75,6 +78,7 @@ textarea
     color: $input-text-color
     &:placeholder-shown::placeholder
       visibility: hidden
+    
   select
     @extend %reset
     padding: 0 0 0 10px

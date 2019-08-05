@@ -45,4 +45,26 @@
   @for $i from 1 through $length
     $shadow: $shadow, #{$i}px #{$i}px darken($color, 8%)
   text-shadow: $shadow
-  border: 1px solid transparent // 防止陰影造成的鋸齒邊緣帶來的視覺衝擊
+  border: 1px solid transparent
+
+@mixin placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+@mixin input-spin
+  input[type="number"]
+    -moz-appearance: textfield
+    &::-webkit-outer-spin-button
+      @content
+    &::-webkit-inner-spin-button
+      @content
+    &::-moz-outer-spin-button
+      @content
+    &::-moz-inner-spin-button
+      @content
