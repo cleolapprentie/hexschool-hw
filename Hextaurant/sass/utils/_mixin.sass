@@ -1,0 +1,41 @@
+@mixin media($bp)
+    @media only screen and (max-width: #{$bp}px)
+        @content
+
+@mixin set-column($cl)
+    max-width: percentage(1/($grid-num/$cl))
+    flex: 0 0 percentage(1/($grid-num/$cl))
+  
+@mixin set-font($fa, $size, $space)
+  font-family: $fa, sans-serif
+  font-size: $size + px
+  line-height: $size * 1.5px
+  letter-spacing: #{$space}px
+
+@mixin flex-centralize($direction)
+    display: flex
+    flex-direction: $direction
+    justify-content: center
+    align-items: center
+  
+@mixin circle-obj($set-width)
+    width: $set-width
+    height: $set-width
+    line-height: $set-width
+    border-radius: 50%
+    text-align: center
+    overflow: hidden
+  
+@mixin h1-with-logo
+    text-indent: 101%
+    white-space: nowrap
+    overflow: hidden
+
+@mixin fontAwesome($code, $weight)
+    content: '#{$code}'
+    font-family: "Font Awesome 5 Free"
+    font-style: normal
+    font-weight: $weight
+    text-decoration: inherit
+//900 (Solid), 400 (Regular or Brands), 300 (Light)
+//argument example: '\f2f1'

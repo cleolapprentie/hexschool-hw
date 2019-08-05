@@ -1,0 +1,35 @@
+.l-content
+  background-color: $bg-color-light
+  &.shopPage
+    padding: 5rem 0
+
+section
+  padding: 6.5rem 0
+  &:nth-child(odd)
+    background-color: $bg-color
+  &:nth-child(even)
+    background-color: $bg-color-light
+
+.title
+    margin-bottom: 7rem
+    position: relative
+    &::after, &::before
+      content: ''
+      width: 20%
+      height: 1px
+      display: block
+      background-color: $color-primary
+      position: absolute
+      top: 50%
+      @include media($mobile-large)
+        display: none
+    &::before
+      left: 12%
+      @include media($tablet)
+        left: 3rem
+    &::after
+      right: 12%
+      @include media($tablet)
+        right: 3rem
+    > span
+      color: $color-em

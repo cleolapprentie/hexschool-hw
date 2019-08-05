@@ -1,0 +1,50 @@
+$gutter: 6rem
+$grid-num: 12
+
+.container
+  max-width: $max-width
+  width: 90vw
+  margin: 0 auto
+  padding-left: $gutter / 2
+  padding-right: $gutter / 2
+
+.inner-container
+  width: 100%
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+  
+.row
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-start
+  margin-left: -($gutter / 2)
+  margin-right: -($gutter /2)
+    
+%col
+  padding-left: $gutter / 2
+  padding-right: $gutter / 2
+
+%col-inner
+  padding-left: $gutter / 4
+  padding-right: $gutter / 4
+
+@for $i from 1 through $grid-num
+  .col-#{$i}
+    @extend %col
+    @include set-column($i)
+    @include media($mobile)
+      max-width: 100%
+      flex: 0 0 100%
+      &:not(:last-child)
+        margin-bottom: $gutter!important
+  .inner-container .col-#{$i}
+    @extend %col-inner
+    @include media($mobile)
+      max-width: 100%
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
+      flex: 0 0 100%
+    &:not(:last-child)
+      margin-bottom: $gutter / 2
+    

@@ -1,0 +1,59 @@
+.card
+  width: 100%
+  min-height: 300px
+  border-radius: $radius-s
+  background-color: #fff
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  position: relative
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+  transition: box-shadow 0.2s linear
+  cursor: default
+  &:hover
+    box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.1)
+    & > .card__img > img
+      transform: scale(1.05)
+  &__img
+    width: 100%
+    position: relative
+    overflow: hidden
+    > img
+      width: 100%
+      object-fit: cover
+      transition: transform 0.2s linear
+  &__content
+    width: 100%
+    @include flex-centralize(column)
+    justify-content: space-between
+    padding: 1.5rem
+    min-height: calc(300px - 120px)
+    > div
+      width: 100%
+  &__title
+    letter-spacing: 1px
+    text-align: center
+    padding-bottom: 10px
+    position: relative
+    &::after
+      content: ''
+      width: 90%
+      height: 1px
+      background-color: #a5a5a5
+      display: block
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+    &--main
+      font-size: 18px
+    &--sub
+      font-size: 14px
+  &__text
+    text-align: center
+    padding-top: 1rem
+  &__bottom
+    justify-self: flex-end
+    margin-top: 10px

@@ -1,0 +1,53 @@
+.search
+  width: 44.75px
+  border-radius: $radius-s
+  overflow: hidden
+  transition: all 0.8s ease
+  > input
+    cursor: pointer
+  .line
+    width: 0
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    box-shadow: inset 0 0 0.5px $input-border rgba($color-primary, 0.9)
+    border-radius: $radius-s
+    overflow: hidden
+    pointer-events: none
+    transition: all 0.8s ease
+    &::after, &::before
+      content: ''
+      width: 0
+      height: 0
+      position: absolute
+      border: ($input-border*1.5) solid transparent
+      border-radius: $radius-s
+      top: 0
+      left: 0
+  .search-btn
+    display: block
+    height: $input-height + $input-border*2
+    padding: 8px 12px 10px 12px
+    color: #fff
+    background-color: rgba($color-primary, 0.9)
+    border-top-right-radius: $radius-s
+    border-bottom-right-radius: $radius-s
+    font-size: 20px
+    position: absolute
+    top: 0
+    left: 0
+    transition: left 0.8s ease
+    pointer-events: none
+    cursor: pointer
+  
+.search.active
+  width: 100%
+  > input
+    cursor: auto
+  .line
+    width: 100%
+  .search-btn
+    pointer-events: auto
+    left: calc(100% - 44.75px)
+  

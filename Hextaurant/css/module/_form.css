@@ -1,0 +1,166 @@
+input, textarea {
+  border: 0;
+  border-radius: 0;
+    border-radius-width: 100%;
+    border-radius-height: 50px;
+    border-radius-padding: 15px 15px 10px 15px;
+    border-radius-color: #525252; }
+
+.label {
+  display: block;
+  font-size: 18px;
+  color: #C8CCD4;
+  padding: 0 8px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: -1;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.input {
+  width: 100%;
+  max-width: 280px;
+  height: 50px;
+  position: relative; }
+  .input > input:placeholder-shown::-webkit-input-placeholder {
+    visibility: hidden; }
+  .input > input:placeholder-shown:-ms-input-placeholder {
+    visibility: hidden; }
+  .input > input:placeholder-shown::-ms-input-placeholder {
+    visibility: hidden; }
+  .input > input:placeholder-shown::placeholder {
+    visibility: hidden; }
+  .input > input:focus ~ .label, .input > input:not(:placeholder-shown) ~ .label {
+    background-color: #fff;
+    -webkit-transform: translateY(-150%) scale(0.75);
+    -ms-transform: translateY(-150%) scale(0.75);
+    transform: translateY(-150%) scale(0.75); }
+  .input > input:not(:placeholder-shown) ~ .label {
+    color: #C8CCD4; }
+  .input > input:focus ~ .label {
+    color: #0077ff; }
+  .input .line {
+    position: absolute;
+    z-index: -1; }
+
+.input--outline > input {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: none; }
+  .input--outline > input:focus ~ .line::before, .input--outline > input:focus ~ .line::after {
+    width: 100%;
+    height: 100%; }
+  .input--outline > input:focus ~ .line::before {
+    border-top-color: #0077ff;
+    border-right-color: #0077ff;
+    -webkit-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+    -o-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s; }
+  .input--outline > input:focus ~ .line::after {
+    border-bottom-color: #0077ff;
+    border-left-color: #0077ff;
+    -webkit-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+    -o-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s; }
+
+.input--outline .line {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: inset 0 0 0 1.5px #C8CCD4;
+  box-shadow: inset 0 0 0 1.5px #C8CCD4;
+  border-radius: 4px;
+  overflow: hidden; }
+  .input--outline .line::before, .input--outline .line::after {
+    content: '';
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-radius: 4px; }
+  .input--outline .line::before {
+    top: 0;
+    left: 0; }
+  .input--outline .line::after {
+    bottom: 0;
+    right: 0; }
+
+.input--outline-shaped .label {
+  left: 15px; }
+
+.input--outline-shaped > input {
+  padding-left: 20px;
+  border-radius: 50rem;
+  background: none; }
+  .input--outline-shaped > input:focus ~ .line {
+    -webkit-box-shadow: inset 0 0 0 2px #0077ff;
+    box-shadow: inset 0 0 0 2px #0077ff;
+    -webkit-transition: -webkit-box-shadow 0.4s ease-out;
+    transition: -webkit-box-shadow 0.4s ease-out;
+    -o-transition: box-shadow 0.4s ease-out;
+    transition: box-shadow 0.4s ease-out;
+    transition: box-shadow 0.4s ease-out, -webkit-box-shadow 0.4s ease-out; }
+
+.input--outline-shaped .line {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: inset 0 0 0 1.5px #C8CCD4;
+  box-shadow: inset 0 0 0 1.5px #C8CCD4;
+  border-radius: 50rem;
+  overflow: hidden; }
+
+.input--underline .label {
+  padding: 0;
+  left: 15px; }
+
+.input--underline .line {
+  width: 100%;
+  height: 100%;
+  background-color: none;
+  top: 0;
+  -webkit-box-shadow: inset 0 -2px 0 0px #C8CCD4;
+  box-shadow: inset 0 -2px 0 0px #C8CCD4;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px; }
+  .input--underline .line::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid transparent; }
+
+.input--underline > input {
+  padding-left: 0;
+  padding-right: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: none; }
+  .input--underline > input:hover ~ .line {
+    background-color: #f2f2f2; }
+  .input--underline > input:focus ~ .line {
+    background: none; }
+    .input--underline > input:focus ~ .line::after {
+      width: 100%;
+      border-color: #0077ff;
+      -webkit-transition: 0.3s ease-out;
+      -o-transition: 0.3s ease-out;
+      transition: 0.3s ease-out; }
+  .input--underline > input:not(:placeholder-shown) ~ .label, .input--underline > input:focus ~ .label {
+    -webkit-transform: translate(-15px, -180%) scale(0.75);
+    -ms-transform: translate(-15px, -180%) scale(0.75);
+    transform: translate(-15px, -180%) scale(0.75); }

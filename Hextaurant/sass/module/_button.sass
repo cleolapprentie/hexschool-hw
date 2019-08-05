@@ -1,0 +1,83 @@
+//reset
+button
+  -moz-appearance: none
+  -webkit-appearance: none
+  border: none
+  outline: none
+  padding: 0
+  background-color: transparent
+
+.btn
+  display: inline-block
+  zoom: 1
+  line-height: normal
+  white-space: nowrap
+  vertical-align: middle
+  text-align: center
+  cursor: pointer
+  -webkit-user-drag: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  padding: 0.8rem 2rem
+  position: relative
+  overflow: hidden
+  border-radius: $radius-s
+  > span
+    position: relative
+    z-index: 1
+    pointer-events: none
+
+.btn::-moz-focus-inner
+  padding: 0
+  border: 0
+
+//style
+.btn--primary, a.btn--primary
+  color: #fff
+  background-color: lighten($btn-primary, 5%)
+  box-shadow: 0 1px 4px rgba(#000, 0.25)
+  transition: box-shadow 0.2s ease, background-color 0.2s ease 0.2s
+  &:hover
+    box-shadow: 0 3px 7px rgba(#000, 0.25)
+  &:focus
+    background-color: $btn-primary
+  
+.btn--secondary, a.btn--secondary
+  color: #fff
+  opacity: 0.8
+  background-color: $btn-secondary
+  box-shadow: 0 1px 4px rgba(#000, 0.25)
+  transition: box-shadow 0.2s ease, background-color 0.2s ease 0.2s
+  &:hover
+    box-shadow: 0 3px 7px rgba(#000, 0.25)
+  &:focus
+    background-color: darken($btn-secondary, 5%)
+  
+.btn--outlined, a.btn--outlined
+  color: $btn-primary
+  background-color: transparent
+  border: 1.5px solid lighten($btn-primary, 5%)
+  transition: all 0.2s ease
+  &:hover
+    background-color: rgba($btn-primary, 0.1)
+  &:focus
+    background-color: rgba($btn-primary, 0.2)
+  .btn--active
+    background-image: radial-gradient(circle at center, darken($btn-primary, 5%) 70%, transparent 70%)
+  
+.btn--active
+  width: 1px
+  height: 1px
+  display: block
+  background-image: radial-gradient(circle at center, white 70%, transparent 70%)
+  opacity: 0.3
+  position: absolute
+  z-index: 0
+  transform-origin: center
+  transform: scale(0)
+  transition: transform 0.2s linear, opacity 0.2s linear 0.2s
+  
+
+  

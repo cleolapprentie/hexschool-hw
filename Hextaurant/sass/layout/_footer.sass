@@ -1,0 +1,77 @@
+.l-footer
+  background-color: $bg-color
+  padding: $gutter
+  padding: $gutter
+  margin-bottom: 80px
+  h3
+    margin-bottom: 1.2rem
+  a:hover
+    text-decoration: underline
+
+.footer
+  &__info
+    display: flex
+    justify-content: space-between
+    > div
+      width: 45%
+    @include media($mobile)
+      flex-direction: column
+      > div
+        width: 100%
+    div:first-child
+      @include media($mobile)
+        margin-bottom: 3rem
+  &__logo
+    text-align: right
+    @include media($mobile)
+      margin-top: 2rem
+    span
+      display: inline-block
+      transition: all 0.2s
+      &:hover
+        opacity: 0.75
+      &:not(:last-child)
+        margin-right: 5px
+      > i
+      font-size: 36px
+    &--gplus a
+      color: #dd4b39
+    &--twitter a
+      color: #00AFF0
+    &--facebook a
+      color: #3b5999
+
+.footer__copyright
+  width: 100%
+  height: 80px
+  font-size: 14px
+  font-weight: 500
+  letter-spacing: 1px
+  color: $input-text-color
+  background-color: $bg-color-light
+  @include flex-centralize(column)
+  position: fixed
+  bottom: 0
+  left: 0
+  z-index: -1
+  i
+    color: $color-em
+    padding: 0 3px
+    animation-fill-mode: backwards
+    animation: beat 1s infinite
+  p:first-child
+    @include media($mobile)
+      display: none
+  
+@keyframes beat
+  0%
+    transform: scale(1)
+  15%
+    transform: scale(1.25)
+  25%
+    transform: scale(1.15)
+  35%
+    transform: scale(1.25)
+  100%
+    transform: scale(1)
+    

@@ -1,0 +1,42 @@
+.reserve__form
+  form
+    display: grid
+    align-items: center
+    grid-template-columns: repeat(6, 1fr)
+    grid-template-rows: repeat(3, $input-height) auto auto auto
+    grid-template-areas: 'name name name phone phone phone' 'email email email email email email' 'number number month date time time' 'msg msg msg msg msg msg' 'helperText helperText helperText btn btn btn'
+    grid-row-gap: 20px
+    grid-column-gap: 8px
+    @include media($screen-small)
+      grid-template-areas: 'name name name phone phone phone' 'email email email email number number' 'month month date date time time' 'msg msg msg msg msg msg' 'helperText helperText helperText helperText helperText helperText' 'btn btn btn btn btn btn'
+    @include media($mobile)
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: repeat(4, $input-height) auto auto auto
+      grid-template-areas: 'name phone' 'email email' 'month date' 'time number' 'msg msg' 'helperText btn'
+    @include media($mobile-large)
+      grid-template-areas: 'name phone' 'email email' 'month date' 'time number' 'msg msg' 'helperText helperText' 'btn btn' 
+    @include media($mobile-small)
+      grid-template-columns: 1fr
+      grid-template-areas: 'name' 'phone' 'email' 'number' 'month' 'date' 'time' 'msg' 'helperText' 'btn'
+  .input > select
+    letter-spacing: -0.5px
+    font-size: 1.3rem
+    
+$map: (name, phone, email, number, month, date, time, msg, helperText, btn)      
+@each $key in $map
+  .form__#{$key}
+    grid-area: $key
+
+.form__msg
+  height: 150px
+
+.form__btn
+  text-align: right
+  @include media($screen-small)
+    text-align: left
+  @include media($mobile)
+    text-align: right
+  @include media($mobile-large)
+    text-align: left
+  
+

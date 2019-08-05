@@ -1,0 +1,42 @@
+html
+  box-sizing: border-box
+  font-size: 62.5%
+  @include media($screen-small)
+    font-size: 58%
+  @include media($mobile)
+    font-size: 55%
+  @include media($mobile-large)
+    font-size: 50%
+  @include media($mobile-small)
+    font-size: 45%
+
+*, *::before, *::after
+  box-sizing: inherit
+  margin: 0
+  padding: 0
+  outline: 0
+
+body
+  font-family: $main-font-family
+  font-size: 16px
+  font-weight: 300
+  line-height: 170%
+  letter-spacing: 0.75px
+  color: $main-font-color
+  
+img
+  vertical-align: bottom
+  max-width: 100%
+  height: auto
+
+
+ul
+  list-style: none
+  margin: 0
+  
+a
+  color: $main-font-color
+  text-decoration: none
+
+p
+  margin: 0

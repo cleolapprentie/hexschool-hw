@@ -1,0 +1,54 @@
+h2
+  @include set-font(kan48typos-std, 36, 3)
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7)
+  
+h3
+  @include set-font(kan412typos-std, 24, 1.5)
+  
+h4
+  @include set-font(kan412typos-std, 20, 1.5)
+
+h5
+  @include set-font(kan412typos-std, 20, 0)
+
+%title
+  margin: 0
+  font-weight: normal
+
+@for $i from 1 through 5
+  h#{$i}
+    @extend %title
+  
+  
+.subtitle-m
+  @include set-font(kan48typos-std, 18, 1.2)
+  line-height: 180%
+
+.subtitle-s
+  @include set-font(source-han-sans-traditional, 14, 0.1)
+  font-weight: 400
+  
+.caption, .helper-text
+  @include set-font(source-han-sans-traditional, 14, 0.7)
+  font-weight: 300
+  color: $color-em
+  white-space: nowrap
+  > a
+    color: $color-em
+    &:hover
+      text-decoration: underline
+
+.nav__menu
+  @include set-font(lato, 16, 2.5)
+  font-weight: 700
+  text-transform: uppercase
+
+.btn
+  @include set-font(lato, 14, 1.25)
+  font-weight: 600
+  text-transform: uppercase
+  
+input, textarea
+  @include set-font(source-han-sans-traditional, 16, 0.15)
+  font-weight: 400
+  

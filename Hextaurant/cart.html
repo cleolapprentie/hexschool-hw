@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hextaurant六角西餐廳</title>
+	<script src="js/vendor/adobeFont.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+	<header class="l-header">
+		<div class="nav">
+			<h1 class="nav__logo">六角西餐廳</h1>
+			<div class="d-flex">
+			  <ul class="nav__menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Chef</a></li>
+          <li><a href="#">SHOP</a></li>
+			  </ul>
+			  <a href="#" class="btn btn--outlined ml20"><span>Login</span></a>
+			</div>
+		</div>
+		<div class="hero">
+			<h2 class="hero__title text-align-center"><span>咬一口</span>就無法忘懷的漢堡</h2>
+			<div class="subtitle-m hero__caption text-align-center mt15">
+				<p><span>七夕</span>絶對無法錯過的好滋味</p>
+				<p><i class="fas fa-utensils pr10"></i>六角大漢堡<i class="fas fa-utensils reverse pr10"></i></p>
+			</div>
+		</div>
+	</header>
+	<main class="l-content shopPage">
+		<div class="container">
+			<div class="row">
+				<div class="col-3 sidebar">
+					<h4 class="sidebar__title"><i class="fas fa-leaf"></i> 線上訂購美食</h4>
+					<ul class="sidebar__list">
+						<li data-id="0"><a href="http://google.com">全部 <span>(23)</span></a></li>
+						<li data-id="1"><a href="#">只愛吃薯條 <span>(18)</span></a></li>
+						<li data-id="2"><a href="#">加熱就可食 <span>(1)</span></a></li>
+						<li data-id="3" class="now-here"><a href="#">不敗漢堡系列 <span>(4)</span></a></li>
+					</ul>
+				</div>
+				<div class="col-9 displayContent">
+					<div class="row">
+						<div class="col-12 searchBar mb30">
+							<div class="input search js--search">
+								<input type="text" id="search" placeholder="search" class="search-input">
+								<div class="line"></div>
+								<label for="search" class="search-btn"><i class="fas fa-search"></i></label>
+							</div>
+							<div class="cart">
+								<p class="cart__text">結帳去</p>
+								<div class="goCart">
+								  <i class="fas fa-shopping-cart"></i>
+								  <span class="goCart__quantity" data-num="0">0</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<ul class="inner-container productList">
+							<li class="col-4">
+								<div class="card js--product">
+									<div class="card__img"><img src="images/product_1.png" alt=""></div>
+									<div class="card__content">
+										<div class="card__title">
+											<p class="card__title--main">經典漢堡套餐</p>
+											<p class="card__title--sub">Classic Hamburger Set</p>
+										</div>
+										<div class="card__text">
+											<p>最經典的原味</p>
+										</div>
+										<div class="card__bottom cart-btn">
+                      <p class="price" data-price="120">120</p>
+                      <div class="add-quantity"><span class="num">1</span><div class="minus"></div><div class="plus"></div></div>
+											<a href="#" class="btn btn--outlined mt10 add-to-cart"><span>Add to Cart</span></a>
+											<div class="add-to-fav">
+											  <i class="far fa-heart"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="col-4">
+								<div class="card js--product">
+									<div class="card__img"><img src="images/product_2.png" alt=""></div>
+									<div class="card__content">
+										<div class="card__title">
+											<p class="card__title--main">英俊香腸</p>
+											<p class="card__title--sub">Handsome Sausage</p>
+										</div>
+										<div class="card__text">
+											<p>吃一口就忘不了的滋味</p>
+										</div>
+										<div class="card__bottom cart-btn">
+                      <p class="price" data-price="1024">1,024</p>
+                      <div class="add-quantity"><span class="num">1</span><div class="minus"></div><div class="plus"></div></div>
+											<a href="#" class="btn btn--outlined mt10 add-to-cart"><span>Add to Cart</span></a>
+											<div class="add-to-fav">
+											  <i class="far fa-heart"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="col-4">
+								<div class="card js--product">
+									<div class="card__img"><img src="images/product_3.png" alt=""></div>
+									<div class="card__content">
+										<div class="card__title">
+											<p class="card__title--main">漢堡兄弟</p>
+											<p class="card__title--sub">Hamburg Brothers</p>
+										</div>
+										<div class="card__text">
+											<p>Double吃 達波享受</p>
+										</div>
+										<div class="card__bottom cart-btn">
+                      <p class="price" data-price="792">792</p>
+                      <div class="add-quantity"><span class="num">1</span><div class="minus"></div><div class="plus"></div></div>
+											<a href="#" class="btn btn--outlined mt10 add-to-cart"><span>Add to Cart</span></a>
+											<div class="add-to-fav">
+											  <i class="far fa-heart"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="col-4">
+								<div class="card js--product">
+									<div class="card__img"><img src="images/product_3.png" alt=""></div>
+									<div class="card__content">
+										<div class="card__title">
+											<p class="card__title--main">完美願望</p>
+											<p class="card__title--sub">Dragon Ball Set</p>
+										</div>
+										<div class="card__text">
+											<p>七顆龍珠 願望滿足</p>
+										</div>
+										<div class="card__bottom cart-btn">
+                      <p class="price" data-price="999999">999,999</p>
+                      <div class="add-quantity"><span class="num">1</span><div class="minus"></div><div class="plus"></div></div>
+											<a href="#" class="btn btn--outlined mt10 add-to-cart"><span>Add to Cart</span></a>
+											<div class="add-to-fav">
+											  <i class="far fa-heart"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="floating-cart">
+					  <div class="goCart">
+						  <i class="fas fa-shopping-cart"></i>
+						  <span class="goCart__quantity" data-num="0">0</span>
+				    </div>
+				    <div class="floating-cart-after"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="l-footer">
+		<div class="row">
+			<div class="col-9 footer__info" id="footer">
+				<div class="about mr20">
+					<h3>關於 六角西餐廳</h3>
+					<p>Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.</p>
+				</div>
+				<div class="contact">
+					<h3>聯絡方式</h3>
+					<ul>
+						<li><i class="fas fa-map-marker-alt pr5"></i> 高雄市中正五路到底</li>
+						<li><i class="fas fa-phone"></i> +886 012 3456</li>
+						<li><i class="fas fa-envelope"></i> <a href="mailto:service@hexschool.com">service@hexschool.com</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-3 footer__logo">
+				<div><img src="images/logo_l.svg" alt="" class="mb20"></div>
+				<div>
+					<span class="footer__logo--gplus"><a href="#"><i class="fab fa-google-plus-square"></i></a></span>
+					<span class="footer__logo--twitter"><a href="#"><i class="fab fa-twitter-square"></i></a></span>
+					<span class="footer__logo--facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></span>
+				</div>
+			</div>
+		</div>
+		<div class="footer__copyright text-align-center">
+			<p>This webpage was created for the course "Responsive Web Design" by Hexschool.</p>
+			<p>Made with <i class="fas fa-heart"></i> by <a href="https://github.com/kayahino/hexschool-hw/tree/master/BMI" target="_blank">艾比</a> in Aug 2019</p>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/cart.js"></script>
+</body>
+
+</html>

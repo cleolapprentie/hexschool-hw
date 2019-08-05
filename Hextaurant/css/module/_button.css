@@ -1,0 +1,17 @@
+.btn {
+  display: inline-block;
+    display-zoom: 1;
+    display-line-height: normal;
+    display-white-space: nowrap;
+    display-vertical-align: middle;
+    display-text-align: center;
+    display-cursor: pointer;
+    display--webkit-user-drag: none;
+    display--webkit-user-select: none;
+    display--moz-user-select: none;
+    display--ms-user-select: none;
+    display-user-select: none; }
+
+.btn::-moz-focus-inner {
+  padding: 0;
+  border: 0; }

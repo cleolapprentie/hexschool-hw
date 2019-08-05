@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hextaurant六角西餐廳</title>
+  <script src="js/vendor/adobeFont.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+  <header class="l-header">
+    <div class="nav">
+      <h1 class="nav__logo">六角西餐廳</h1>
+      <div class="d-flex">
+        <ul class="nav__menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Chef</a></li>
+          <li><a href="#">SHOP</a></li>
+        </ul>
+        <a href="#" class="btn btn--outlined ml20"><span>Login</span></a>
+      </div>
+    </div>
+    <div class="hero">
+      <h2 class="hero__title text-align-center"><span>咬一口</span>就無法忘懷的漢堡</h2>
+      <div class="subtitle-m hero__caption text-align-center mt15">
+        <p><span>七夕</span>絶對無法錯過的好滋味</p>
+        <p><i class="fas fa-utensils pr10"></i>六角大漢堡<i class="fas fa-utensils reverse pr10"></i></p>
+      </div>
+    </div>
+  </header>
+  <main class="l-content loginPage">
+    <section>
+      <div class="title text-align-center">
+        <h3 class="mb10">六角西餐廳</h3>
+        <p class="subtitle-m text-align-center">享受美食好味道</p>
+      </div>
+      <div class="main-container">
+        <div class="inner-wrapper login-form">
+          <form action="#">
+            <h4>Log in</h4>
+            <div class="input input--outline">
+              <input type="email" placeholder="Email">
+              <div class="line"></div>
+              <label class="label">Email</label>
+            </div>
+            <div class="input input--outline">
+              <input type="password" placeholder="Password">
+              <div class="line"></div>
+              <label class="label">Password</label>
+            </div>
+            <div class="helper-text"><a href="#">Forgot your password?</a></div>
+            <div class="d-flex">
+              <button class="btn btn--primary mr20">
+                <span>Log in</span>
+              </button>
+              <button class="btn btn--secondary signup-btn">
+                <span>Sign up</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="inner-wrapper signup-form">
+          <form action="#">
+            <h4>Sign up</h4>
+            <div class="input input--outline">
+              <input type="email" placeholder="Email">
+              <div class="line"></div>
+              <label class="label">Email</label>
+            </div>
+            <div class="input input--outline">
+              <input type="password" placeholder="Password">
+              <div class="line"></div>
+              <label class="label">Password</label>
+            </div>
+            <div class="helper-text">See our <a href="#">Privacy Policy</a></div>
+            <div class="d-flex">
+              <button class="btn btn--primary mr20">
+                <span>Sign Up</span>
+              </button>
+              <button class="btn btn--secondary login-btn">
+                <span>Log in</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="overlay-clip">
+          <div class="overlay">
+
+            <div class="overlay__panel overlay--left">
+              <h4>Hello <span>New Friend!</span></h4>
+              <p style="font-weight: 700">Already have an account?</p>
+              <p>Login with your account to keep connected with us.</p>
+              <button class="btn btn--outlined login-btn">
+                <span>Log in</span>
+              </button>
+            </div>
+            <div class="overlay__panel overlay--right">
+              <h4>Welcome <span>Back!</span></h4>
+              <p style="font-weight: 700">Don't have an account?</p>
+              <p>Enter your personal details and start journey with us.</p>
+              <button class="btn btn--outlined signup-btn">
+                <span>Sign up</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <footer class="l-footer">
+    <div class="row">
+      <div class="col-9 footer__info">
+        <div class="about mr20">
+          <h3>關於 六角西餐廳</h3>
+          <p>Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.</p>
+        </div>
+        <div class="contact">
+          <h3>聯絡方式</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt pr5"></i> 高雄市中正五路到底</li>
+            <li><i class="fas fa-phone"></i> +886 012 3456</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:service@hexschool.com">service@hexschool.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-3 footer__logo">
+        <div><img src="images/logo_l.svg" alt="" class="mb20"></div>
+        <div>
+          <span class="footer__logo--gplus"><a href="#"><i class="fab fa-google-plus-square"></i></a></span>
+          <span class="footer__logo--twitter"><a href="#"><i class="fab fa-twitter-square"></i></a></span>
+          <span class="footer__logo--facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright text-align-center">
+      <p>This webpage was created for the course "Responsive Web Design" by Hexschool.</p>
+      <p>Made with <i class="fas fa-heart"></i> by <a href="https://github.com/kayahino/hexschool-hw/tree/master/BMI" target="_blank">艾比</a> in Aug 2019</p>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/login.js"></script>
+</body>
+
+</html>

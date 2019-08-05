@@ -1,0 +1,210 @@
+fieldset
+  border: none
+  margin: 0
+
+input, select, textarea
+  border: 0
+  border-radius: 0
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+    // display: none <- Crashes Chrome on hover
+    opacity: 0
+
+select
+  -webkit-appearance: none
+   -moz-appearance: none
+  -ms-appearance: none
+  appearance: none
+  box-shadow: none
+
+// remove the auto-complete background color
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active
+  box-shadow: 0 0 0 1000px transparent inset!important
+  transition: background-color 5000s ease-in-out 0s
+//input:-internal-autofill-selected, input:-internal-autofill-selected
+//  background-color: transparent!important  <-- not really work
+  
+
+  
+  
+.select
+  position: relative
+  option
+    outline: 0
+    background-color: $label-bg
+  &:hover::after
+    top: 53%
+    color: $focus-color
+  &:focus-within::after
+    color: $focus-color
+  &.active::after
+    transform: translateY(-50%) rotate(180deg)
+
+.select::after
+  @include fontAwesome('\f078', 900)
+  color: $input-base-color
+  font-size: 1.4rem
+  position: absolute
+  top: 50%
+  right: 10px
+  transform: translateY(-50%)
+  transition: all 0.2s ease
+  pointer-events: none
+
+// remove IE arrow
+select::-ms-expand
+  display: none
+
+textarea
+  resize: none
+  overflow-x: hidden
+
+%reset
+  width: 100%
+  height: 100%
+  min-height: $input-height
+  background: transparent
+
+.input
+  width: 100%
+  height: $input-height
+  position: relative
+  input, textarea
+    @extend %reset
+    padding: 10px 15px
+    color: $input-text-color
+    &:placeholder-shown::placeholder
+      visibility: hidden
+  select
+    @extend %reset
+    padding: 0 0 0 10px
+    color: $input-base-color
+  input[type="number"]
+    text-align: center
+    padding: 0 10px 0 20px
+
+.label
+  display: block
+  font-size: $body-font-size
+  color: $input-base-color
+  padding: 0 8px
+  position: absolute
+  top: $input-height / 2
+  left: 10px
+  pointer-events: none
+  transform: translateY(-50%)
+  transform-origin: 0 0
+  transition: all 0.2s ease
+
+.line
+  position: absolute
+  pointer-events: none
+  
+.input.number
+  &::before, &::after
+    color: $input-base-color
+    position: absolute
+    pointer-events: none
+    @include media($mobile)
+      display: none
+  &:hover::before, &:hover::after
+    color: $focus-color
+  &:focus-within::before, &:focus-within::after
+    color: $focus-color
+  &:active::before
+    padding-bottom: 3px
+  &:active::after
+    padding-top: 3px
+  &::before
+    @include fontAwesome('\f0de', 900)
+    top: 50%
+    right: 10px
+    transform: translateY(-50%)
+    padding-right: 1.5px
+    padding-bottom: 2px
+  &::after
+    @include fontAwesome('\f0dd', 900)
+    bottom: 50%
+    right: 10px
+    transform: translateY(50%)
+    padding-right: 1.5px
+    padding-top: 2px
+
+
+
+
+// OUTLINED STYLE
+.input--outline
+  > input, textarea, select
+    border-radius: $radius-s
+    background: none
+    &:focus, &:not(:placeholder-shown)
+      ~ .label
+        color: $focus-color
+        background-color: $label-bg
+        top: 2px
+        transform: translateY(-50%) scale(0.75)
+    &:not(:placeholder-shown)
+      ~ .label
+        color: $input-base-color
+    &:focus 
+      ~ .line::before, & ~ .line::after
+        width: 100%
+        height: 100%
+      ~ .line::before
+        border-top-color: $focus-color
+        border-right-color: $focus-color
+        transition: width 0.15s ease-out, height 0.15s ease-out 0.15s
+      ~ .line::after
+        border-bottom-color: $focus-color
+        border-left-color: $focus-color
+        transition: width 0.15s ease-out, height 0.15s ease-out 0.15s
+  .line
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    box-shadow: inset 0 0 0.5px $input-border $input-base-color
+    border-radius: $radius-s
+    overflow: hidden
+    &::before, &::after
+      content: ''
+      border: ($input-border*1.5) solid transparent
+      width: 0
+      height: 0
+      position: absolute
+      border-radius: $radius-s
+    &::before
+      top: 0
+      left: 0
+    &::after
+      bottom: 0
+      right: 0
+  
+// OUTLINE SHAPED STYLE
+.input--shaped
+  > input, textarea, select
+    border-radius: $radius-l
+    background: none
+    &:focus, &:not(:placeholder-shown)
+      ~ .label
+        background-color: $label-bg
+        top: 2px
+        transform: translateY(-50%) scale(0.75)
+    &:not(:placeholder-shown)
+      ~ .label
+        color: $input-base-color
+    &:focus 
+      ~ .label
+        color: $focus-color
+      ~ .line
+        box-shadow: inset 0 0 0.5px ($input-border*1.5) $focus-color
+  .line
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    box-shadow: inset 0 0 0.5px $input-border $input-base-color
+    border-radius: $radius-l
+    overflow: hidden
+    transition: all 0.2s ease

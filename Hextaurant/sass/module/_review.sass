@@ -1,0 +1,26 @@
+.review
+  &__box
+    border-radius: 4px
+    position: relative
+    &::before
+      @include fontAwesome('\f10e', 900)
+      position: absolute
+      right: 5%
+      top: -2rem
+      color: #fff
+  &__sign
+    color: rgba($color-primary, 0.5)
+    font-weight: 300
+    justify-content: flex-end
+    &::before
+      content: ''
+      width: 20%
+      height: 1.5px
+      background-color: rgba($color-primary, 0.3)
+      display: block
+      position: relative
+      left: -2rem
+      top: 50%
+  &__photo
+    @include circle-obj(45px)
+  
