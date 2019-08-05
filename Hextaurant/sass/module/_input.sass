@@ -155,10 +155,14 @@ textarea
         border-top-color: $focus-color
         border-right-color: $focus-color
         transition: width 0.15s ease-out, height 0.15s ease-out 0.15s
+        @include media($mobile)
       ~ .line::after
         border-bottom-color: $focus-color
         border-left-color: $focus-color
         transition: width 0.15s ease-out, height 0.15s ease-out 0.15s
+      @include media($mobile)
+        ~ .line
+          box-shadow: inset 0 0 0.5px ($input-border*1.5) $focus-color
   .line
     width: 100%
     height: 100%
@@ -174,6 +178,8 @@ textarea
       height: 0
       position: absolute
       border-radius: $radius-s
+      @include media($mobile)
+        display: none
     &::before
       top: 0
       left: 0

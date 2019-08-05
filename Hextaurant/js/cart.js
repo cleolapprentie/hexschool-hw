@@ -89,7 +89,7 @@ $(document).ready(function(){
   }
   
   function btnAnimation(e) {
-    if (e.target.classList.contains('btn') && !e.target.parentElement.parentElement.classList.contains('nav__menu')) {
+    if (e.target.classList.contains('btn') && !e.target.parentElement.parentElement.classList.contains('nav')) {
       e.preventDefault()
     }
     var circle = document.createElement('div')
@@ -172,6 +172,8 @@ $(document).ready(function(){
     console.log('cartX = ', floatingCart.left, 'cartY', floatingCart.top)
     console.log('offsetX:', offsetX, 'offsetY:', offsetY)
     // animation
+    
+    
     setTimeout(function(){
       document.querySelector('.floating-cart').classList.add('active')
       newObj.style.left = targetBtn.left - contentArea.offsetLeft + targetBtn.width / 2 + offsetX + 'px'

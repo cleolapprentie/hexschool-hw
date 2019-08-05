@@ -13,33 +13,115 @@
   align-items: center
   justify-content: space-between
   background-color: #000
-  padding: 1.5rem 3rem
-  > div
+  padding: 0 3rem
+  position: relative
+  top: 0
+  z-index: 10
+  height: fit-content
+  min-height: 52px
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25)
+  &.sticky
     width: 100%
+    z-index: 100
+    position: fixed
+    top: 0
+    transform: translateY(-100px)
+    transition: transform 0.6s ease
+  &.sticky.scroll
+    transform: translateY(0)
+  > div
+    width: fit-content
   &__logo
     height: 2.4rem
     width: 12rem
     background-image: url($header-logo)
+    background-repeat: no-repeat
     background-size: contain
     @include h1-with-logo
+  .btn
+    padding: 0.5rem 1.5rem
+    &:active
+      transform: scale(0.95)
   &__menu
-    display: flex
-    align-items: center
-    > li:not(:first-child)
-      margin-left: 2rem
+    display: inline-block
+    @include media($mobile)
+      display: none
+      height: fit-content
+      position: absolute
+      top: calc(100% - 1px)
+      left: 0
+      right: 0
+      text-align: center
+      overflow: hidden
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25)
+    > li
+      display: inline-block
+      @include media($mobile)
+        display: block
+        padding: 0
+        background-color: #000
+        border-top: 1px solid rgba(#fff, 0.5)
+      &:hover
+        background-color: #282828
     a
+      display: block
+      padding: 1.5rem 2rem
       color: rgba(255, 255, 255, 0.95)
-    .btn
-      &--login
-        border: 1px solid #fff
-        &:active::before, &:focus::before
-          background-color: rgba(255, 255, 255, 0.4)
-      &--reserve
-        color: #000!important
-        background-color: #fff
-        &:active::before, &:focus::before
-          background-color: rgba(0, 0, 0, 0.2)
+
+      
+
+.menu-trigger
+  width: 30px
+  height: 30px
+  position: relative
+  cursor: pointer
+  display: none
+  margin-left: 20px
+  @include media($mobile)
+    display: block
+  &:hover:not(.active) .dash
+    &::before
+      top: -11px
+    &::after
+      top: 11px
+  &.active
+    .dash
+      background-color: transparent
+      &::before
+        height: 2px
+        transform: rotate(-44deg)
+      &::after
+        height: 2px
+        transform: rotate(44deg)
+    
+    
+.dash
+  display: inline-block
+  height: 4px
+  width: 30px
+  background-color: #fff
+  border-radius: 1px
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  &::before, &::after
+    content: ''
+    height: 4px
+    width: 30px
+    background-color: #fff
+    border-radius: 1px
+    display: block
+    position: absolute
+    transform-origin: right center
+    transition: all 0.2s ease
+  &::before
+    top: -10px
+  &::after
+    top: 10px
+    
   
+        
+        
 .hero
   max-width: 50rem
   width: 100%
