@@ -79,16 +79,17 @@ $(document).ready(function(){
   }
   
   function btnAnimation(e) {
-    if (e.target.classList.contains('btn') && !e.target.parentElement.parentElement.classList.contains('nav')) {
+    if (!e.target.parentElement.parentElement.classList.contains('nav')) {
       e.preventDefault()
     }
     var circle = document.createElement('DIV')
     e.target.appendChild(circle)
     circle.classList.add('btn--active')
     var targetWidth = e.target.offsetWidth
-    var x = e.layerX
-    var y = e.layerY
+    var x = e.offsetX
+    var y = e.offsetY
     var target = e.target.lastElementChild
+    console.log('x: ', x, 'y: ', y)
     target.style.left = x + 'px'
     target.style.top = y + 'px'
     target.style.transform = 'scale(' + targetWidth*2.1 + ')'

@@ -55,7 +55,7 @@ $(document).ready(function(){
       addQuantity(target)
     } else if(target.classList.contains('add-to-fav')) {
       addFav(target)
-    } else if(target.classList.contains('add-to-cart')) {
+    } else if(target.classList.contains('add-to-cart') || target.parentElement.classList.contains('add-to-cart')) {
       addToCart(target)
     } else {
       if (document.querySelector('.search-input').value) { return }
@@ -89,7 +89,7 @@ $(document).ready(function(){
   }
   
   function btnAnimation(e) {
-    if (e.target.classList.contains('btn') && !e.target.parentElement.parentElement.classList.contains('nav')) {
+    if (!e.target.parentElement.parentElement.classList.contains('nav')) {
       e.preventDefault()
     }
     var circle = document.createElement('div')
@@ -142,7 +142,7 @@ $(document).ready(function(){
   }
   
   function addToCart(target) {
-    var orderNum = target.parentElement.childNodes[3]
+    var orderNum = (target.nodeName === 'SPAN') ? target.parentElement.parentElement.childNodes[3] : target.parentElement.childNodes[3]
     var newObj = orderNum.firstChild.cloneNode(true)
     newObj.classList.add('add-cart-animation')
     
@@ -168,9 +168,6 @@ $(document).ready(function(){
     contentArea.appendChild(newObj)
     newObj.style.left = targetBtn.left - contentArea.offsetLeft + targetBtn.width / 2 + 'px'
     newObj.style.top = targetBtn.top + scrollTop - contentArea.offsetTop + 'px'
-    console.log('x = ', targetBtn.left, 'y = ', targetBtn.top, 'scrollTop = ', scrollTop)
-    console.log('cartX = ', floatingCart.left, 'cartY', floatingCart.top)
-    console.log('offsetX:', offsetX, 'offsetY:', offsetY)
     // animation
     
     
