@@ -95,17 +95,22 @@
     opacity: 0
     transition: all 0.4s ease 0.3s
   &.active > &-after
-    background-color: $btn-secondary
+    background-color: #816c68
     transform: scale(1.5)
     opacity: 0!important
   .goCart
     @include circle-obj(65px)
-    background-color: lighten(#63707e, 25%)
+    background-color: #816c68
     box-shadow: 0 2px 10px rgba(#000, 0.4)
     z-index: 1
+    border: 1px solid transparent // 防止陰影造成的鋸齒邊緣帶來的視覺衝擊
+    > i
+      pointer-events: none
+      @include longShadow(30, #816c68)
   .goCart__quantity
     top: 15px
     right: 13px
+    box-shadow: -1px 1px 5px rgba(#000, 0.2)
 
 .productList
   width: 100%

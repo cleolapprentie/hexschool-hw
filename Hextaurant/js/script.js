@@ -49,9 +49,14 @@ $(document).ready(function(){
   })
   
   
-  $('.menu-trigger').on('click', function(e){
+  $('.menu-trigger').on('click', function(){
     $(this).toggleClass('active')
     $(this).parent().find('.nav__menu').slideToggle(400)
+  })
+  
+  
+  $('.nav__logo').on('click', function(){
+    window.location.reload()
   })
   
   
@@ -65,7 +70,7 @@ $(document).ready(function(){
     } 
     console.log(target)
   }, false)
-
+  
   function selectItem(target) {
     target.parentElement.classList.toggle('active')
     target.addEventListener('blur', function(){

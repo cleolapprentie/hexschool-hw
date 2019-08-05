@@ -2,18 +2,28 @@
 <html lang="zh-TW">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hextaurant六角西餐廳</title>
-  <script src="js/vendor/adobeFont.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-  <link rel="stylesheet" href="css/all.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Hextaurant六角西餐廳</title>
+	<meta name="keywords" content="漢堡,漢堡王者,六角西餐廳">
+	<meta name="description" content="用心製作漢堡就是要帶給你最好">
+	<script src="js/vendor/adobeFont.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link rel="stylesheet" href="css/all.css">
+	
+	<link rel="shortcut icon" href="favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 </head>
 
 <body>
   <header class="l-header">
     <div class="nav">
-      <div><h1 class="nav__logo">六角西餐廳</h1></div>
+      <div class="d-flex align-items-center">
+        <img src="images/icon.svg" alt="" class="nav__icon">
+        <h1 class="nav__logo">六角西餐廳</h1>
+      </div>
       <div class="d-flex align-items-center">
         <ul class="nav__menu">
           <li><a href="index.html">Home</a></li>
@@ -114,36 +124,39 @@
 
 
   </main>
-  <footer class="l-footer">
-    <div class="row">
-      <div class="col-9 footer__info">
-        <div class="about mr20">
-          <h3>關於 六角西餐廳</h3>
-          <p>Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.</p>
-        </div>
-        <div class="contact">
-          <h3>聯絡方式</h3>
-          <ul>
-            <li><i class="fas fa-map-marker-alt pr5"></i> 高雄市中正五路到底</li>
-            <li><i class="fas fa-phone"></i> +886 012 3456</li>
-            <li><i class="fas fa-envelope"></i> <a href="mailto:service@hexschool.com">service@hexschool.com</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-3 footer__logo">
-        <div><img src="images/logo_l.svg" alt="" class="mb20"></div>
-        <div>
-          <span class="footer__logo--gplus"><a href="#"><i class="fab fa-google-plus-square"></i></a></span>
-          <span class="footer__logo--twitter"><a href="#"><i class="fab fa-twitter-square"></i></a></span>
-          <span class="footer__logo--facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></span>
-        </div>
-      </div>
-    </div>
-    <div class="footer__copyright text-align-center">
-      <p>This webpage was created for the course "Responsive Web Design" by Hexschool.</p>
-      <p>Made with <i class="fas fa-heart"></i> by <a href="https://github.com/kayahino/hexschool-hw/tree/master/BMI" target="_blank">艾比</a> in Aug 2019</p>
-    </div>
-  </footer>
+ 	<footer class="l-footer" id="footer">
+		<div class="row">
+			<div class="col-8 footer__info">
+				<div class="about mr20">
+					<h3>關於 六角西餐廳</h3>
+					<p>Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.</p>
+				</div>
+				<div class="contact">
+					<h3>聯絡方式</h3>
+					<ul>
+						<li><i class="fas fa-map-marker-alt pr5"></i> 高雄市中正五路到底</li>
+						<li><i class="fas fa-phone"></i> +886 012 3456</li>
+						<li><i class="fas fa-envelope"></i> <a href="mailto:service@hexschool.com">service@hexschool.com</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-4 footer__sns">
+				<div class="d-flex align-items-center justify-content-end">
+				  <img src="images/icon.svg" alt="Hextaurant" class="footer__icon">
+				  <img src="images/logo_l.svg" alt="Logo" class="footer__logo">
+				</div>
+				<div>
+					<span class="footer__sns--gplus"><a href="#"><i class="fab fa-google-plus-square"></i></a></span>
+					<span class="footer__sns--twitter"><a href="#"><i class="fab fa-twitter-square"></i></a></span>
+					<span class="footer__sns--facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></span>
+				</div>
+			</div>
+		</div>
+		<div class="footer__copyright text-align-center">
+			<p>This webpage was created for the course "Responsive Web Design" by Hexschool.</p>
+			<p>Made with <i class="fas fa-heart"></i> by <a href="https://github.com/kayahino/hexschool-hw/tree/master/BMI" target="_blank">艾比</a> in Aug 2019</p>
+		</div>
+	</footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/login.js"></script>

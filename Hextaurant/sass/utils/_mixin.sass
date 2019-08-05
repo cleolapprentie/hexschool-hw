@@ -39,3 +39,10 @@
     text-decoration: inherit
 //900 (Solid), 400 (Regular or Brands), 300 (Light)
 //argument example: '\f2f1'
+
+@mixin longShadow($length, $color)
+  $shadow: ()
+  @for $i from 1 through $length
+    $shadow: $shadow, #{$i}px #{$i}px darken($color, 8%)
+  text-shadow: $shadow
+  border: 1px solid transparent // 防止陰影造成的鋸齒邊緣帶來的視覺衝擊

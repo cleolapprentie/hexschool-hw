@@ -5,15 +5,23 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Hextaurant六角西餐廳</title>
+	<meta name="keywords" content="漢堡,漢堡王者,六角西餐廳">
+	<meta name="description" content="用心製作漢堡就是要帶給你最好">
 	<script src="js/vendor/adobeFont.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<link rel="stylesheet" href="css/all.css">
+	
+	<link rel="shortcut icon" href="favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 </head>
 
 <body>
 	<header class="l-header">
 	  <div class="nav">
-	    <div>
+	    <div class="d-flex align-items-center">
+        <img src="images/icon.svg" alt="Hextaurant" class="nav__icon">
 	      <h1 class="nav__logo">六角西餐廳</h1>
 	    </div>
 	    <div class="d-flex align-items-center">
@@ -192,9 +200,9 @@
 			</div>
 		</section>
 	</main>
-	<footer class="l-footer">
+	<footer class="l-footer" id="footer">
 		<div class="row">
-			<div class="col-9 footer__info">
+			<div class="col-8 footer__info">
 				<div class="about mr20">
 					<h3>關於 六角西餐廳</h3>
 					<p>Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.</p>
@@ -208,12 +216,15 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-3 footer__logo">
-				<div><img src="images/logo_l.svg" alt="" class="mb20"></div>
+			<div class="col-4 footer__sns">
+				<div class="d-flex align-items-center justify-content-end">
+				  <img src="images/icon.svg" alt="Hextaurant" class="footer__icon">
+				  <img src="images/logo_l.svg" alt="Logo" class="footer__logo">
+				</div>
 				<div>
-					<span class="footer__logo--gplus"><a href="#"><i class="fab fa-google-plus-square"></i></a></span>
-					<span class="footer__logo--twitter"><a href="#"><i class="fab fa-twitter-square"></i></a></span>
-					<span class="footer__logo--facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></span>
+					<span class="footer__sns--gplus"><a href="#"><i class="fab fa-google-plus-square"></i></a></span>
+					<span class="footer__sns--twitter"><a href="#"><i class="fab fa-twitter-square"></i></a></span>
+					<span class="footer__sns--facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></span>
 				</div>
 			</div>
 		</div>
