@@ -928,9 +928,8 @@ input, textarea {
     z-index: 100;
     position: fixed;
     top: 0;
-    -webkit-transform: translateY(-100px);
-    -ms-transform: translateY(-100px);
-    transform: translateY(-100px);
+    -webkit-transform: translateY(-100px) translateZ(0);
+    transform: translateY(-100px) translateZ(0);
     -webkit-transition: -webkit-transform 0.6s ease;
     transition: -webkit-transform 0.6s ease;
     -o-transition: transform 0.6s ease;
@@ -1480,63 +1479,65 @@ textarea {
   padding-right: 1.5px;
   padding-top: 2px; }
 
-.input--outline > input, .input--outline textarea, .input--outline select {
-  border-radius: 4px;
-  background: none; }
-  .input--outline > input:focus ~ .label, .input--outline > input:not(:placeholder-shown) ~ .label, .input--outline textarea:focus ~ .label, .input--outline textarea:not(:placeholder-shown) ~ .label, .input--outline select:focus ~ .label, .input--outline select:not(:placeholder-shown) ~ .label {
-    color: #ff7c36;
-    background-color: #f6f4f3;
-    top: 2px;
-    -webkit-transform: translateY(-50%) scale(0.75);
-    -ms-transform: translateY(-50%) scale(0.75);
-    transform: translateY(-50%) scale(0.75); }
-  .input--outline > input:not(:placeholder-shown) ~ .label, .input--outline textarea:not(:placeholder-shown) ~ .label, .input--outline select:not(:placeholder-shown) ~ .label {
-    color: rgba(78, 24, 5, 0.4); }
-  .input--outline > input:focus ~ .line::before, .input--outline > input:focus ~ .line::after, .input--outline textarea:focus ~ .line::before, .input--outline textarea:focus ~ .line::after, .input--outline select:focus ~ .line::before, .input--outline select:focus ~ .line::after {
-    width: 100%;
-    height: 100%; }
-  .input--outline > input:focus ~ .line::before, .input--outline textarea:focus ~ .line::before, .input--outline select:focus ~ .line::before {
-    border-top-color: #ff7c36;
-    border-right-color: #ff7c36;
-    -webkit-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
-    -o-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
-    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s; }
-  .input--outline > input:focus ~ .line::after, .input--outline textarea:focus ~ .line::after, .input--outline select:focus ~ .line::after {
-    border-bottom-color: #ff7c36;
-    border-left-color: #ff7c36;
-    -webkit-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
-    -o-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
-    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s; }
-  @media only screen and (max-width: 767px) {
-    .input--outline > input:focus ~ .line, .input--outline textarea:focus ~ .line, .input--outline select:focus ~ .line {
-      -webkit-box-shadow: inset 0 0 0.5px 2.25px #ff7c36;
-      box-shadow: inset 0 0 0.5px 2.25px #ff7c36; } }
-
-.input--outline .line {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -webkit-box-shadow: inset 0 0 0.5px 1.5px rgba(78, 24, 5, 0.4);
-  box-shadow: inset 0 0 0.5px 1.5px rgba(78, 24, 5, 0.4);
-  border-radius: 4px;
-  overflow: hidden; }
-  .input--outline .line::before, .input--outline .line::after {
-    content: '';
-    border: 2.25px solid transparent;
-    width: 0;
-    height: 0;
-    position: absolute;
-    border-radius: 4px; }
+.input--outline {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }
+  .input--outline > input, .input--outline textarea, .input--outline select {
+    border-radius: 4px;
+    background: none; }
+    .input--outline > input:focus ~ .label, .input--outline > input:not(:placeholder-shown) ~ .label, .input--outline textarea:focus ~ .label, .input--outline textarea:not(:placeholder-shown) ~ .label, .input--outline select:focus ~ .label, .input--outline select:not(:placeholder-shown) ~ .label {
+      color: #ff7c36;
+      background-color: #f6f4f3;
+      top: 2px;
+      -webkit-transform: translateY(-50%) scale(0.75);
+      -ms-transform: translateY(-50%) scale(0.75);
+      transform: translateY(-50%) scale(0.75); }
+    .input--outline > input:not(:placeholder-shown) ~ .label, .input--outline textarea:not(:placeholder-shown) ~ .label, .input--outline select:not(:placeholder-shown) ~ .label {
+      color: rgba(78, 24, 5, 0.4); }
+    .input--outline > input:focus ~ .line::before, .input--outline > input:focus ~ .line::after, .input--outline textarea:focus ~ .line::before, .input--outline textarea:focus ~ .line::after, .input--outline select:focus ~ .line::before, .input--outline select:focus ~ .line::after {
+      width: 100%;
+      height: 100%; }
+    .input--outline > input:focus ~ .line::before, .input--outline textarea:focus ~ .line::before, .input--outline select:focus ~ .line::before {
+      border-top-color: #ff7c36;
+      border-right-color: #ff7c36;
+      -webkit-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+      -o-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+      transition: width 0.15s ease-out, height 0.15s ease-out 0.15s; }
+    .input--outline > input:focus ~ .line::after, .input--outline textarea:focus ~ .line::after, .input--outline select:focus ~ .line::after {
+      border-bottom-color: #ff7c36;
+      border-left-color: #ff7c36;
+      -webkit-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+      -o-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+      transition: width 0.15s ease-out, height 0.15s ease-out 0.15s; }
     @media only screen and (max-width: 767px) {
-      .input--outline .line::before, .input--outline .line::after {
-        display: none; } }
-  .input--outline .line::before {
+      .input--outline > input:focus ~ .line, .input--outline textarea:focus ~ .line, .input--outline select:focus ~ .line {
+        -webkit-box-shadow: inset 0 0 0.5px 2.25px #ff7c36;
+        box-shadow: inset 0 0 0.5px 2.25px #ff7c36; } }
+  .input--outline .line {
+    width: 100%;
+    height: 100%;
     top: 0;
-    left: 0; }
-  .input--outline .line::after {
-    bottom: 0;
-    right: 0; }
+    left: 0;
+    -webkit-box-shadow: inset 0 0 0.5px 1.5px rgba(78, 24, 5, 0.4);
+    box-shadow: inset 0 0 0.5px 1.5px rgba(78, 24, 5, 0.4);
+    border-radius: 4px;
+    overflow: hidden; }
+    .input--outline .line::before, .input--outline .line::after {
+      content: '';
+      border: 2.25px solid transparent;
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-radius: 4px; }
+      @media only screen and (max-width: 767px) {
+        .input--outline .line::before, .input--outline .line::after {
+          display: none; } }
+    .input--outline .line::before {
+      top: 0;
+      left: 0; }
+    .input--outline .line::after {
+      bottom: 0;
+      right: 0; }
 
 .input--shaped > input, .input--shaped textarea, .input--shaped select {
   border-radius: 50rem;
