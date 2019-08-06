@@ -62,7 +62,7 @@ $(document).ready(function(){
     }
   })
   
-  $('.nav__logo').on('click', function(){
+  $('.nav__logo, .nav__icon').on('click', function(){
     window.location.reload()
   })
   

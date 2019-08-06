@@ -18,9 +18,9 @@
 .footer
   &__info
     display: flex
-    justify-content: space-between
-    > div
+    > div:first-child
       width: 48%
+      margin-right: $gutter
     @include media($mobile)
       flex-direction: column
       > div
