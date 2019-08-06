@@ -1,6 +1,8 @@
 h2
   @include set-font(kan48typos-std, 36, 3)
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7)
+  @include media($mobile-small)
+    @include set-font(kan48typos-std, 32, 3)
   
 h3
   @include set-font(kan412typos-std, 24, 1.5)
@@ -44,7 +46,7 @@ h5
   text-transform: uppercase
 
 .btn
-  @include set-font(lato, 14, 1.25)
+  @include set-font(lato, 14, 1.75)
   font-weight: 600
   text-transform: uppercase
   

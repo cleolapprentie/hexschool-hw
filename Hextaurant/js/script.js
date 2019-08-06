@@ -51,9 +51,16 @@ $(document).ready(function(){
   
   $('.menu-trigger').on('click', function(){
     $(this).toggleClass('active')
-    $(this).parent().find('.nav__menu').slideToggle(400)
+    $(this).parent().find('.nav__menu').stop().slideToggle(400)
   })
   
+  $('body').on('click', function(e) {
+    if ($(e.target).hasClass('menu-trigger')) { return }
+    if ($('.menu-trigger').hasClass('active')) {
+      $('.nav').find('.nav__menu').slideUp()
+      $('.menu-trigger').removeClass('active')
+    }
+  })
   
   $('.nav__logo').on('click', function(){
     window.location.reload()

@@ -20,11 +20,12 @@ button
   -moz-user-select: none
   -ms-user-select: none
   user-select: none
-  padding: 1.2rem 2.5rem
+  padding: 10px 18px
   position: relative
   overflow: hidden
   border-radius: $radius-s
   > span
+    display: inline-block // to solve IE edge pointer-events issue: SPAN must be in block level
     position: relative
     z-index: 1
     pointer-events: none
@@ -71,7 +72,7 @@ button
   width: 1px
   height: 1px
   display: block
-  background-image: radial-gradient(circle at center, white 70%, transparent 70%)
+  background-image: radial-gradient(circle at center, #fff 60%, rgba(255, 255, 255, 0.5) 60%, transparent 70%)
   opacity: 0.3
   position: absolute
   z-index: 0

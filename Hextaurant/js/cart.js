@@ -142,10 +142,13 @@ $(document).ready(function(){
   }
   
   function addToCart(target) {
-    var orderNum = (target.nodeName === 'SPAN') ? target.parentElement.parentElement.childNodes[3] : target.parentElement.childNodes[3]
-    var newObj = orderNum.firstChild.cloneNode(true)
+    var orderNum = target.parentElement.childNodes[3]
+    var clone = orderNum.firstChild.cloneNode(true)
+    var newObj = document.createElement('div')
+    var contentArea = document.querySelector('.displayContent')
+    newObj.appendChild(clone)
     newObj.classList.add('add-cart-animation')
-    
+    contentArea.appendChild(newObj)
     var t = orderNum.firstChild.textContent
     var num = parseInt(t)
     var numDisplay = document.querySelector('.goCart__quantity')
@@ -161,11 +164,10 @@ $(document).ready(function(){
     // count distance
     var targetBtn = orderNum.getBoundingClientRect()
     var floatingCart = document.querySelector('.floating-cart').getBoundingClientRect()
-    var offsetX = Math.abs((floatingCart.left + floatingCart.width / 2) - (targetBtn.left + targetBtn.width / 2))
+    var newObjWidth = document.querySelector('.add-cart-animation').getBoundingClientRect().width
+    var offsetX = Math.abs((floatingCart.left + floatingCart.width / 2) - (targetBtn.left + targetBtn.width / 2)) - newObjWidth/2
     var offsetY = Math.abs((floatingCart.top + floatingCart.height / 2) - (targetBtn.top + targetBtn.height / 2))
     var scrollTop = window.pageYOffset
-    var contentArea = document.querySelector('.displayContent')
-    contentArea.appendChild(newObj)
     newObj.style.left = targetBtn.left - contentArea.offsetLeft + targetBtn.width / 2 + 'px'
     newObj.style.top = targetBtn.top + scrollTop - contentArea.offsetTop + 'px'
     // animation
@@ -173,13 +175,13 @@ $(document).ready(function(){
     
     setTimeout(function(){
       document.querySelector('.floating-cart').classList.add('active')
-      newObj.style.left = targetBtn.left - contentArea.offsetLeft + targetBtn.width / 2 + offsetX + 'px'
-      newObj.style.top = targetBtn.top + scrollTop - contentArea.offsetTop + offsetY + 'px'
+      newObj.style.transform = 'translate3d(' + offsetX + 'px, 0, 0)' 
+      newObj.querySelector('span').style.transform = 'translate3d(0, ' + offsetY + 'px, 0)'
       newObj.style.opacity = 0
     }, 0)
     
     setTimeout(function(){
-      newObj.remove()
+//      newObj.remove()
       document.querySelector('.floating-cart .goCart__quantity').textContent = cartNum
       document.querySelector('.floating-cart .goCart__quantity').classList.add('active')
     }, 400)

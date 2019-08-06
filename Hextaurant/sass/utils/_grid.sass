@@ -40,6 +40,9 @@ $grid-num: 12
         margin-bottom: $gutter!important
   .inner-container .col-#{$i}
     @extend %col-inner
+    @include media($tablet)
+      max-width: 50%
+      flex: 0 0 50%
     @include media($mobile)
       max-width: 100%
       padding-left: $gutter / 2
