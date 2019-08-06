@@ -491,7 +491,7 @@ input, textarea {
       .col-1:not(:last-child) {
         margin-bottom: 6rem !important; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .inner-container .col-1 {
     max-width: 50%;
     -webkit-box-flex: 0;
@@ -524,7 +524,7 @@ input, textarea {
       .col-2:not(:last-child) {
         margin-bottom: 6rem !important; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .inner-container .col-2 {
     max-width: 50%;
     -webkit-box-flex: 0;
@@ -557,7 +557,7 @@ input, textarea {
       .col-3:not(:last-child) {
         margin-bottom: 6rem !important; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .inner-container .col-3 {
     max-width: 50%;
     -webkit-box-flex: 0;
@@ -590,7 +590,7 @@ input, textarea {
       .col-4:not(:last-child) {
         margin-bottom: 6rem !important; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .inner-container .col-4 {
     max-width: 50%;
     -webkit-box-flex: 0;
@@ -623,7 +623,7 @@ input, textarea {
       .col-5:not(:last-child) {
         margin-bottom: 6rem !important; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .inner-container .col-5 {
     max-width: 50%;
     -webkit-box-flex: 0;
@@ -656,7 +656,7 @@ input, textarea {
       .col-6:not(:last-child) {
         margin-bottom: 6rem !important; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .inner-container .col-6 {
     max-width: 50%;
     -webkit-box-flex: 0;
@@ -689,7 +689,7 @@ input, textarea {
       .col-7:not(:last-child) {
         margin-bottom: 6rem !important; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .inner-container .col-7 {
     max-width: 50%;
     -webkit-box-flex: 0;
@@ -722,7 +722,7 @@ input, textarea {
       .col-8:not(:last-child) {
         margin-bottom: 6rem !important; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .inner-container .col-8 {
     max-width: 50%;
     -webkit-box-flex: 0;
@@ -755,7 +755,7 @@ input, textarea {
       .col-9:not(:last-child) {
         margin-bottom: 6rem !important; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .inner-container .col-9 {
     max-width: 50%;
     -webkit-box-flex: 0;
@@ -788,7 +788,7 @@ input, textarea {
       .col-10:not(:last-child) {
         margin-bottom: 6rem !important; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .inner-container .col-10 {
     max-width: 50%;
     -webkit-box-flex: 0;
@@ -821,7 +821,7 @@ input, textarea {
       .col-11:not(:last-child) {
         margin-bottom: 6rem !important; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .inner-container .col-11 {
     max-width: 50%;
     -webkit-box-flex: 0;
@@ -854,7 +854,7 @@ input, textarea {
       .col-12:not(:last-child) {
         margin-bottom: 6rem !important; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .inner-container .col-12 {
     max-width: 50%;
     -webkit-box-flex: 0;
@@ -2283,7 +2283,7 @@ button {
   .reserve__form {
     margin-top: 7rem; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .shopPage .col-3, .shopPage .col-9 {
     max-width: 100%;
     -webkit-box-flex: 0;
