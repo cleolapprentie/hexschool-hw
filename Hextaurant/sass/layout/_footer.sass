@@ -18,16 +18,16 @@
 .footer
   &__info
     display: flex
-    > div:first-child
-      width: 48%
-      margin-right: $gutter
     @include media($mobile)
       flex-direction: column
       > div
         width: 100%
-    div:first-child
+    > div:first-child
+      max-width: 60%
+      margin-right: $gutter
       @include media($mobile)
-        margin-bottom: 3rem
+        max-width: 100%
+        margin: 0 0 3rem 0
   &__icon
     width: 8rem
     margin-right: 20px

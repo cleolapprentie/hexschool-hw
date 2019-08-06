@@ -973,10 +973,10 @@ input, textarea {
 
 .underline {
   padding: 0 5px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(219, 88, 87, 0.6)), to(rgba(219, 88, 87, 0.6))) no-repeat 0 95%/100% 0.9rem;
-  background: -webkit-linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 95%/100% 0.9rem;
-  background: -o-linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 95%/100% 0.9rem;
-  background: linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 95%/100% 0.9rem; }
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(219, 88, 87, 0.6)), to(rgba(219, 88, 87, 0.6))) no-repeat 0 100%/100% 0.9rem;
+  background: -webkit-linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 100%/100% 0.9rem;
+  background: -o-linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 100%/100% 0.9rem;
+  background: linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 100%/100% 0.9rem; }
 
 .l-header {
   width: 100%;
@@ -1025,9 +1025,7 @@ input, textarea {
     -o-transition: transform 0.4s ease;
     transition: transform 0.4s ease;
     transition: transform 0.4s ease, -webkit-transform 0.4s ease;
-    will-change: transform;
-    -webkit-perspective: 1000;
-    -webkit-backface-visibility: hidden; }
+    will-change: transform; }
   .nav.sticky.scroll {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
@@ -1250,9 +1248,6 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .footer__info > div:first-child {
-    width: 48%;
-    margin-right: 6rem; }
   @media only screen and (max-width: 767px) {
     .footer__info {
       -webkit-box-orient: vertical;
@@ -1261,9 +1256,13 @@ section {
       flex-direction: column; }
       .footer__info > div {
         width: 100%; } }
-  @media only screen and (max-width: 767px) {
-    .footer__info div:first-child {
-      margin-bottom: 3rem; } }
+  .footer__info > div:first-child {
+    max-width: 60%;
+    margin-right: 6rem; }
+    @media only screen and (max-width: 767px) {
+      .footer__info > div:first-child {
+        max-width: 100%;
+        margin: 0 0 3rem 0; } }
 
 .footer__icon {
   width: 8rem;
@@ -2564,9 +2563,7 @@ button {
   -o-transition: transform 0.3s cubic-bezier(0, 0.52, 0.28, 0.75), opacity 0.2s linear 0.2s;
   transition: transform 0.3s cubic-bezier(0, 0.52, 0.28, 0.75), opacity 0.2s linear 0.2s;
   transition: transform 0.3s cubic-bezier(0, 0.52, 0.28, 0.75), opacity 0.2s linear 0.2s, -webkit-transform 0.3s cubic-bezier(0, 0.52, 0.28, 0.75);
-  will-change: transform, opacity;
-  -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden; }
+  will-change: transform, opacity; }
   .add-cart-animation > span {
     display: inline-block;
     width: 40px;
