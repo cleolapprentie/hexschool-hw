@@ -175,8 +175,8 @@ $(document).ready(function(){
     
     setTimeout(function(){
       document.querySelector('.floating-cart').classList.add('active')
-      newObj.style.transform = 'translate3d(' + offsetX + 'px, 0, 0)' 
-      newObj.querySelector('span').style.transform = 'translate3d(0, ' + offsetY + 'px, 0)'
+      newObj.style.transform = 'translateX(' + offsetX + 'px)' 
+      newObj.querySelector('span').style.transform = 'translateY(' + offsetY + 'px)'
       newObj.style.opacity = 0
     }, 0)
     
