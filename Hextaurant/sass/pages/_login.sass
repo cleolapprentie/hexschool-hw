@@ -75,10 +75,12 @@
 .login-form
   left: 0
   z-index: 2
+  backface-visibility: hidden
     
 .signup-form
   left: 0
   z-index: 1
+  backface-visibility: hidden
   @include media($mobile)
     transform: translateX(100%)
 
@@ -90,7 +92,6 @@
   left: 50%
   top: 0
   z-index: 10
-  transform: translateX(0%)
   transition: transform 0.6s ease-in-out
   @include media($mobile)
     display: none
@@ -115,6 +116,7 @@
       position: absolute
       top: 0
       transition: transform 0.6s ease-in-out
+      backface-visibility: hidden
     &--left
       left: 0
       transform: translateX(-20%)
