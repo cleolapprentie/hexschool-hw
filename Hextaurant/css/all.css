@@ -1185,6 +1185,7 @@ input, textarea {
       font-weight: 700; }
 
 .l-content {
+  width: 100%;
   background-color: #f6f4f3; }
   .l-content.shopPage {
     padding: 5rem 0; }
@@ -1224,6 +1225,7 @@ section {
     color: #db5857; }
 
 .l-footer {
+  width: 100%;
   background-color: #efe9e7;
   padding: 6rem;
   padding: 6rem;
@@ -1407,14 +1409,18 @@ fieldset {
 input, select, textarea {
   border: 0;
   border-radius: 0; }
-  input::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    color: transparent; }
-  input:-moz-placeholder, select:-moz-placeholder, textarea:-moz-placeholder {
-    color: transparent; }
-  input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
-    color: transparent; }
-  input:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder {
-    color: transparent; }
+
+::-webkit-input-placeholder {
+  color: transparent; }
+
+:-ms-input-placeholder {
+  color: transparent; }
+
+::-ms-input-placeholder {
+  color: transparent; }
+
+::placeholder {
+  color: transparent; }
 
 input[type="number"] {
   -moz-appearance: textfield; }
@@ -1433,8 +1439,6 @@ input[type="number"] {
 
 select {
   -webkit-appearance: none;
-    -webkit-appearance--moz-appearance: none;
-  -ms-appearance: none;
   -moz-appearance: none;
   appearance: none;
   -webkit-box-shadow: none;
@@ -1950,8 +1954,9 @@ textarea {
       text-align: left; } }
 
 button {
-  -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   outline: none;
   padding: 0;
