@@ -973,10 +973,10 @@ input, textarea {
 
 .underline {
   padding: 0 5px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(219, 88, 87, 0.6)), to(rgba(219, 88, 87, 0.6))) no-repeat 0 100%/100% 0.9rem;
-  background: -webkit-linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 100%/100% 0.9rem;
-  background: -o-linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 100%/100% 0.9rem;
-  background: linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 100%/100% 0.9rem; }
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(219, 88, 87, 0.6)), to(rgba(219, 88, 87, 0.6))) no-repeat 0 95%/100% 0.9rem;
+  background: -webkit-linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 95%/100% 0.9rem;
+  background: -o-linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 95%/100% 0.9rem;
+  background: linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 95%/100% 0.9rem; }
 
 .l-header {
   width: 100%;
