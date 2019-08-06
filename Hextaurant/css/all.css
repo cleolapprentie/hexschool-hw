@@ -2785,9 +2785,9 @@ button {
   z-index: 5; }
 
 .main-container.active .overlay-clip {
-  -webkit-transform: translate(-100%);
-  -ms-transform: translate(-100%);
-  transform: translate(-100%); }
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%); }
 
 .main-container.active .overlay {
   -webkit-transform: translateX(50%);
