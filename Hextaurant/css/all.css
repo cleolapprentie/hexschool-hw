@@ -1018,9 +1018,8 @@ input, textarea {
     z-index: 100;
     position: fixed;
     top: 0;
-    -webkit-transform: translateY(-80px);
-    -ms-transform: translateY(-80px);
-    transform: translateY(-80px);
+    -webkit-transform: translate3d(0, -80px, 0);
+    transform: translate3d(0, -80px, 0);
     -webkit-transition: -webkit-transform 0.4s ease;
     transition: -webkit-transform 0.4s ease;
     -o-transition: transform 0.4s ease;
@@ -1028,9 +1027,8 @@ input, textarea {
     transition: transform 0.4s ease, -webkit-transform 0.4s ease;
     will-change: transform; }
   .nav.sticky.scroll {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0); }
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
   .nav__icon {
     width: 40px;
     margin-right: 15px;
