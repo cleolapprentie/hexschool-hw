@@ -1045,7 +1045,7 @@ input, textarea {
     overflow: hidden; }
     @media only screen and (max-width: 767px) {
       .nav__logo {
-        visibility: hidden; } }
+        display: none; } }
   .nav .btn {
     padding: 8px 20px; }
     .nav .btn:active {
@@ -1686,6 +1686,9 @@ textarea {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-grid-columns: 1fr 8px 1fr 8px 1fr 8px 1fr 8px 1fr 8px 1fr;
   grid-template-columns: repeat(6, 1fr);
   -ms-grid-rows: 44px 20px 44px 20px 44px 20px auto 20px auto 20px auto;
@@ -2151,22 +2154,16 @@ button {
   .card:hover {
     -webkit-box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.1);
     box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.1); }
-    .card:hover > .card__img > img {
-      -webkit-transform: scale(1.05) translateZ(0);
-      transform: scale(1.05) translateZ(0); }
   .card__img {
     width: 100%;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px; }
     .card__img > img {
       width: 100%;
       -o-object-fit: cover;
-      object-fit: cover;
-      -webkit-transition: -webkit-transform 0.2s linear;
-      transition: -webkit-transform 0.2s linear;
-      -o-transition: transform 0.2s linear;
-      transition: transform 0.2s linear;
-      transition: transform 0.2s linear, -webkit-transform 0.2s linear; }
+      object-fit: cover; }
   .card__content {
     width: 100%;
     display: -webkit-box;
@@ -2279,7 +2276,14 @@ button {
     padding: 0 5rem; }
     @media only screen and (max-width: 768px) {
       .chef__info {
-        padding: 5rem 5rem; } }
+        padding: 6rem 8rem; } }
+
+@media only screen and (max-width: 768px) {
+  .reserve .col-5, .reserve .col-7 {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%; } }
 
 @media only screen and (max-width: 539px) {
   .reserve .caption > span {
@@ -2292,9 +2296,9 @@ button {
     height: 100%;
     border: 1px solid #eee; }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .reserve__form {
-    margin-top: 7rem; } }
+    margin-top: 6rem; } }
 
 @media only screen and (max-width: 960px) {
   .shopPage .col-3, .shopPage .col-9 {

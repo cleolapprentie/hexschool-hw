@@ -45,6 +45,7 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $target.offset().top - 50
       }, 800)
+      $target.css('transform', 'translateZ(0)')
     }
   })
   
