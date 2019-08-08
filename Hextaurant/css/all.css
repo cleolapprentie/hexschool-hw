@@ -443,7 +443,7 @@ input, textarea {
 
 .container {
   max-width: 1440px;
-  width: 90vw;
+  width: 98vw;
   margin: 0 auto;
   padding-left: 3rem;
   padding-right: 3rem; }
@@ -2276,7 +2276,7 @@ button {
     padding: 0 5rem; }
     @media only screen and (max-width: 768px) {
       .chef__info {
-        padding: 6rem 8rem; } }
+        padding: 6rem 3.5rem; } }
 
 @media only screen and (max-width: 768px) {
   .reserve .col-5, .reserve .col-7 {
