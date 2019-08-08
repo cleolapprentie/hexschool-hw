@@ -26,16 +26,16 @@ $(document).ready(function(){
     var floatingCart = document.querySelector('.floating-cart')
     var footerTop = document.querySelector('#footer').offsetTop
     floatingCart.style.position = 'fixed'
-    floatingCart.style.right = pageWidth - (targetLeft + targetWidth) + 'px'
-    floatingCart.style.bottom = '30px'
+    floatingCart.style.right = pageWidth - (targetLeft + targetWidth) + 10 + 'px'
+    floatingCart.style.bottom = '10px'
     
     window.addEventListener('scroll', function() {
       if (window.pageYOffset + pageHeight > footerTop) {
         floatingCart.style = ''
       } else {
         floatingCart.style.position = 'fixed'
-        floatingCart.style.right = pageWidth - (targetLeft + targetWidth) + 'px'
-        floatingCart.style.bottom = '30px'
+        floatingCart.style.right = pageWidth - (targetLeft + targetWidth) + 10 + 'px'
+        floatingCart.style.bottom = '10px'
       }
     })
   }

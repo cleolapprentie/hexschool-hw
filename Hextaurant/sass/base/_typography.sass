@@ -1,17 +1,17 @@
 h2
-  @include set-font(kan48typos-std, 36, 3)
+  @include set-font(kan48typos-std, $body-font-size*2.25, 3px)
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7)
   @include media($mobile-small)
-    @include set-font(kan48typos-std, 32, 3)
+    @include set-font(kan48typos-std, $body-font-size*2, 3px)
   
 h3
-  @include set-font(kan412typos-std, 24, 1.5)
+  @include set-font(kan412typos-std, $body-font-size*1.5, 1.5px)
   
 h4
-  @include set-font(kan412typos-std, 20, 1.5)
+  @include set-font(kan412typos-std, $body-font-size*1.25, 1.5px)
 
 h5
-  @include set-font(kan412typos-std, 20, 0)
+  @include set-font(kan412typos-std, $body-font-size*1.25, 0)
 
 %title
   margin: 0
@@ -23,15 +23,15 @@ h5
   
   
 .subtitle-m
-  @include set-font(kan48typos-std, 18, 1.2)
+  @include set-font(kan48typos-std, $body-font-size*1.15, 1.2px)
   line-height: 180%
 
 .subtitle-s
-  @include set-font(source-han-sans-traditional, 14, 0.1)
+  @include set-font(source-han-sans-traditional, $body-font-size*0.9, 0.1px)
   font-weight: 400
   
 .caption, .helper-text
-  @include set-font(source-han-sans-traditional, 14, 0.7)
+  @include set-font(source-han-sans-traditional, $body-font-size*0.9, 0.7px)
   font-weight: 300
   color: $color-em
   white-space: nowrap
@@ -41,16 +41,16 @@ h5
       text-decoration: underline
 
 .nav__menu
-  @include set-font(lato, 16, 2.5)
+  @include set-font(lato, $body-font-size, 2.5px)
   font-weight: 700
   text-transform: uppercase
 
 .btn
-  @include set-font(lato, 14, 1.75)
+  @include set-font(lato, $body-font-size*0.9, 1.75px)
   font-weight: 600
   text-transform: uppercase
   
 input, textarea
-  @include set-font(source-han-sans-traditional, 16, 0.15)
+  @include set-font(source-han-sans-traditional, $body-font-size, 0.15px)
   font-weight: 400
   

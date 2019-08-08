@@ -25,6 +25,7 @@
         color: #fff
   .displayContent
     position: relative
+    padding-bottom: 50px
     
   .searchBar
     display: flex
@@ -86,7 +87,7 @@
   color: #fff
   position: absolute
   bottom: 0
-  right: 0
+  right: 10px
   &-after
     display: block
     width: 100%
@@ -122,12 +123,12 @@
   width: 100%
   .price
     font-weight: 700
-    @include set-font(lato, 24, 1.2)
+    @include set-font(lato, $body-font-size*1.5, 1.2px)
     margin-bottom: 10px
     &::before
       content: '$'
   .add-quantity
-    @include set-font(lato, 24, 1.2)
+    @include set-font(lato, $body-font-size*1.5, 1.2px)
     position: relative
   .minus, .plus
     width: 30px

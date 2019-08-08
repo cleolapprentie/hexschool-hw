@@ -385,7 +385,7 @@ h5 {
   font-family: kan412typos-std, sans-serif;
   font-size: 20px;
   line-height: 30px;
-  letter-spacing: 0px; }
+  letter-spacing: 0; }
 
 h1, h2, h3, h4, h5 {
   margin: 0;
@@ -393,22 +393,22 @@ h1, h2, h3, h4, h5 {
 
 .subtitle-m {
   font-family: kan48typos-std, sans-serif;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 18.4px;
+  line-height: 27.6px;
   letter-spacing: 1.2px;
   line-height: 180%; }
 
 .subtitle-s {
   font-family: source-han-sans-traditional, sans-serif;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 14.4px;
+  line-height: 21.6px;
   letter-spacing: 0.1px;
   font-weight: 400; }
 
 .caption, .helper-text {
   font-family: source-han-sans-traditional, sans-serif;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 14.4px;
+  line-height: 21.6px;
   letter-spacing: 0.7px;
   font-weight: 300;
   color: #db5857;
@@ -428,8 +428,8 @@ h1, h2, h3, h4, h5 {
 
 .btn {
   font-family: lato, sans-serif;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 14.4px;
+  line-height: 21.6px;
   letter-spacing: 1.75px;
   font-weight: 600;
   text-transform: uppercase; }
@@ -973,10 +973,13 @@ input, textarea {
 
 .underline {
   padding: 0 5px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(219, 88, 87, 0.6)), to(rgba(219, 88, 87, 0.6))) no-repeat 0 95%/100% 0.9rem;
-  background: -webkit-linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 95%/100% 0.9rem;
-  background: -o-linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 95%/100% 0.9rem;
-  background: linear-gradient(rgba(219, 88, 87, 0.6), rgba(219, 88, 87, 0.6)) no-repeat 0 95%/100% 0.9rem; }
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(219, 88, 87, 0.6)), color-stop(50%, rgba(219, 88, 87, 0.6)));
+  background-image: -webkit-linear-gradient(rgba(219, 88, 87, 0.6) 50%, rgba(219, 88, 87, 0.6) 50%);
+  background-image: -o-linear-gradient(rgba(219, 88, 87, 0.6) 50%, rgba(219, 88, 87, 0.6) 50%);
+  background-image: linear-gradient(rgba(219, 88, 87, 0.6) 50%, rgba(219, 88, 87, 0.6) 50%);
+  background-repeat: no-repeat;
+  background-size: 100% 35%;
+  background-position: left 0 bottom 0; }
 
 .l-header {
   width: 100%;
@@ -2204,9 +2207,9 @@ button {
       -ms-transform: translateX(-50%);
       transform: translateX(-50%); }
     .card__title--main {
-      font-size: 18px; }
+      font-size: 18.4px; }
     .card__title--sub {
-      font-size: 14px; }
+      font-size: 14.4px; }
   .card__text {
     text-align: center;
     padding-top: 1rem; }
@@ -2331,7 +2334,8 @@ button {
   color: #fff; }
 
 .shopPage .displayContent {
-  position: relative; }
+  position: relative;
+  padding-bottom: 50px; }
 
 .shopPage .searchBar {
   display: -webkit-box;
@@ -2432,7 +2436,7 @@ button {
   color: #fff;
   position: absolute;
   bottom: 0;
-  right: 0; }
+  right: 10px; }
   .floating-cart-after {
     display: block;
     width: 100%;
