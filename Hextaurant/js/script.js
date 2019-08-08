@@ -75,8 +75,7 @@ $(document).ready(function(){
       selectItem(target)
     } else if (target.classList.contains('btn')) {
       btnAnimation(e)
-    } 
-    console.log(target)
+    }
   }, false)
   
   function selectItem(target) {
@@ -97,7 +96,6 @@ $(document).ready(function(){
     var x = e.offsetX
     var y = e.offsetY
     var target = e.target.lastElementChild
-    console.log('x: ', x, 'y: ', y)
     target.style.left = x + 'px'
     target.style.top = y + 'px'
     target.style.transform = 'scale(' + targetWidth*2.1 + ')'

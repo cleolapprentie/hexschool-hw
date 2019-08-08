@@ -73,7 +73,6 @@ $(document).ready(function(){
   document.querySelector('.search-btn').addEventListener('click', btnAnimation)
   document.querySelector('.sidebar__list').addEventListener('click', function(e){
     if (!e.target.nodeName === 'LI') { return }
-    console.log(e.target)
     btnAnimation(e)
   })
   
