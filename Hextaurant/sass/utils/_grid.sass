@@ -13,6 +13,8 @@ $grid-num: 12
   margin: 0 auto
   display: flex
   flex-wrap: wrap
+  padding-left: $gutter / 4
+  padding-right: $gutter / 4
   
 .row
   display: flex
@@ -34,8 +36,8 @@ $grid-num: 12
     @extend %col
     @include set-column($i)
     @include media($mobile)
-      max-width: 100%
-      flex: 0 0 100%
+      max-width: 100%!important
+      flex: 0 0 100%!important
       &:not(:last-child)
         margin-bottom: $gutter!important
   .inner-container .col-#{$i}
@@ -44,10 +46,8 @@ $grid-num: 12
       max-width: 50%
       flex: 0 0 50%
     @include media($mobile)
-      max-width: 100%
       padding-left: $gutter / 2
       padding-right: $gutter / 2
-      flex: 0 0 100%
     &:not(:last-child)
       margin-bottom: $gutter / 2
     
