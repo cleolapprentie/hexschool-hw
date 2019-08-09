@@ -15,6 +15,9 @@ $grid-num: 12
   flex-wrap: wrap
   padding-left: $gutter / 4
   padding-right: $gutter / 4
+  @include media($mobile)
+    padding-left: 0
+    padding-right: 0
   
 .row
   display: flex
