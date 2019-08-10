@@ -3,10 +3,12 @@ $grid-num: 12
 
 .container
   max-width: $max-width
-  width: 98vw
+  width: 90vw
   margin: 0 auto
   padding-left: $gutter / 2
   padding-right: $gutter / 2
+  @include media($mobile)
+    width: 98vw
 
 .inner-container
   width: 100%

@@ -443,10 +443,13 @@ input, textarea {
 
 .container {
   max-width: 1440px;
-  width: 98vw;
+  width: 90vw;
   margin: 0 auto;
   padding-left: 3rem;
   padding-right: 3rem; }
+  @media only screen and (max-width: 767px) {
+    .container {
+      width: 98vw; } }
 
 .inner-container {
   width: 100%;
@@ -927,7 +930,8 @@ input, textarea {
   flex-direction: column; }
 
 .hide {
-  visibility: hidden; }
+  visibility: hidden !important;
+  opacity: 0 !important; }
 
 .underline {
   padding: 0 4px;
@@ -1028,7 +1032,9 @@ input, textarea {
         text-align: center;
         overflow: hidden;
         -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25); } }
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0); } }
     .nav__menu > li {
       display: inline-block; }
       @media only screen and (max-width: 767px) {
@@ -2259,6 +2265,36 @@ button {
 @media only screen and (max-width: 768px) {
   .reserve__form {
     margin-top: 6rem; } }
+
+.totop {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  background-color: #481908;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  visibility: visible;
+  opacity: 0.8;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }
+  .totop:after {
+    color: #fff;
+    font-size: 22px;
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: inherit; }
 
 @media only screen and (max-width: 960px) {
   .shopPage .col-3, .shopPage .col-9 {

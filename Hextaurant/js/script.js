@@ -31,10 +31,23 @@ $(document).ready(function(){
   $(window).on('scroll', function(){
     var $scrollTop = $(window).scrollTop()
     $('.nav').toggleClass('scroll', ($scrollTop > 120))
+    // close the menu when scroll
     if ($('.nav').hasClass('scroll') && $('.menu-trigger').hasClass('active')) {
       $('.nav').find('.nav__menu').slideUp()
       $('.menu-trigger').removeClass('active')
     }
+    // totop btn show up
+    if ($scrollTop > 600) {
+      $('.totop').removeClass('hide')
+    } else {
+      $('.totop').addClass('hide')
+    }
+  })
+  
+  $('.totop').on('click', function() {
+    $('html, body').stop().animate({
+      scrollTop: 0
+    }, 600)
   })
   
   
@@ -42,10 +55,9 @@ $(document).ready(function(){
     e.preventDefault()
     var $target = $(this.hash)
     if ($target.length) {
-      $('html, body').animate({
+      $('html, body').stop().animate({
         scrollTop: $target.offset().top - 50
-      }, 800)
-      $target.css('transform', 'translateZ(0)')
+      }, 600)
     }
   })
   

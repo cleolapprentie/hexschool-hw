@@ -54,3 +54,20 @@
   &__form
     @include media($tablet)
       margin-top: 6rem
+      
+.totop
+  @include circle-obj(45px)
+  background-color: $color-primary
+  position: fixed
+  bottom: 15px
+  right: 15px
+  visibility: visible
+  opacity: 0.8
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4)
+  transition: all 0.3s
+  cursor: pointer
+  transform: translateZ(0)
+  &:after
+    color: #fff
+    font-size: 22px
+    @include fontAwesome('\f062', 900)
