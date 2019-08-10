@@ -1022,7 +1022,7 @@ input, textarea {
         height: -moz-fit-content;
         height: fit-content;
         position: absolute;
-        top: calc(100% - 1px);
+        top: 100%;
         left: 0;
         right: 0;
         text-align: center;
@@ -1034,7 +1034,6 @@ input, textarea {
       @media only screen and (max-width: 767px) {
         .nav__menu > li {
           display: block;
-          padding: 0;
           background-color: #000;
           border-top: 1px solid rgba(255, 255, 255, 0.5); } }
       .nav__menu > li:hover {
@@ -1048,7 +1047,7 @@ input, textarea {
       color: rgba(255, 255, 255, 0.95); }
       @media only screen and (max-width: 767px) {
         .nav__menu a {
-          padding: 2rem; } }
+          padding: 2rem 0; } }
 
 .menu-trigger {
   width: 44px;

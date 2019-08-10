@@ -54,7 +54,7 @@
       display: none
       height: fit-content
       position: absolute
-      top: calc(100% - 1px)
+      top: 100%
       left: 0
       right: 0
       text-align: center
@@ -64,7 +64,6 @@
       display: inline-block
       @include media($mobile)
         display: block
-        padding: 0
         background-color: #000
         border-top: 1px solid rgba(#fff, 0.5)
       &:hover
@@ -76,7 +75,7 @@
       padding: 1.5rem 2rem
       color: rgba(255, 255, 255, 0.95)
       @include media($mobile)
-        padding: 2rem
+        padding: 2rem 0
 
       
 
