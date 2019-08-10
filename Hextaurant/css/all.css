@@ -393,22 +393,22 @@ h1, h2, h3, h4, h5 {
 
 .subtitle-m {
   font-family: kan48typos-std, sans-serif;
-  font-size: 18.4px;
-  line-height: 27.6px;
+  font-size: 18px;
+  line-height: 27px;
   letter-spacing: 1.2px;
   line-height: 180%; }
 
 .subtitle-s {
   font-family: source-han-sans-traditional, sans-serif;
-  font-size: 14.4px;
-  line-height: 21.6px;
+  font-size: 14px;
+  line-height: 21px;
   letter-spacing: 0.1px;
   font-weight: 400; }
 
 .caption, .helper-text {
   font-family: source-han-sans-traditional, sans-serif;
-  font-size: 14.4px;
-  line-height: 21.6px;
+  font-size: 14px;
+  line-height: 21px;
   letter-spacing: 0.7px;
   font-weight: 300;
   color: #db5857;
@@ -428,8 +428,8 @@ h1, h2, h3, h4, h5 {
 
 .btn {
   font-family: lato, sans-serif;
-  font-size: 14.4px;
-  line-height: 21.6px;
+  font-size: 14px;
+  line-height: 21px;
   letter-spacing: 1.75px;
   font-weight: 600;
   text-transform: uppercase; }
