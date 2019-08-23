@@ -44,7 +44,7 @@ Bootstrap 文件上也說了，這個 Modal 的運作方式是從 `<body>` 中�
     
     
     
-> ⚠️ **Warning**: Be very careful here!
+> ⚠️ **Warning**: Be very careful here!   
 > 以下只適用在確定 Modal 高度不會大於 viewport 而造成捲動的情況下    
 > 不然會有兩條 scrollbar HEN 監介
 
