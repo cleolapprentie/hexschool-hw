@@ -357,7 +357,7 @@
         <h3 class="text-center mb-5"><span class="title">即刻預約</span></h3>
         <div class="row">
           <div class="col-md-5">
-            <div class="embed-responsive embed-responsive-4by3">
+            <div class="embed-responsive embed-responsive-1by1">
               <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.322817687997!2d120.29824711496694!3d22.604417285166377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e037799f9afb1%3A0xb9f297a86cf40dfb!2z6auY6ZuE6Luf6auU56eR5oqA5ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1566372977236!5m2!1szh-TW!2stw" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
           </div>
@@ -365,17 +365,18 @@
             <div class="divide"></div>
           </div>
           <div class="col-md-7">
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation d-flex flex-column h-100" novalidate>
+              <small class="text-muted d-inline-block mb-2"><span class="text-danger">*</span> 星號為必填欄位</small>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="username">姓名</label>
+                  <label for="username">姓名<span class="text-danger">*</span></label>
                   <input type="text" class="form-control" name="name" id="username" placeholder="請輸入姓名" required>
                   <div class="invalid-feedback">
                     姓名欄不可為空
                   </div>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="tel">聯絡電話</label>
+                  <label for="tel">聯絡電話<span class="text-danger">*</span></label>
                   <input type="tel" class="form-control" name="telephone" id="tel" placeholder="請輸入電話" required>
                   <div class="invalid-feedback">
                     請輸入正確格式
@@ -383,37 +384,48 @@
                 </div>
                 <div class="form-group col-md-8">
                   <label for="email">信箱</label>
-                  <input type="email" class="form-control" name="" id="email" placeholder="請輸入信箱" required>
+                  <input type="email" class="form-control" name="" id="email" placeholder="請輸入信箱">
                   <div class="invalid-feedback">
                     請輸入正確格式
                   </div>
                 </div>
                 <div class="form-group col-md-4">
-                  <label for="person">人數</label>
+                  <label for="person">人數<span class="text-danger">*</span></label>
                   <input type="number" class="form-control" name="" id="person" placeholder="請輸入人數" required>
                   <div class="invalid-feedback">
                     請輸入預定人數
                   </div>
                 </div>
-                <fieldset class="col-md-12 mb-3">
-                  <legend style="font-size: 1.2rem"><span class="title">是否需要素食？</span></legend>
+              </div>
+              <div class="form-row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label for="message">備註</label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                  </div>
+                </div>
+                <fieldset class="col-md-4 mb-3 px-3">
+                  <legend class="mb-2" style="font-size: 1rem">是否需要素食？<span class="text-danger">*</span></legend>
                   <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input vege-check" name="vegetarian" id="vegetarian-yes" value="yes">
+                    <input type="radio" class="custom-control-input vege-check" name="vegetarian" id="vegetarian-yes"
+                      value="yes">
                     <label class="custom-control-label" for="vegetarian-yes">需要</label>
                   </div>
-                  <div class="mb-3" style="display: none; transform: translateZ(0);">
-                    <div class="form-group mb-0 w-50 w-md-25">
-                      <p class="mb-2 title d-inline-block" style="font-size: 1.2rem">需要幾份？</p>
-                      <input type="number" class="form-control" name="vegetarian-number" id="vegetarian-number" placeholder="素食人數">
+                  <div class="mb-2" style="display: none; transform: translateZ(0);">
+                    <div class="form-group mb-0">
+                      <p class="my-2 d-inline-block">需要幾份？</p>
+                      <input type="number" class="form-control" name="vegetarian-number" id="vegetarian-number"
+                        placeholder="素食人數">
                     </div>
                   </div>
                   <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input vege-check" name="vegetarian" id="vegetarian-no" value="no" checked>
+                    <input type="radio" class="custom-control-input vege-check" name="vegetarian" id="vegetarian-no"
+                      value="no" checked>
                     <label class="custom-control-label" for="vegetarian-no">不需要</label>
                   </div>
                 </fieldset>
               </div>
-              <div class="text-right">
+              <div class="mt-auto">
                 <button type="reset" class="btn btn-outline-secondary">取消</button>
                 <button type="submit" class="btn btn-info ml-2">送出</button>
               </div>
@@ -563,16 +575,16 @@
             $('#vegetarian-yes').parent().next().slideDown(300);
           } else {
             // 解決 slideup 時 margin collapse 問題
-            $('#vegetarian-yes').parent().next().removeClass('mb-3');
+            $('#vegetarian-yes').parent().next().removeClass('mb-2');
             $('#vegetarian-yes').parent().next().slideUp(300, function () {
-              $('#vegetarian-yes').parent().next().addClass('mb-3');
+              $('#vegetarian-yes').parent().next().addClass('mb-2');
             });
           }
         });
         $('button[type="reset"]').on('click', function () {
-          $('#vegetarian-yes').parent().next().removeClass('mb-3');
+          $('#vegetarian-yes').parent().next().removeClass('mb-2');
           $('#vegetarian-yes').parent().next().slideUp(300, function () {
-            $('#vegetarian-yes').parent().next().addClass('mb-3');
+            $('#vegetarian-yes').parent().next().addClass('mb-2');
           });
           $(this).parents().removeClass('was-validated')
         });
