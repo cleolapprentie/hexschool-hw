@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>六角西餐廳</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -493,7 +492,6 @@
       </div>
     </div>
 
-
     <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -551,27 +549,22 @@
       </div>
     </div>
 
-
     
-
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
       $(document).ready(function () {
         $('.vege-check').on('click', function () {
+          // 當需要素食被 check 之後，出現內容
           if ($('#vegetarian-yes').prop('checked')) {
             $('#vegetarian-yes').parent().next().slideDown(300);
           } else {
+            // 解決 slideup 時 margin collapse 問題
+            $('#vegetarian-yes').parent().next().removeClass('mb-3');
             $('#vegetarian-yes').parent().next().slideUp(300, function () {
               $('#vegetarian-yes').parent().next().addClass('mb-3');
             });
-            $('#vegetarian-yes').parent().next().removeClass('mb-3');
           }
         });
         $('button[type="reset"]').on('click', function () {
@@ -602,11 +595,10 @@
         $('#signUpModal').on('shown.bs.modal', function() {
           var height = $(this).find('form').height();
           $('#agreement').css('max-height', height + 'px');
-
         });
 
         $('#signUpModal').on('hidden.bs.modal', function() {
-          $(this).find('form').removeClass('was-validated').addClass('needs-validation');
+          $(this).find('form').removeClass('was-validated');
         });
 
         // 修正關閉modal一瞬間偏移的bug
