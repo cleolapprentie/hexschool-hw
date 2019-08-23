@@ -43,10 +43,11 @@ Bootstrap 文件上也說了，這個 Modal 的運作方式是從 `<body>` 中�
 所以 `padding-right: 17px` 正好是補了被刪除的 scrollbar 空間   
     
     
-:::danger   
-以下只適用在確定 Modal 高度不會大於 viewport 而造成捲動的情況下    
-不然會有兩條 scrollbar HEN 監介   
-:::
+    
+> [!WARNING]
+> 以下只適用在確定 Modal 高度不會大於 viewport 而造成捲動的情況下    
+> 不然會有兩條 scrollbar HEN 監介
+
     
 依照我的觀察，當 `data-dismiss` 和 `data-toggle` 同時被觸發，第二個 Modal 開啓時，    
 原先有 scrollbar 的頁面不知道為什麼 scrollbar 不見了   
@@ -155,10 +156,10 @@ $('body').on('shown.bs.modal', function() {
 
     
         
-:::info   
-更新如下    
-:::   
 
+> [!IMPORTANT]
+> 更新如下
+    
 結果我後來發現我其中一個 Modal 內容會超過 viewport 的高度   
 造成兩條捲軸的尷尬問題   
 因為 BS 讓 `body` 的捲軸消失，我又強制讓捲軸在 `.modal-open` 的情況下出來    
