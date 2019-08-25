@@ -179,7 +179,7 @@ $(document).ready(function () {
 
     if (orderState === '已出貨') {
       setTimeout(function() {
-        $('.collapse').collapse('show');
+        $('#editModal .collapse').collapse('show');
       }, 200)
     }
 
