@@ -1,0 +1,94 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: tbudrgothic-std, source-han-sans-traditional, lato,  sans-serif;
+  letter-spacing: 0.05rem;
+  word-break: break-all;
+  overflow-x: hidden;
+}
+
+.table-responsive {
+  overflow-y: auto;
+}
+
+.table td, .table th {
+  vertical-align: middle!important;
+}
+td:nth-child(3) {
+  max-width: 268px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.col-form-label.readonly > span {
+  background-color: #e9ecef;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.table {
+  white-space: nowrap;
+}
+
+
+.dropdown-item:hover {
+  background-color: #efebe9;
+}
+
+.modal-body label {
+  word-break: break-all;
+}
+
+.form-row {
+  align-items: center;
+}
+
+nav, footer {
+  font-family: fot-rodin-pron, sans-serif;
+}
+
+.page-item.active .page-link {
+  background-color: #819ca9;
+  border-color: #819ca9;
+}
+
+.page-link {
+  color: #546e7a;
+}
+
+.text-em {
+  padding: 0 0.3rem;
+  background-image: linear-gradient(to top, rgba(255, 169, 143, 0.7) 80%, transparent 80%);
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  background-position: left bottom;
+  white-space: nowrap;
+}
+
+.modal-delete form {
+  opacity: 0.3;
+}
+
+.delete-text {
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.modal-delete .delete-text {
+  display: block;
+}
+
+.main {
+  min-height: calc(100vh - 33.5px - 49*2px - 21*4px - 47.5px)
+}
