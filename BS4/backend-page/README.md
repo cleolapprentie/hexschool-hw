@@ -2,6 +2,15 @@
 
 ## [Demo](https://kayahino.github.io/hexschool-hw/BS4/backend-page/backend_index.html)
 
+首頁
+![](https://i.imgur.com/ivBoqPx.png)
+
+列表
+![](https://i.imgur.com/9qCS7yB.png)
+
+
+
+
 ### 解決圖表在手機版瀏覽時圖像太小不易閱讀的問題
         
 由於 Chart.js 有自帶 responsive 功能，會隨著內容寬度來自適應
