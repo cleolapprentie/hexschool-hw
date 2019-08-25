@@ -73,6 +73,7 @@ nav, footer {
 
 .modal-delete form {
   opacity: 0.3;
+  pointer-events: none;
 }
 
 .delete-text {

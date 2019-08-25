@@ -98,6 +98,7 @@ $(document).ready(function () {
       if ($(this).is('input')) {
         if ($(this).hasClass('readonly')) { return }
         $(this).prop('readonly', false);
+        $(this).prop('disabled', false);
       } else {
         $(this).prop('disabled', false);
       }
@@ -195,13 +196,16 @@ $(document).ready(function () {
       modal.find('.modal-header').addClass('bg-danger text-white').removeClass('bg-warning');
       modal.find('.js--save').addClass('btn-danger').removeClass('btn-warning');
       modal.find('.modal-content').addClass('modal-delete');
+      modal.find('input, select').each(function() {
+        $(this).prop('disabled', true);
+      })
     }
 
 
   }
 
   function selectionCorrespond(select, value) {
-    $(select).find('option').each(function () {
+    $(select).find('option').each(function() {
       if ($(this).val() === value) {
         if ($(this).val() === '已出貨') {
           var input = $(this).parentsUntil('.modal-body').find('input, select');
