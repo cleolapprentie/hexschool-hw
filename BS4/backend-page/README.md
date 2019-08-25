@@ -1,4 +1,4 @@
-# BS4 Backend Page 版型練習記錄
+# 六角學院 BS4 Backend Page 版型練習記錄
 
 ## [Demo](https://kayahino.github.io/hexschool-hw/BS4/backend-page/backend_index.html)
 
