@@ -69,7 +69,7 @@
               <th scope="col" width="150">姓名</th>
               <th scope="col">Email</th>
               <th scope="col">狀態</th>
-              <th scope="col" class="text-right">訂單金額</th>
+              <th scope="col" class="text-right">訂單金額NT$</th>
               <th scope="col" class="text-center">操作</th>
               <th scope="col" class="d-none">手機</th>
             </tr>
@@ -82,7 +82,7 @@
               <td>1</td>
               <td data-customer="problem">Mark</td>
               <td>mark@mail.com</td>
-              <td data-toggle="tooltip" data-title="郵局 26705210024458">已出貨</td>
+              <td data-state="shipped" data-toggle="tooltip" data-title="郵局 26705210024458">已出貨</td>
               <td class="text-right"></td>
               <td class="text-center">
                 <div class="btn-group btn-group-sm" role="group" aria-label="operation">
@@ -111,7 +111,7 @@
               <td>15</td>
               <td data-customer="regular">高橋一生的嘴邊肉</td>
               <td>isseylove@gmail.com</td>
-              <td>缺貨</td>
+              <td data-state="out-of-stock">缺貨</td>
               <td class="text-right"></td>
               <td class="text-center">
                 <div class="btn-group btn-group-sm" role="group" aria-label="operation">
@@ -140,7 +140,7 @@
               <td>87</td>
               <td>Joseph</td>
               <td>abc123445678@gmail.com</td>
-              <td>待出貨</td>
+              <td data-state="confirm">訂單確認</td>
               <td class="text-right"></td>
               <td class="text-center">
                 <div class="btn-group btn-group-sm" role="group" aria-label="operation">
@@ -163,21 +163,73 @@
               <td class="d-none">0912345678</td>
             </tr>
             <tr>
+              <th scope="row">201908240003</th>
+              <td data-price="666">FE100</td>
+              <td>前端工程師補充kit</td>
+              <td>999</td>
+              <td data-customer="vip">我要成為前端工程師</td>
+              <td>front_end_developper00@gmail.com</td>
+              <td data-state="out-of-stock">缺貨</td>
+              <td class="text-right"></td>
+              <td class="text-center">
+                <div class="btn-group btn-group-sm" role="group" aria-label="operation">
+                  <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#editModal"
+                    data-backdrop="static" data-title="編輯">編輯</button>
+                  <button type="button" class="btn btn-outline-secondary">查看</button>
+                  <div class="btn-group" role="group">
+                    <button id="dropdownId" type="button" class="btn btn-outline-secondary dropdown-toggle"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      ...
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <a class="dropdown-item" href="#">操作紀錄</a>
+                      <a class="dropdown-item" href="#">資料匯出</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item text-danger js--delete-order" href="#" data-toggle="modal"
+                        data-target="#editModal" data-backdrop="static" data-title="刪除">刪除訂單</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="d-none">0952759746</td>
+            </tr>
+            <tr>
+              <th scope="row">201908240003</th>
+              <td data-price="444">BS777</td>
+              <td>Bootstrap 歡樂包</td>
+              <td>7</td>
+              <td data-customer="vip">Steve</td>
+              <td>javis01234@gmail.com</td>
+              <td data-state="suspense">待處理</td>
+              <td class="text-right"></td>
+              <td class="text-center">
+                <div class="btn-group btn-group-sm" role="group" aria-label="operation">
+                  <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#editModal"
+                    data-backdrop="static" data-title="編輯">編輯</button>
+                  <button type="button" class="btn btn-outline-secondary">查看</button>
+                  <div class="btn-group" role="group">
+                    <button id="dropdownId" type="button" class="btn btn-outline-secondary dropdown-toggle"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      ...
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <a class="dropdown-item" href="#">操作紀錄</a>
+                      <a class="dropdown-item" href="#">資料匯出</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item text-danger js--delete-order" href="#" data-toggle="modal"
+                        data-target="#editModal" data-backdrop="static" data-title="刪除">刪除訂單</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="d-none">0952759746</td>
+            </tr>
+            <tr>
               <th scope="row" colspan="9">
                 <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-secondary" role="progressbar"
-                        style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar progress-bar-striped bg-secondary" role="progressbar" style="width: 75%;"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-              </th>
-            </tr>
-            <tr>
-              <th scope="row" colspan="9">
-                ...
-              </th>
-            </tr>
-            <tr>
-              <th scope="row" colspan="9">
-                ...
               </th>
             </tr>
             <tr>
@@ -248,7 +300,8 @@
                 <label for="orderState" class="col-2 col-form-label">狀態</label>
                 <div class="col form-inline">
                   <select class="custom-select" name="orderState" id="orderState" style="width: auto;">
-                    <option value="待出貨">待出貨</option>
+                    <option value="待處理">待處理</option>
+                    <option value="訂單確認">訂單確認</option>
                     <option value="已出貨">已出貨</option>
                     <option value="缺貨" class="text-danger">缺貨</option>
                   </select>

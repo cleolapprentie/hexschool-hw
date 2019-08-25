@@ -18,6 +18,8 @@ $(document).ready(function () {
         $(this).append('<span class="badge badge-pill badge-danger ml-2">奧客</span>');
       } else if ($(this).data('customer') === 'regular') {
         $(this).append('<span class="badge badge-pill badge-success ml-2">常客</span>');
+      } else if ($(this).data('customer') === 'vip') {
+        $(this).append('<span class="badge badge-pill badge-warning ml-2">VIP</span>')
       } else {
         return;
       }
@@ -46,7 +48,7 @@ $(document).ready(function () {
         price = $(target[1]).data('price'),
         total = price * quant,
         d = total.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-    $(this).text('NT$ ' + d);
+    $(this).text('$ ' + d);
   }
 
 
@@ -171,22 +173,7 @@ $(document).ready(function () {
     modal.find('.quantity-item-1').val(itemQuantity);
     modal.find('#tracking').val(trackingCode);
 
-    // if (orderState === '待出貨') {
-    //   modal.find('#orderState').prop('selectedIndex', 0);
-    // } else if (orderState === '已出貨') {
-    //   $('.collapse').collapse('show');
-    //   modal.find('#orderState').prop('selectedIndex', 1);
-    // } else {
-    //   modal.find('#orderState').last().prop('selectedIndex', 2);
-    // }
-
-
-
-    // $('#delivery').find('option').each(function() {
-    //   if ($(this).val() === delivery) {
-    //     $(this).prop('selected', true);
-    //   }
-    // });
+    
     selectionCorrespond('#orderState', orderState);
     selectionCorrespond('#delivery', delivery);
 
