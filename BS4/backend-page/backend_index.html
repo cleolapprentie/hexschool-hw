@@ -84,14 +84,14 @@
   </div>
 
   <div class="container-fluid">
-    <div id="main" class="mt-4">
+    <div class="mt-4">
       <div class="row">
         <div class="col-md-5" id="online">
           <div class="card h-100 text-center">
-            <div class="card-body d-flex flex-column justify-content-center">
-              <div class="h5 mb-4">目前線上人數</div>
+            <div class="card-body d-flex flex-column justify-content-center p-4">
+              <div class="h5 mb-4">目前在線人數</div>
               <div class="display-3">99</div>
-              <div class="progress mt-5" style="height: 1.8rem">
+              <div class="progress mt-4 mt-md-5" style="height: 1.8rem">
                 <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
                   aria-valuemax="100">Desktop</div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 75%;" aria-valuenow="75"
@@ -111,7 +111,7 @@
                 <a name="" id="" class="btn btn-outline-secondary btn-sm" href="backend_orderlist.html" role="button">訂單管理</a>
               </div>
               <div class="table-responsive-md">
-                <table class="table table-hover mb-0">
+                <table class="table table-hover mb-0" id="new-order">
                   <thead class="thead-light">
                     <tr>
                       <th scope="col">來源</th>
@@ -122,34 +122,40 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td scope="row">Youtube</td>
-                      <td>喜多郎</td>
-                      <td>六角和牛排</td>
-                      <td class="text-right">3,000</td>
+                      <td scope="row"><span class="badge text-white" style="background-color: #282828">Youtube</span></td>
+                      <td>Steve</td>
+                      <td>Bootstrap 歡樂包</td>
+                      <td class="text-right">3108</td>
                     </tr>
                     <tr>
-                      <td scope="row">Youtube</td>
-                      <td>喜多郎</td>
-                      <td>六角囍餅</td>
-                      <td class="text-right">2,000</td>
+                      <td scope="row"><span class="badge text-white" style="background-color: #1877f2">Facebook</span></td>
+                      <td>我要成為前端工程師</td>
+                      <td>前端工程師補充kit</td>
+                      <td class="text-right">665334</td>
                     </tr>
                     <tr>
-                      <td scope="row">Youtube</td>
-                      <td>喜多郎</td>
-                      <td>六角雞胸</td>
-                      <td class="text-right">1,500</td>
+                      <td scope="row"><span class="badge text-white" style="background-color: #1877f2">Facebook</span></td>
+                      <td>Joseph</td>
+                      <td>頭好壯壯祖傳秘方雞精 87天份</td>
+                      <td class="text-right">173913</td>
                     </tr>
                     <tr>
-                      <td scope="row">Youtube</td>
-                      <td>喜多郎</td>
-                      <td>六角可愛 T-shirt</td>
-                      <td class="text-right">2,000</td>
+                      <td scope="row"><span class="badge text-white" style="background-color: #DB4437">Google</span></td>
+                      <td>高橋一生的嘴邊肉</td>
+                      <td>高橋一生怎麼可以這麼帥又可愛世界最愛你</td>
+                      <td class="text-right">7800</td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><span class="badge badge-light">Untraceable</span></td>
+                      <td>Mark</td>
+                      <td>超纖細肥皂</td>
+                      <td class="text-right">342</td>
                     </tr>
                   </tbody>
                   <tfoot>
                     <tr class="table-warning">
                       <th colspan="3" class="text-right">總營收</th>
-                      <td class="text-right">10,500</td>
+                      <td class="text-right"></td>
                     </tr>
                   </tfoot>
                 </table>
@@ -176,8 +182,7 @@
                   <div class="pl-2">
                     <p class="h5 font-weight-bolder">Details</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim temporibus libero sequi voluptatem
-                      odio beatae laboriosam quas? Totam, deserunt dolorem quod alias assumenda suscipit officia,
-                      dignissimos sit magnam reiciendis officiis.</p>
+                      odio beatae laboriosam quas.</p>
                   </div>
                   <div class="pl-2">
                     <div class="mt-3">
@@ -190,7 +195,14 @@
                     <div class="mt-3">
                       <h6>Facebook</h6>
                       <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 75%; background-color: #3C5A99;"
+                        <div class="progress-bar" role="progressbar" style="width: 75%; background-color: #1877f2;"
+                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                    <div class="mt-3">
+                      <h6>Youtube</h6>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 30%; background-color: #282828;"
                           aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                     </div>
@@ -238,7 +250,7 @@
             </div>
           </div>
           <div class="table-responsive-md mt-3">
-            <table class="table table-hover mb-0">
+            <table class="table table-hover mb-0" id="monthly-review">
               <thead class="thead-light">
                 <tr>
                   <th scope="col" width="80">日期</th>
@@ -252,68 +264,68 @@
               </thead>
               <tbody style="font-size: 12px;">
                 <tr>
-                  <td scope="row">9/1</td>
+                  <td scope="row">8/22</td>
                   <td>300</td>
                   <td>1</td>
                   <td>250</td>
-                  <td>3</td>
-                  <td class="text-right">256,000</td>
-                  <td class="text-right">168,000</td>
+                  <td>1</td>
+                  <td class="text-right">256000</td>
+                  <td class="text-right">168000</td>
                 </tr>
                 <tr>
-                  <td scope="row">9/2</td>
-                  <td>300</td>
-                  <td>1</td>
-                  <td>250</td>
-                  <td>3</td>
-                  <td class="text-right">256,000</td>
-                  <td class="text-right">168,000</td>
+                  <td scope="row">8/23</td>
+                  <td>160</td>
+                  <td>0</td>
+                  <td>100</td>
+                  <td>0</td>
+                  <td class="text-right">192480</td>
+                  <td class="text-right">102590</td>
                 </tr>
                 <tr>
-                  <td scope="row">9/3</td>
-                  <td>300</td>
-                  <td>1</td>
-                  <td>250</td>
-                  <td>3</td>
-                  <td class="text-right">256,000</td>
-                  <td class="text-right">168,000</td>
+                  <td scope="row">8/24</td>
+                  <td>95</td>
+                  <td>0</td>
+                  <td>70</td>
+                  <td>0</td>
+                  <td class="text-right">222222</td>
+                  <td class="text-right">111111</td>
                 </tr>
                 <tr>
-                  <td scope="row">9/4</td>
-                  <td>300</td>
-                  <td>1</td>
+                  <td scope="row">8/25</td>
+                  <td>340</td>
+                  <td>2</td>
                   <td>250</td>
                   <td>3</td>
-                  <td class="text-right">256,000</td>
-                  <td class="text-right">168,000</td>
+                  <td class="text-right">456789</td>
+                  <td class="text-right">412345</td>
                 </tr>
                 <tr>
-                  <td scope="row">9/5</td>
-                  <td>300</td>
-                  <td>1</td>
+                  <td scope="row">8/26</td>
                   <td>250</td>
-                  <td>3</td>
-                  <td class="text-right">256,000</td>
-                  <td class="text-right">168,000</td>
+                  <td>0</td>
+                  <td>200</td>
+                  <td>1</td>
+                  <td class="text-right">119000</td>
+                  <td class="text-right">98000</td>
                 </tr>
                 <tr>
-                  <td scope="row">9/6</td>
-                  <td>300</td>
-                  <td>1</td>
-                  <td>250</td>
-                  <td>3</td>
-                  <td class="text-right">256,000</td>
-                  <td class="text-right">168,000</td>
+                  <td scope="row">8/27</td>
+                  <td>107</td>
+                  <td>2</td>
+                  <td>90</td>
+                  <td>0</td>
+                  <td class="text-right">256000</td>
+                  <td class="text-right">168000</td>
                 </tr>
               </tbody>
               <tfoot>
-                <tr class="table-warning">
-                  <td colspan="6" class="text-right">月總營收</td>
-                  <td class="text-right">3,750,500</td>
-                </tr>
                 <tr>
+                  <td colspan="6" class="text-right">月總營收</td>
+                  <td class="text-right"></td>
+                </tr>
+                <tr class="table-warning">
                   <td colspan="6" class="text-right">月總淨利潤</td>
-                  <td class="text-right"><span class="text-em">2,140,500</span></td>
+                  <td class="text-right"><span class="text-em"></span></td>
                 </tr>
               </tfoot>
             </table>
@@ -328,9 +340,9 @@
 
 
   <!-- Footer -->
-  <footer class="bg-light mt-4 py-3">
+  <footer class="bg-light mt-5 py-3">
     <div class="container text-center text-muted">
-      <p class="mb-0">六角學院後台管理系統</p>
+      <p class="mb-0">六角後台管理系統</p>
     </div>
   </footer>
 
@@ -466,9 +478,35 @@
     };
   </script>
   <script>
-    $(document).ready(function () {
-      $('a[href="#"]').on('click', function (e) {
+    $(document).ready(function() {
+      $('a[href="#"]').on('click', function(e) {
         e.preventDefault();
+      });
+      var monthlyCol = $('#monthly-review').find('td:nth-child(6), td:nth-child(7)').not('tfoot td'),
+          newCol = $('#new-order').find('td:last-child').not('tfoot td'),
+          totalSales = 0,
+          totalIncome = 0,
+          totalPrice = 0;
+      $(monthlyCol).each(function() {
+        var display;
+        if ($(this).is(':nth-child(6)')) {
+          totalSales += parseInt($(this).text());
+        } else {
+          totalIncome += parseInt($(this).text());
+        }
+        $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+      });
+      $(newCol).each(function() {
+        totalPrice += parseInt($(this).text());
+        $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+      })
+      $('#new-order').find('tfoot td:last-child').text(totalPrice.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+      $('#monthly-review tfoot').find('tr').each(function() {
+        if ($(this).is('tr:first-child')) {
+           $(this).children().not(':first-child').text(totalSales.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+        } else {
+          $(this).children().not(':first-child').children().text(totalIncome.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+        }
       });
     });
   </script>

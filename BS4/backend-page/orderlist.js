@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   var trigger;
   $('a[href="#"]').on('click', function(e) {
     e.preventDefault();
@@ -85,14 +85,14 @@ $(document).ready(function () {
     $('#newOrderModal .modal-body').find('form').append(formRow);
   });
 
-  $('#editModal').on('show.bs.modal', function (e) {
+  $('#editModal').on('show.bs.modal', function(e) {
     trigger = $(e.relatedTarget);
     var target = $(this);
     showData(e, trigger, target);
     $('.js--save').on('click', edit);
   });
 
-  $('#editModal').on('hidden.bs.modal', function () {
+  $('#editModal').on('hidden.bs.modal', function() {
     // reset
     $('.modal-body').find('input, select').each(function() {
       if ($(this).is('input')) {
@@ -184,7 +184,7 @@ $(document).ready(function () {
       }, 200)
     }
 
-    $('#orderState').on('change', function (e) {
+    $('#orderState').on('change', function(e) {
       if (e.target.value === '已出貨') {
         $('.collapse').collapse('show');
       } else {
