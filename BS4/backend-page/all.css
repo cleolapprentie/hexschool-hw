@@ -16,12 +16,13 @@ body {
 .table td, .table th {
   vertical-align: middle!important;
 }
-td:nth-child(3) {
-  max-width: 268px;
+td:not(:nth-child(9)) {
+  max-width: 250px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 
 .col-form-label.readonly > span {
   background-color: #e9ecef;
