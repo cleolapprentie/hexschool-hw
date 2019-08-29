@@ -2,15 +2,20 @@ $(document).ready(function() {
   var filter = getFilter(),
     page = 1,
     max = 3,
-    pageCount = 1;
+    pageCount;
   // 切換 list 取得 filter
   $("#item-list").on('click', function(e) {
     e.preventDefault();
     filter = $(e.target).data('list');
-    pageCount = 1;  // reset page counter
+    page = 1; // reset page
+    pageCount = 1; // reset pageCount
     $(e.target).siblings().removeClass('active');
     $(e.target).addClass('active');
     getData(initPage);
+
+    $('html, body').stop().animate({
+      scrollTop: $('#displayItems').offset().top - 70
+    }, 400);
   });
 
 
@@ -18,7 +23,7 @@ $(document).ready(function() {
 
   $(".pagination").on('click', function(e) {
     e.preventDefault();
-    if (e.target.parentNode.nodeName !== 'LI') { return }
+    if ($(e.target).is('li')) { return }
     var targetPage = $(e.target).parent().data('page');
     page = targetPage;
     getData(printData);
@@ -38,6 +43,10 @@ $(document).ready(function() {
     }
     $('.next').attr('data-page', (page + 1));
     $('.prev').attr('data-page', (page - 1));
+
+    $('html, body').stop().animate({
+      scrollTop: $('#displayItems').offset().top - 70
+    }, 400);
   });
 
 
@@ -64,7 +73,6 @@ $(document).ready(function() {
           e.preventDefault();
           var target = $(this).find('svg');
           if (target.data('prefix') === 'far') {
-            console.log('how')
             target.attr('data-prefix', 'fas');
           } else {
             target.attr('data-prefix', 'far');
@@ -80,7 +88,6 @@ $(document).ready(function() {
     var filter = getFilter(),
         display = $('#displayItems');
     display.empty();
-    pageCount = 1;
 
     if (!data[filter]) {
       $(display).addClass('not-found');
@@ -92,13 +99,11 @@ $(document).ready(function() {
     }
 
     var getData = data[filter];
+    pageCount = Math.ceil(getData.length / max);
     getData.forEach(function(el, index) {
       // pagination
       if (index >= max * (page - 1) && index < max * page) {
         printFn(el);
-      }
-      if (index === max * page) {
-        pageCount++
       }
       
       function printFn(el) {
@@ -197,15 +202,17 @@ $(document).ready(function() {
     display.find('.price').each(function() {
       var num = $(this).text();
       $(this).text('NT$ ' + num.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-    });  
+    });
   }
   function pageNav() {
     $('.page').remove();
-    for (var n = 0; n < pageCount; n++) {
-      var pageNav = '<li class="page page-item" data-page="' + (n+1) + '"><a class="page-link" href="#">' + (n+1) + '</a></li>';
+    for (var n = 1; n <= pageCount; n++) {
+      var pageNav = '<li class="page page-item" data-page="' + (n) + '"><a class="page-link" href="#">' + (n) + '</a></li>';
       $(pageNav).insertBefore($('.next'));
     }
-    $('.pagination').find('[data-page="' + page +'"]').addClass('active');
+    $('.pagination').find('[data-page="' + page +'"]').not('.prev, .next').addClass('active');
+    $('.pagination').find('.next').addClass('disabled');
+    $('.pagination').find('.prev').addClass('disabled');
     if (pageCount > 1) {
       $('.pagination').find('.next').removeClass('disabled');
     }

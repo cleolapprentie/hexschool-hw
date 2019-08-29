@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>六角購物趣</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-md navbar-light sticky-top"
       style="z-index: 50; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);">
       <a class="navbar-brand" href="#">六角購物趣</a>
-      <button class="navbar-toggler ml-3 border-0" type="button" data-toggle="collapse" data-target="#navbar-collapse"
+      <button class="navbar-toggler ml-3 border-0 px-0" type="button" data-toggle="collapse" data-target="#navbar-collapse"
         aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle Navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -46,14 +46,14 @@
           </span>
         </a>
 
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cart-preview" style="min-width: 350px">
-          <div class="py-3 px-4">
-            <p class="h6">已選擇商品</p>
-            <table class="table itemList">
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cart-preview">
+          <div class="py-2 px-4">
+            <p class="h6 mt-1">已選擇商品</p>
+            <table class="table itemList mb-0">
               <tbody>
                 <tr>
                   <td scope="row" class="delete-item">
-                    <a href="#" class="text-secondary" role="button"><i class="far fa-trash-alt"></i></a>
+                    <a href="#" class="text-secondary delete-item" role="button"><i class="far fa-trash-alt"></i></a>
                   </td>
                   <td class="item__name text-truncate">骷髏上衣 兩色</td>
                   <td class="item__size">S</td>
@@ -63,7 +63,7 @@
                 </tr>
                 <tr>
                   <td scope="row" class="delete-item">
-                    <a href="#" class="text-secondary" role="button"><i class="far fa-trash-alt"></i></a>
+                    <a href="#" class="text-secondary delete-item" role="button"><i class="far fa-trash-alt"></i></a>
                   </td>
                   <td class="item__name text-truncate">俐落剪裁帥氣西裝外套 女</td>
                   <td class="item__size">F</td>
@@ -73,7 +73,7 @@
                 </tr>
               </tbody>
             </table>
-            <a class="btn btn-info btn-block" href="#">結帳去</a>
+            <a class="btn btn-info btn-sm btn-block mt-2" href="#">結帳去</a>
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@
 
     <!-- Main -->
     <div class="container mt-5">
-      <h1 class="text-center text-secondary cashier-title">六角購物趣 <span class="d-block d-sm-inline">結帳頁面</span></h1>
+      <h1 class="text-center text-secondary cashier-title">六角購物趣 <span class="d-block d-sm-inline"><i class="far fa-credit-card mr-3"></i>結帳頁面</span></h1>
       <div class="form-row text-center mt-4">
         <div class="col-sm">
           <div class="alert alert-info alert-rounded" role="alert">
@@ -106,7 +106,7 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-8">
-          <div id="cart-detail" role="tablist" aria-multiselectable="true" class="mt-2">
+          <div id="cart-detail" class="mt-2">
             <div class="card">
               <div class="card-header border-bottom-0" role="tab" id="section1HeaderId">
                 <a data-toggle="collapse" href="#detail-show" aria-expanded="true" aria-controls="detail-show" class="text-secondary">
@@ -114,13 +114,74 @@
                 </a>
               </div>
             </div>
-            <div id="detail-show" class="collapse" data-parent="#cart-detail" role="tabpanel"
+            <div id="detail-show" class="collapse table-responsive" data-parent="#cart-detail" role="tabpanel"
               aria-labelledby="section1HeaderId">
-              <div class="mt-3">
-                Section 1 content
-              </div>
+              <table class="table mt-3">
+                <thead>
+                  <tr>
+                    <th class="border-top-0"></th>
+                    <th class="border-top-0" width="90"></th>
+                    <th class="border-top-0">商品名稱</th>
+                    <th class="border-top-0">顏色</th>
+                    <th class="border-top-0">尺寸</th>
+                    <th class="border-top-0">數量</th>
+                    <th class="text-right border-top-0">小計</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row" class="h4 text-center">
+                      <a href="#" class="text-secondary delete-item" role="button"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                    <td class="text-center">
+                      <div class="thumbnail"><img src="img/item-1.jpg" alt="" class="img-fluid"></div>
+                    </td>
+                    <td class="text-truncate">骷髏上衣 兩色</td>
+                    <td>黑</td>
+                    <td>S</td>
+                    <td>1</td>
+                    <td class="text-right">495</td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="h4 text-center">
+                      <a href="#" class="text-secondary delete-item" role="button"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                    <td class="text-center">
+                      <div class="thumbnail"><img src="img/item-3.jpg" alt="" class="img-fluid"></div>
+                    </td>
+                    <td class="text-truncate">俐落剪裁帥氣西裝外套 女</td>
+                    <td>黑</td>
+                    <td>F</td>
+                    <td>1</td>
+                    <td class="text-right">1600</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th colspan="6" class="text-right">運費</th>
+                    <td class="text-right">80</td>
+                  </tr>
+                  <tr class="table-info">
+                    <th colspan="6" class="text-right">合計</th>
+                    <td class="text-right"><span class="price h5">2175<span></td>
+                  </tr>
+                </tfoot>
+              </table>
             </div>
           </div>
+          <div class="mt-4 py-2 text-center bg-light"><h2 class="mb-0 h4">訂購人資訊</h2></div>
+          <form class="mt-3">
+            <div class="form-row">
+              <div class="col-md form-group">
+                <label for="buyer-name">購買人姓名</label>
+                <input type="text" class="form-control" id="buyer-name">
+              </div>
+              <div class="col-md form-group">
+                <label for="buyer-name">Email</label>
+                <input type="email" class="form-control" id="buyer-name">
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
