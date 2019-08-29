@@ -146,6 +146,7 @@ td.item__price {
   display: inline-block;
   position: relative;
   padding: 0.3rem;
+  line-height: 100%;
   z-index: 1;
 }
 
