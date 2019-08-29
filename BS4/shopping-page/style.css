@@ -142,6 +142,7 @@ td.item__price {
   display: inline-block;
   position: relative;
   text-size-adjust: none;
+  -webkit-text-size-adjust: none;
   z-index: 1;
 }
 
