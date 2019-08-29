@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>六角購物趣</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/releases/v5.10.2/js/all.js"></script>
+    <script src="adobefont.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light sticky-top" style="z-index: 50; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);">
+      <a class="navbar-brand" href="#">六角購物趣</a>
+      <button class="navbar-toggler ml-3 border-0" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="shop.html">衣料品<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">生活好物</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">居家環境</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">毛小孩專區</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">六角學院</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown ml-auto" id="cart-preview">
+          <a href="#" class="text-dark" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="fa-layers fa-fw h4 mb-0">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="fa-layers-counter" style="background:Tomato">2</span>
+            </span>
+          </a>
+        
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cart-preview" style="min-width: 350px">
+          <div class="py-3 px-4">
+            <p class="h6">已選擇商品</p>
+            <table class="table itemList">
+              <tbody>
+                <tr>
+                  <td scope="row" class="delete-item">
+                    <a href="#" class="text-secondary" role="button"><i class="far fa-trash-alt"></i></a>
+                  </td>
+                  <td class="item__name text-truncate">骷髏上衣 兩色</td>
+                  <td class="item__size">S</td>
+                  <td class="item__color">黑</td>
+                  <td class="item__quantity"><span class="circle quantity">1</span></td>
+                  <td class="item__price price">495</td>
+                </tr>
+                <tr>
+                  <td scope="row" class="delete-item">
+                    <a href="#" class="text-secondary" role="button"><i class="far fa-trash-alt"></i></a>
+                  </td>
+                  <td class="item__name text-truncate">俐落剪裁帥氣西裝外套 女</td>
+                  <td class="item__size">F</td>
+                  <td class="item__color">黑</td>
+                  <td class="item__quantity"><span class="circle quantity">1</span></td>
+                  <td class="item__price price">1600</td>
+                </tr>
+              </tbody>
+            </table>
+            <a class="btn btn-info btn-block" href="#">結帳去</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="container mt-4">
+      <ol class="breadcrumb bg-transparent px-0">
+        <li class="breadcrumb-item"><a href="#" class="">首頁</a></li>
+        <li class="breadcrumb-item"><a href="shop.html" class="">衣料品</a></li>
+        <li class="breadcrumb-item"><a href="#" class="">上着</a></li>
+        <div class="breadcrumb-item active">骷髏上衣 兩色</div>
+      </ol>
+      <div class="row">
+        <div class="col-md-7 d-flex justify-content-center">
+          <div class="mr-3" style="flex: 1 0 auto">
+            <ul class="list-unstyled mb-0 d-flex flex-column align-items-center h-100">
+              <li data-target="#item-images" data-slide-to="0" class="thumbnail active">
+                <a href="#"><img src="img/item-1.jpg" alt="" class=""></a>
+              </li>
+              <li data-target="#item-images" data-slide-to="1" class="thumbnail mt-1">
+                  <a href="#"><img src="img/item-image-1.jpg" alt="" class=""></a>
+              </li>
+              <li data-target="#item-images" data-slide-to="2" class=" thumbnail mt-1">
+                  <a href="#"><img src="img/item-image-2.jpg" alt="" class=""></a>
+              </li>
+            </ul>
+          </div>
+          <div id="item-images" class="carousel slide w-100" data-ride="carousel" style="height: 350px">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item bg-cover active" style="background-image: url('img/item-1.jpg'); height: 350px;" data-slide-target="0">
+              </div>
+              <div class="carousel-item bg-cover" style="background-image: url('img/item-image-1.jpg'); height: 350px" data-slide-target="1">
+              </div>
+              <div class="carousel-item bg-cover" style="background-image: url('img/item-image-2.jpg'); height: 350px" data-slide-target="2">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#item-images" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#item-images" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="pl-md-4">
+            <h1 class="mt-4 mt-md-0 mb-3">骷髏上衣 兩色</h1>
+            <div class="d-flex align-content-end mt-4 mb-2">
+              <span class="h3 mb-0 mr-auto text-danger price">495</span>
+              <del class="align-self-end text-lighter price">549</del>
+            </div>
+            <p class="mb-0"><i class="fas fa-truck mr-2"></i>滿2千免運費</p>
+          </div>
+          <div class="mt-4 pl-md-4 d-flex">
+            <div class="d-flex align-items-center mr-auto">
+              <label for="item-size" class="mb-0 mr-2" style="white-space: nowrap">尺寸</label>
+              <select class="custom-select" name="" id="item-size">
+                <option selected value="small">S</option>
+                <option value="medium">M</option>
+                <option value="large">L</option>
+              </select>
+            </div>
+            <div class="btn-group-toggle d-flex align-items-center">
+              <span class="mr-2" style="cursor: default">顏色</span>
+              <label class="color-palette palette__black active mb-0">
+                <input type="radio" name="options" id="black" checked>
+              </label>
+              <label class="color-palette palette__white mb-0">
+                <input type="radio" name="options" id="white">
+              </label>
+            </div>
+          </div>
+          <div class="mt-4 d-flex align-items-center pl-md-4">
+            <div class="d-flex align-items-center" id="add-qty">
+              <a href="#" class="mr-3 text-secondary minus-qty circle p-2" role="button"><i class="fas fa-minus" style="pointer-events: none;"></i></a>
+              <div class="" style="flex: 0 1 80px">
+                <input type="number" class="form-control text-center" name="" id="item-quantity" inputmode="numeric" min="1" title="数量" value="1">
+              </div>
+              <a href="#" class="ml-3 text-secondary plus-qty circle p-2" role="button"><i class="fas fa-plus" style="pointer-events: none;"></i></a>
+            </div>
+            <button type="button" name="" id="" class="ml-4 btn btn-info btn-block">加入購物車</button>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5" id="copy">
+        <div class="col-md-7 pt-3">
+          <h2 class="display-4" style="font-family: ta-hougan-k500, sans-serif; white-space: nowrap">街頭潮流<span class="d-block text-right">由 NI 開始</span></h2>
+          <p class="mt-4">
+            過了批准不肯，國人鮮花萬元晶片遊客名單是一個。<br>
+            接到主持一會您現在像是現代化。<br>
+            舉行無奈字元快速右鍵經常周圍本月報價，調整廣場管。<br>
+            發出並且寶寶做什麼，幾次有時，贏得。<br>
+            衝擊醫藥一番然而您的背後，輔助幫助反對競爭力，距離退出，數。
+          </p>
+        </div>
+        <div class="col-md-5 d-flex align-items-center">
+          <img src="img/item-image-6.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="container mt-5 ">
+          <div class="row text-right">
+            <div class="col-md-6"><img src="img/item-image-3.jpg" alt="" class="img-fluid w-75"></div>
+            <div class="col-md-6 pt-5" style="font-family: lato, sans-serif">
+              <h3 class="display-4 mb-2 pl-5">Lorem, ipsum.</h3>
+              <p class="pl-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, natus.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, voluptates!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, placeat.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-md-6 d-flex justify-content-center flex-row-reverse">
+              <h3 class="mb-2 vertical-text">解放痛苦輕輕集。</h3>
+              <p class="vertical-text mt-4">找一個座位，<br>尋找屬於自己的舒適圈</p>
+            </div>
+            <div class="col-md-5 mt-4 mt-md-0 ml-auto text-right"><img src="img/item-image-4.jpg" alt="" class="img-fluid"></div>
+          </div>
+        </div>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-md-8">
+              <img src="img/item-image-5.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-4 pt-5 d-flex align-items-end">
+              <p class="h4 vertical-text">常用很難，儘管理想。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="mt-5 py-4" style="font-size: 0.9rem;">
+      <div class="container text-center">
+        <div class="d-md-flex justify-content-center align-items-center">
+          <p class="mb-2"><i class="far fa-copyright"></i> Copright 2017 六角學院</p>
+          <ul class="mb-2 list-unstyled d-flex ml-md-3 justify-content-center">
+            <li class="align-self-center"><a href="#" class="text-info mr-2">About</a></li>
+            <li><a href="#" class="text-info h4 mr-2"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#" class="text-info h4"><i class="fab fa-facebook-square"></i></a></li>
+          </ul>
+        </div>
+        <p class="mb-0">Made with Bootstrap 4 by <a href="https://kayahino.github.io/hexschool-hw/BS4/shopping-page/shop.html" class="text-info">艾比</a></p>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $('#item-images').on('slide.bs.carousel', function(e) {
+          var target = $(e.relatedTarget).data('slide-target');
+          $('.thumbnail').each(function() {
+            $(this).removeClass('active');
+          });
+          $('.thumbnail[data-slide-to="' + target + '"]').addClass('active');
+        });
+        $('.color-palette').on('click', function() {
+          $('.color-palette').siblings().removeClass('active');
+          $(this).addClass('active');
+        });
+        $('#add-qty').on('click', function(e) {
+          e.preventDefault();
+          if ($(e.target).is('INPUT')) { return }
+          var qty = $('#item-quantity').val();
+          if ($(e.target).hasClass('minus-qty')) {
+            if (qty === '1') { return }
+            qty--;
+          } else {
+            qty++;
+          }
+          $('#item-quantity').val(qty);
+        });
+        $('.price').each(function() {
+          var num = $(this).text();
+          $(this).text('NT$ ' + num.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+        });
+        $('.dropdown-menu').on('click', function(e) {
+          e.stopPropagation();
+        })
+      });
+    </script>
+  </body>
+</html>

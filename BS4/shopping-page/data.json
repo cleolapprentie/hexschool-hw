@@ -1,0 +1,103 @@
+{
+  "wear": [
+    {
+      "itemCategory": "wear",
+      "itemImg": "img/item-1.jpg",
+      "itemName": "骷髏T恤 兩色",
+      "itemState": ["new", 0.9],
+      "itemPrice": 549,
+      "itemColors": [
+        "black",
+        "white"
+      ],
+      "itemSizes": [
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "itemCategory": "wear",
+      "itemImg": "img/item-2.jpg",
+      "itemName": "小花搖擺長裙",
+      "itemState": ["sale", 0.5],
+      "itemPrice": 1240,
+      "itemColors": [
+        "pink"
+      ],
+      "itemSizes": [
+        "F"
+      ]
+    },
+    {
+      "itemCategory": "wear",
+      "itemImg": "img/item-3.jpg",
+      "itemName": "俐落剪裁帥氣西裝外套 女",
+      "itemState": ["sale", 0.5, "sold-out"],
+      "itemPrice": 3200,
+      "itemColors": [
+        "black"
+      ],
+      "itemSizes": [
+        "F"
+      ]
+    },
+    {
+      "itemCategory": "wear",
+      "itemImg": "img/item-4.jpg",
+      "itemName": "一字領小洋裝",
+      "itemState": ["normal"],
+      "itemPrice": 1800,
+      "itemColors": [
+        "skyblue"
+      ],
+      "itemSizes": [
+        "F"
+      ]
+    },
+    {
+      "itemCategory": "wear",
+      "itemImg": "img/item-5.jpg",
+      "itemName": "經典字母大學T",
+      "itemState": ["sale", "0.5", "sold-out"],
+      "itemPrice": 900,
+      "itemColors": [
+        "black",
+        "white",
+        "pink",
+        "skyblue"
+      ],
+      "itemSizes": [
+        "F"
+      ]
+    },
+    {
+      "itemCategory": "wear",
+      "itemImg": "img/item-6.jpg",
+      "itemName": "蜂鳥圖案小洋裝",
+      "itemState": ["sale", "0.5", "sold-out"],
+      "itemPrice": 1800,
+      "itemColors": [
+        "pink"
+      ],
+      "itemSizes": [
+        "F"
+      ]
+    }
+  ],
+  "goods": [
+    {
+      "itemCategory": "goods",
+      "itemImg": "img/item-4.jpg",
+      "itemName": "馬克杯",
+      "itemState": ["normal"],
+      "itemPrice": 1800,
+      "itemColors": [
+        "skyblue"
+      ],
+      "itemSizes": [
+        "F"
+      ]
+    }
+  ]
+}
