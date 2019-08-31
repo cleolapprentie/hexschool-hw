@@ -9,6 +9,9 @@
 
 * [自我練習項目](#自我練習項目)
 * [解決問題筆記](#解決問題筆記)
+
+### [Demo](https://kayahino.github.io/hexschool-hw/BS4/shopping-page/shop.html)
+
 ---
 
 ## 自我練習項目
