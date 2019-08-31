@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://use.fontawesome.com/releases/v5.10.2/js/all.js"></script>
-    <script src="adobefont.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.10.2/js/all.js"></script>
+    <script src="vendor/adobefont.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -47,33 +47,33 @@
         </a>
 
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cart-preview">
-          <div class="py-2 px-4">
-            <p class="h6 mt-1">已選擇商品</p>
+          <div class="px-3 py-2">
+            <p class="h6 text-center">已選擇商品</p>
             <table class="table itemList mb-0">
               <tbody>
                 <tr>
-                  <td scope="row" class="delete-item">
-                    <a href="#" class="text-secondary delete-item" role="button"><i class="far fa-trash-alt"></i></a>
+                  <td scope="row">
+                    <a href="#" class="text-secondary delete-item"" role="button"><i class="far fa-trash-alt"></i></a>
                   </td>
                   <td class="item__name text-truncate">骷髏上衣 兩色</td>
-                  <td class="item__size">S</td>
-                  <td class="item__color">黑</td>
+                  <td class="item__size d-none d-md-table-cell">S</td>
+                  <td class="item__color d-none d-md-table-cell">黑</td>
                   <td class="item__quantity"><span class="circle quantity">1</span></td>
                   <td class="item__price price">495</td>
                 </tr>
                 <tr>
-                  <td scope="row" class="delete-item">
+                  <td scope="row">
                     <a href="#" class="text-secondary delete-item" role="button"><i class="far fa-trash-alt"></i></a>
                   </td>
                   <td class="item__name text-truncate">俐落剪裁帥氣西裝外套 女</td>
-                  <td class="item__size">F</td>
-                  <td class="item__color">黑</td>
+                  <td class="item__size d-none d-md-table-cell">F</td>
+                  <td class="item__color d-none d-md-table-cell">黑</td>
                   <td class="item__quantity"><span class="circle quantity">1</span></td>
                   <td class="item__price price">1600</td>
                 </tr>
               </tbody>
             </table>
-            <a class="btn btn-info btn-sm btn-block mt-2" href="#">結帳去</a>
+            <a href="#" class="btn btn-info btn-sm btn-block mt-2" onclick="window.location = '/cashier.html'">結帳去</a>
           </div>
         </div>
       </div>
@@ -81,26 +81,26 @@
 
     <!-- Main -->
     <div class="container mt-5">
-      <h1 class="text-center text-secondary cashier-title">六角購物趣 <span class="d-block d-sm-inline"><i class="far fa-credit-card mr-3"></i>結帳頁面</span></h1>
-      <div class="form-row text-center mt-4">
+      <h1 class="text-center text-secondary cashier-title h2">六角購物趣 <span class="d-block h1 mt-2"><i class="fas fa-credit-card mr-3"></i>結帳頁面</span></h1>
+      <div class="row text-center mt-4 align-items-center">
         <div class="col-sm">
           <div class="alert alert-info alert-rounded" role="alert">
-            <strong>STEP1 輸入訂單資料</strong>
+            <strong>STEP1 <span class="d-inline-block d-md-block d-xl-inline-block">輸入訂單資料</span></strong>
           </div>
         </div>
         <div class="col-sm">
           <div class="alert alert-light alert-rounded d-none d-sm-block" role="alert">
-            <strong>STEP2 確認訂單資料</strong>
+            <strong>STEP2 <span class="d-inline-block d-md-block d-xl-inline-block">確認訂單資料</span></strong>
           </div>
         </div>
         <div class="col-sm">
           <div class="alert alert-light alert-rounded d-none d-sm-block" role="alert">
-            <strong>STEP3 金流付款</strong>
+            <strong>STEP3 <span class="d-inline-block d-md-block d-xl-inline-block">金流付款</span></strong>
           </div>
         </div>
         <div class="col-sm">
-          <div class="alert alert-light alert-rounded d-none d-sm-block" role="alert">
-            <strong>STEP4 訂單完成</strong>
+          <div class="alert alelight alert-rounded d-none d-sm-block" role="alert">
+            <strong>STEP4 <span class="d-inline-block d-md-block d-xl-inline-block">訂單完成</span></strong>
           </div>
         </div>
       </div>
@@ -134,54 +134,135 @@
                       <a href="#" class="text-secondary delete-item" role="button"><i class="far fa-trash-alt"></i></a>
                     </td>
                     <td class="text-center">
-                      <div class="thumbnail"><img src="img/item-1.jpg" alt="" class="img-fluid"></div>
+                      <div class="thumbnail"><img src="img/item-1-thumb.png" alt="" class="img-fluid"></div>
                     </td>
                     <td class="text-truncate">骷髏上衣 兩色</td>
                     <td>黑</td>
                     <td>S</td>
                     <td>1</td>
-                    <td class="text-right">495</td>
+                    <td class="text-right price">495</td>
                   </tr>
                   <tr>
                     <td scope="row" class="h4 text-center">
                       <a href="#" class="text-secondary delete-item" role="button"><i class="far fa-trash-alt"></i></a>
                     </td>
                     <td class="text-center">
-                      <div class="thumbnail"><img src="img/item-3.jpg" alt="" class="img-fluid"></div>
+                      <div class="thumbnail"><img src="img/item-3-thumb.png" alt="" class="img-fluid"></div>
                     </td>
                     <td class="text-truncate">俐落剪裁帥氣西裝外套 女</td>
                     <td>黑</td>
                     <td>F</td>
                     <td>1</td>
-                    <td class="text-right">1600</td>
+                    <td class="text-right price">1600</td>
                   </tr>
                 </tbody>
                 <tfoot>
                   <tr>
                     <th colspan="6" class="text-right">運費</th>
-                    <td class="text-right">80</td>
+                    <td class="text-right price">80</td>
                   </tr>
                   <tr class="table-info">
                     <th colspan="6" class="text-right">合計</th>
-                    <td class="text-right"><span class="price h5">2175<span></td>
+                    <td class="text-right"><span class="price h5 price">2175<span></td>
                   </tr>
                 </tfoot>
               </table>
             </div>
           </div>
           <div class="mt-4 py-2 text-center bg-light"><h2 class="mb-0 h4">訂購人資訊</h2></div>
-          <form class="mt-3">
+          <form class="mt-3 needs-validation" id="buyer-info" autocomplete="false" novalidate>
             <div class="form-row">
-              <div class="col-md form-group">
+              <div class="col-md-3 form-group">
                 <label for="buyer-name">購買人姓名</label>
-                <input type="text" class="form-control" id="buyer-name">
+                <input type="text" class="form-control" id="buyer-name" name="fname" required>
+              </div>
+              <div class="col-md-4 form-group">
+                <label for="buyer-mobile">手機</label>
+                <input type="tel" class="form-control" id="buyer-mobile" name="mobile" required>
+              </div>
+              <div class="col-md-5 form-group">
+                <label for="buyer-email">Email</label>
+                <input type="email" class="form-control" id="buyer-email" name="email" required>
               </div>
               <div class="col-md form-group">
-                <label for="buyer-name">Email</label>
-                <input type="email" class="form-control" id="buyer-name">
+                <div class="selected-item position-absolute bg-transparent">請選擇縣市</div>
+                <label for="buyer-city" onclick="$(this).parent().find('.custom-select').focus()">縣市</label>
+                <select class="custom-select d-none" id="buyer-city" name="city" required>
+                  <option disabled>請選擇縣市</option>
+                </select>
+                <div class="custom-select city" tabindex="0"><span class="validate-icon"></span></div>
+                <ul class="list-unstyled card select-option invisible mb-0"></ul>
+              </div>
+              <div class="col-md form-group">
+                <div class="selected-item position-absolute bg-transparent invisible">請選擇鄉鎮區</div>
+                <label for="buyer-district" onclick="$(this).parent().find('.custom-select').focus()">鄉鎮區</label>
+                <select class="custom-select d-none" id="buyer-district" name="country" required>
+                  <option disabled>請選擇鄉鎮區</option>
+                </select>
+                <div class="custom-select district" tabindex="0"><span class="validate-icon"></span></div>
+                <ul class="list-unstyled card select-option invisible mb-0"></ul>
+              </div>
+              <div class="col-md form-group zipcode">
+                <label for="buyer-zipcode">郵遞區號</label>
+                <input type="text" class="form-control" id="buyer-zipcode" name="zip" required>
+              </div>
+              <div class="col-12 form-group">
+                <label for="buyer-address">地址<small class="text-secondary ml-2">路段/巷弄/號/樓</small></label>
+                <input type="text" class="form-control" id="buyer-address" name="address" required>
               </div>
             </div>
           </form>
+          <div class="mt-4 py-2 text-center bg-light"><h2 class="mb-0 h4">收件人資訊</h2></div>
+          <div class="mt-3 custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="copy-value" value="yes">
+            <label class="custom-control-label" for="copy-value">同購買人</label>
+          </div>
+          <form class="mt-3 needs-validation" id="recipient-info" autocomplete="false" novalidate>
+            <div class="form-row">
+              <div class="col-md-3 form-group">
+                <label for="recipient-name">收件人姓名</label>
+                <input type="text" class="form-control" id="recipient-name" name="fname" required>
+              </div>
+              <div class="col-md-4 form-group">
+                <label for="recipient-mobile">手機</label>
+                <input type="tel" class="form-control" id="recipient-mobile" name="mobile" required>
+              </div>
+              <div class="col-md-5 form-group">
+                <label for="recipient-email">Email</label>
+                <input type="email" class="form-control" id="recipient-email" name="email" required>
+              </div>
+              <div class="col-md form-group">
+                <div class="selected-item position-absolute bg-transparent">請選擇縣市</div>
+                <label for="recipient-city" onclick="$(this).parent().find('.custom-select').focus()">縣市</label>
+                <select class="custom-select d-none" id="recipient-city" name="city" required>
+                  <option disabled>請選擇縣市</option>
+                </select>
+                <div class="custom-select city" tabindex="0"><span class="validate-icon"></span></div>
+                <ul class="list-unstyled card select-option invisible mb-0"></ul>
+              </div>
+              <div class="col-md form-group">
+                <div class="selected-item position-absolute bg-transparent invisible">請選擇鄉鎮區</div>
+                <label for="recipient-district" onclick="$(this).parent().find('.custom-select').focus()">鄉鎮區</label>
+                <select class="custom-select d-none" id="recipient-district" name="country" required>
+                  <option disabled>請選擇鄉鎮區</option>
+                </select>
+                <div class="custom-select district" tabindex="0"><span class="validate-icon"></span></div>
+                <ul class="list-unstyled card select-option invisible mb-0"></ul>
+              </div>
+              <div class="col-md form-group">
+                <label for="recipient-zipcode zipcode">郵遞區號</label>
+                <input type="text" class="form-control" id="recipient-zipcode" name="zip" required>
+              </div>
+              <div class="col-12 form-group">
+                <label for="recipient-address">地址<small class="text-secondary ml-2">路段/巷弄/號/樓</small></label>
+                <input type="text" class="form-control" id="recipient-address" name="address" required>
+              </div>
+            </div>
+          </form>
+          <div class="d-flex mt-4">
+            <button type="button" class="btn btn-outline-secondary" onclick="window.history.back()">繼續選購</button>
+            <button type="submit" class="btn btn-info ml-auto">前往付款</button>
+          </div>
         </div>
       </div>
     </div>
@@ -197,11 +278,52 @@
             <li><a href="#" class="text-info h4"><i class="fab fa-facebook-square"></i></a></li>
           </ul>
         </div>
-        <p class="mb-0">Made with Bootstrap 4 by <a href="https://kayahino.github.io/hexschool-hw/BS4/shopping-page/shop.html" class="text-info">艾比</a></p>
+        <p class="mb-0">Made with Bootstrap 4 by <a href="https://github.com/kayahino/hexschool-hw/tree/master/BS4/shopping-page" target="_blank" class="text-info">艾比</a></p>
       </div>
     </footer>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body py-4 h5 mb-0">
+            確定刪除此商品？
+          </div>
+          <div class="modal-footer py-2">
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger delete">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/cashier.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          $('button[type="submit"]').on('click', function(e) {
+            e.preventDefault();
+            $('.needs-validation').each(function() {
+              $(this).addClass('was-validated');
+            });
+            if ($('#buyer-info')[0].checkValidity() && $('#recipient-info')[0].checkValidity()) {
+              window.location = "/complete.html"
+              // $('#buyer-info').submit();
+              // $('#recipient-info').submit();
+            }
+          });
+        }, false);
+      })();
+    </script>
   </body>
 </html>

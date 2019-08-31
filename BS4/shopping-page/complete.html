@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>六角購物趣</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.10.2/js/all.js"></script>
+    <script src="vendor/adobefont.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light sticky-top"
+      style="z-index: 50; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);">
+      <a class="navbar-brand" href="#">六角購物趣</a>
+      <button class="navbar-toggler ml-3 border-0 px-0" type="button" data-toggle="collapse" data-target="#navbar-collapse"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="shop.html">衣料品<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">生活好物</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">居家環境</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">毛小孩專區</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">六角學院</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown ml-auto" id="cart-preview">
+        <a href="#" class="text-dark" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="fa-layers fa-fw h4 mb-0">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="fa-layers-counter" style="background:Tomato">0</span>
+          </span>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cart-preview">
+          <div class="px-3 py-2">
+            <p class="h6 text-center">已選擇商品</p>
+            <table class="table itemList mb-0">
+              <tbody>
+                <tr><td class="text-center pt-3 pb-2" style="color: #aaa">還沒有選擇商品哦</td></tr>
+              </tbody>
+            </table>
+            <a class="btn btn-info btn-sm btn-block mt-2" href="#">結帳去</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="container mt-5">
+      <h1 class="text-center text-secondary cashier-title h2">六角購物趣 <span class="d-block h1 mt-2"><i class="fas fa-check mr-3 text-success"></i>訂單完成</span></h1>
+      <div class="row text-center mt-4 align-items-center">
+        <div class="col-sm">
+          <div class="alert alert-secondary alert-rounded" role="alert">
+            <strong>STEP1 <span class="d-inline-block d-md-block d-xl-inline-block">輸入訂單資料</span></strong>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="alert alert-secondary alert-rounded d-none d-sm-block" role="alert">
+            <strong>STEP2 <span class="d-inline-block d-md-block d-xl-inline-block">確認訂單資料</span></strong>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="alert alert-secondary alert-rounded d-none d-sm-block" role="alert">
+            <strong>STEP3 <span class="d-inline-block d-md-block d-xl-inline-block">金流付款</span></strong>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="alert alert-success alert-rounded d-none d-sm-block" role="alert">
+            <strong>STEP4 <span class="d-inline-block d-md-block d-xl-inline-block">訂單完成</span></strong>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-8">
+          <div class="mt-4 py-2 text-center bg-light"><h2 class="mb-0 h4">購買資訊</h2></div>
+          <div id="cart-detail" class="mt-2">
+            <div id="detail-show" class="table-responsive" aria-labelledby="section1HeaderId">
+              <table class="table mt-3">
+                <thead>
+                  <tr>
+                    <th class="border-top-0" width="90"></th>
+                    <th class="border-top-0">商品名稱</th>
+                    <th class="border-top-0">顏色</th>
+                    <th class="border-top-0">尺寸</th>
+                    <th class="border-top-0">數量</th>
+                    <th class="text-right border-top-0">小計</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">
+                      <div class="thumbnail"><img src="img/item-1-thumb.png" alt="" class="img-fluid"></div>
+                    </td>
+                    <td class="text-truncate">骷髏上衣 兩色</td>
+                    <td>黑</td>
+                    <td>S</td>
+                    <td>1</td>
+                    <td class="text-right price">495</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="thumbnail"><img src="img/item-3-thumb.png" alt="" class="img-fluid"></div>
+                    </td>
+                    <td class="text-truncate">俐落剪裁帥氣西裝外套 女</td>
+                    <td>黑</td>
+                    <td>F</td>
+                    <td>1</td>
+                    <td class="text-right price">1600</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th colspan="5" class="text-right">運費</th>
+                    <td class="text-right price">80</td>
+                  </tr>
+                  <tr>
+                    <th colspan="5" class="text-right">合計</th>
+                    <td class="text-right"><span class="price price">2175<span></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <div class="mt-4 py-2 text-center bg-light"><h2 class="mb-0 h4">訂購人資訊</h2></div>
+          <table class="table mt-3">
+            <tbody>
+              <tr>
+                <th scope="row" class="border-top-0" width="120">Email</th>
+                <td class="border-top-0">ag3456***@gmail.com</td>
+              </tr>
+              <tr>
+                <th scope="row">姓名</th>
+                <td>許*全</td>
+              </tr>
+              <tr>
+                <th scope="row">手機</th>
+                <td>0988******</td>
+              </tr>
+              <tr>
+                <th scope="row">地址</th>
+                <td>100 台北市中正區八德路１段23號</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="mt-4 py-2 text-center bg-light"><h2 class="mb-0 h4">收件人資訊</h2></div>
+          <table class="table mt-3">
+            <tbody>
+              <tr>
+                <th scope="row" class="border-top-0" width="120">Email</th>
+                <td class="border-top-0">同訂購人</td>
+              </tr>
+              <tr>
+                <th scope="row">姓名</th>
+                <td>同訂購人</td>
+              </tr>
+              <tr>
+                <th scope="row">手機</th>
+                <td>同訂購人</td>
+              </tr>
+              <tr>
+                <th scope="row">地址</th>
+                <td>同訂購人</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex mt-4">
+            <button type="button" class="btn btn-info ml-auto" onclick="window.location = '/shop.html'">繼續逛逛</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="mt-5 py-4" style="font-size: 0.9rem;">
+      <div class="container text-center">
+        <div class="d-md-flex justify-content-center align-items-center">
+          <p class="mb-2"><i class="far fa-copyright"></i> Copright 2017 六角學院</p>
+          <ul class="mb-2 list-unstyled d-flex ml-md-3 justify-content-center">
+            <li class="align-self-center"><a href="#" class="text-info mr-2">About</a></li>
+            <li><a href="#" class="text-info h4 mr-2"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#" class="text-info h4"><i class="fab fa-facebook-square"></i></a></li>
+          </ul>
+        </div>
+        <p class="mb-0">Made with Bootstrap 4 by <a href="https://github.com/kayahino/hexschool-hw/tree/master/BS4/shopping-page" target="_blank" class="text-info">艾比</a></p>
+      </div>
+    </footer>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body py-4 h5 mb-0">
+            確定刪除此商品？
+          </div>
+          <div class="modal-footer py-2">
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger delete">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/cashier.js"></script>
+  </body>
+</html>
