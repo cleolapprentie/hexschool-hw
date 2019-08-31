@@ -1,5 +1,7 @@
 # BS4 Shopping Page 版型練習記錄
 
+## [Demo](https://kayahino.github.io/hexschool-hw/BS4/shopping-page/shop.html)
+
 1. 利用 JSON 來動態製作商品清單
 2. FontAwesome 5 layer 用法
 3. Bootstrap Carousel 應用
@@ -9,8 +11,6 @@
 
 * [自我練習項目](#自我練習項目)
 * [解決問題筆記](#解決問題筆記)
-
-### [Demo](https://kayahino.github.io/hexschool-hw/BS4/shopping-page/shop.html)
 
 ---
 
@@ -49,6 +49,7 @@
 * Carousel Indicators 當成 thumbnail 預覽
 
 ![](https://i.imgur.com/WIFDZtR.gif)
+
 像原本的 indicator 一樣將三張圖片放進 `ul` 裡    
 只不過不加 `carousel-indicators`，而是自己自訂樣式做成預覽圖    
 再用 flex 做直式排版    
@@ -84,6 +85,7 @@ Bootstrap 的 radio 按鈕式設計之（改）
 
 ### 自訂下拉式選單配合表單驗證
 ![](https://i.imgur.com/gi9u2g5.gif)
+
 沒有使用 plugin 做成動態的下拉式選單    
 資料來自 [donma](https://github.com/donma/TaiwanAddressCityAreaRoadChineseEnglishJSON?fbclid=IwAR0WL-DTcKTNDsW61f0Uh8FAqWukgrODxntCcXTfFSk-2yYXzSxvXaseV8s) 大大的台灣地址 JSON 資料    
     
@@ -93,6 +95,7 @@ Bootstrap 的 radio 按鈕式設計之（改）
 
 不過因為是自訂選單，表單驗證後不會套用原本的樣式
 ![](https://i.imgur.com/5ANgJfy.png)
+
 稍微做了一點改裝    
 先判斷 `<select>` 欄位為 `:valid` 還是 `:invalid`，再針對其改變樣式    
 然後再加入 FontAwesome 的 icon 讓這個 `<div>` 看起來跟其他 `<input>` 欄位一樣    
