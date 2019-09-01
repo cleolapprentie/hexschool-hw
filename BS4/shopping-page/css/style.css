@@ -104,6 +104,9 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
     -ms-transform: translateX(50%);
     -o-transform: translateX(50%);
   }
+  .alert::after {
+    display: none!important;
+  }
 }
 
 .custom-control-input:checked ~ .custom-control-label::before {
@@ -516,12 +519,76 @@ del.price {
     -moz-transform: translateX(0)  ;
     -ms-transform: translateX(0)  ;
     -o-transform: translateX(0)  ;
-}
+  }
   to {
     transform: translateX(3px)  ;
     -webkit-transform: translateX(3px)  ;
     -moz-transform: translateX(3px)  ;
     -ms-transform: translateX(3px)  ;
     -o-transform: translateX(3px)  ;
+  }
 }
+
+.col-sm:not(:first-child) .alert::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -1px;
+  width: 30px;
+  height: 3px;
+  display: block;
+  background-color: #eee;
+  transform: translate(-100%, -50%);
+  -webkit-transform: translate(-100%, -50%);
+  -moz-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  -o-transform: translate(-100%, -50%);
+}
+
+.done.alert::after {
+  background-color: #75c287!important;
+}
+
+.heart {
+  animation: heart 1s infinite;
+  -webkit-animation: heart 1s infinite;
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  15% {
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+}
+  30% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  70% {
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+}
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  
 }
