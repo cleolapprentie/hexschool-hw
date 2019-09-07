@@ -1,6 +1,6 @@
 # BS4 Landing Page 版型練習記錄
 
-## [Demo](https://kayahino.github.io/hexschool-hw/BS4/landing-page-practice/landing.html)
+## [Demo](https://kayahino.github.io/hexschool-hw/BS4/landing-page/landing.html)
 
 ## 解決 modal (多次) 開啓時的bug
 
